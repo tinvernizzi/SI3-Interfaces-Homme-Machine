@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group>
+         <children>
+            <HBox alignment="CENTER" prefHeight="170.0" prefWidth="642.0" spacing="50.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/produits/C1.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="150.0" prefWidth="191.0" spacing="10.0">
+                     <children>
+                        <Label text="PRIX" textFill="#ff2b2b">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="Promotion">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Validité de la promotion" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <Label layoutX="125.0" layoutY="180.0" text=" Nom du produit">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group>
+         <children>
+            <VBox>
+               <children>
+                  <Label prefHeight="35.0" prefWidth="368.0" text="Description">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="368.0" text="Quid? qui se etiam nunc subsidiis patrimonii aut amicorum liberalitate sustentant, hos perire patiemur? An, si qui frui publico non potuit per hostem, hic tegitur ipsa lege censoria; quem is frui non sinit, qui est, etiamsi non appellatur, hostis, huic ferri auxilium non oportet? Retinete igitur in provincia diutius eum, qui de sociis cum hostibus, de civibus cum sociis faciat pactiones, qui hoc etiam se pluris esse quam collegam putet, quod ille vos tristia voltuque deceperit, ipse numquam se minus quam erat, nequam esse simularit. Piso autem alio quodam modo gloriatur se brevi tempore perfecisse, ne Gabinius unus omnium nequissimus existimaretur.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="368.0" text="Mentions légales">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="368.0" text="Quid? qui se etiam nunc subsidiis patrimonii aut amicorum liberalitate sustentant, hos perire patiemur? An, si qui frui publico non potuit per hostem, hic tegitur ipsa lege censoria; quem is frui non sinit, qui est, etiamsi non appellatur, hostis, huic ferri auxilium non oportet? Retinete igitur in provincia diutius eum, qui de sociis cum hostibus, de civibus cum sociis faciat pactiones, qui hoc etiam se pluris esse quam collegam putet, quod ille vos tristia voltuque deceperit, ipse numquam se minus quam erat, nequam esse simularit. Piso autem alio quodam modo gloriatur se brevi tempore perfecisse, ne Gabinius unus omnium nequissimus existimaretur.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Group>
+   </children>
+</VBox>
