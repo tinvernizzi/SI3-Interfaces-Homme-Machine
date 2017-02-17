@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import org.tbee.javafx.scene.layout.fxml.*?>
-<MigPane id="rootPane" fx:controller="fr.polytech.ihm.HelloController"
+<MigPane id="rootPane" fx:controller="fr.polytech.si3.ihm.HelloController"
          styleClass="main-panel"
          layout="insets 20"
          cols="[label, pref!][grow, 50::]"

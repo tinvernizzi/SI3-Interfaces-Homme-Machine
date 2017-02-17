@@ -1,4 +1,4 @@
-package fr.polytech.ihm;
+package fr.polytech.si3.ihm;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
