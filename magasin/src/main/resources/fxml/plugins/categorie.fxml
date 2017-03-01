@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Dvd-video-logo.svg.png" />
+                  <Image url="@/images/Dvd-video-logo.svg.png" />
                </image>
                <VBox.margin>
                   <Insets />

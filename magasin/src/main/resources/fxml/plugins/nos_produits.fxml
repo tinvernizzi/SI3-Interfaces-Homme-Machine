@@ -30,7 +30,7 @@
                <children>
                   <ImageView fitHeight="167.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@neuro.png" />
+                        <Image url="@/images/neuro.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -38,7 +38,7 @@
                   </ImageView>
                   <ImageView fitHeight="139.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@sciences.png" />
+                        <Image url="@/images/sciences.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -63,7 +63,7 @@
                            <children>
                               <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@Dvd-video-logo.svg.png" />
+                                    <Image url="@/images/Dvd-video-logo.svg.png" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -92,7 +92,7 @@
                            <children>
                               <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@dvd.jpg" />
+                                    <Image url="@/images/dvd.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -121,7 +121,7 @@
                            <children>
                               <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@livres.jpg" />
+                                    <Image url="@/images/livres.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -150,7 +150,7 @@
                            <children>
                               <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@stage.jpg" />
+                                    <Image url="@/images/stage.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
