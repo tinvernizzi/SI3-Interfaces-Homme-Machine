@@ -23,7 +23,7 @@
                      <children>
                         <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@imported/p2/tboth.png" />
+                              <Image url="@/images/tboth.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -95,51 +95,51 @@
                <children>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_C1.jpg" />
+                        <Image url="@/images/p_C1.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_D1.jpg" />
+                        <Image url="@/images/p_D1.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_L1.jpg" />
+                        <Image url="@/images/p_L1.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_S1.jpg" />
+                        <Image url="@/images/p_S1.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_C2.jpg" />
+                        <Image url="@/images/p_C2.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_D2.jpg" />
+                        <Image url="@/images/p_D2.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_L2.jpg" />
+                        <Image url="@/images/p_L2.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_S2.jpg" />
+                        <Image url="@/images/p_S2.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_C3.jpg" />
+                        <Image url="@/images/p_C3.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_D3.jpg" />
+                        <Image url="@/images/p_D3.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_L3.jpg" />
+                        <Image url="@/images/p_L3.jpg" />
                      </image></ImageView>
                   <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <image>
-                        <Image url="@images/p_S3.jpg" />
+                        <Image url="@/images/p_S3.jpg" />
                      </image></ImageView>
                </children>
             </GridPane>
