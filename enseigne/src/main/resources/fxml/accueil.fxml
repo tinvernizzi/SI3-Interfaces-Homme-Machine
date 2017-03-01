@@ -23,7 +23,7 @@
                            <children>
                               <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@imported/p2/tboth.png" />
+                                    <Image url="@/images/tboth.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -75,7 +75,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_C1.jpg" />
+                                    <Image url="@/images/p_C1.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -106,7 +106,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_C2.jpg" />
+                                    <Image url="@/images/p_C2.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -137,7 +137,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_C3.jpg" />
+                                    <Image url="@/images/p_C3.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -168,7 +168,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_L3.jpg" />
+                                    <Image url="@/images/p_L3.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -236,7 +236,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/information.png" />
+                                    <Image url="@/images/information.png" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -264,7 +264,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/enseigne.png" />
+                                    <Image url="@/images/enseigne.png" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -292,7 +292,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_C.jpg" />
+                                    <Image url="@/images/p_C.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -320,7 +320,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/p_L.jpg" />
+                                    <Image url="@/images/p_L.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -369,7 +369,7 @@
                            <children>
                               <ImageView fitHeight="167.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/neuro.png" />
+                                    <Image url="@/images/neuro.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets />
@@ -377,7 +377,7 @@
                               </ImageView>
                               <ImageView fitHeight="139.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/sciences.png" />
+                                    <Image url="@/images/sciences.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets />

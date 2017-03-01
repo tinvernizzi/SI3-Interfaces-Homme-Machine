@@ -20,7 +20,7 @@
                      <children>
                         <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/tboth.png" />
+                              <Image url="@/images/enseigne.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -64,124 +64,38 @@
             </VBox>
          </top>
       </BorderPane>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
-         <top>
-            <VBox maxHeight="1.7976931348623157E308" prefHeight="570.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0">
+               <center>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@/images/tboth.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                <children>
-                  <Label text="Informations">
+                  <Label text="A propos de 'To Be or To Have'">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <VBox.margin>
+                     <padding>
                         <Insets left="30.0" />
-                     </VBox.margin>
+                     </padding>
                   </Label>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/information.png" />
-                           </image>
-                        </ImageView>
-                        <VBox prefWidth="800.0" spacing="10.0">
-                           <children>
-                              <Label text="Titre">
-                                 <font>
-                                    <Font name="System Bold Italic" size="22.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="&lt; description de l'information &gt;" />
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/information.png" />
-                           </image>
-                        </ImageView>
-                        <VBox prefWidth="800.0" spacing="10.0">
-                           <children>
-                              <Label text="Titre">
-                                 <font>
-                                    <Font name="System Bold Italic" size="22.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="20.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="&lt; description de l'information &gt;" />
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/information.png" />
-                           </image>
-                        </ImageView>
-                        <VBox prefWidth="800.0" spacing="10.0">
-                           <children>
-                              <Label text="Titre">
-                                 <font>
-                                    <Font name="System Bold Italic" size="22.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="20.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label text="&lt; description de l'information &gt;" />
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </HBox>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="940.0" text="&quot;The secret of successful retailing is to give your customers what they want. And really, if you think about it from your point of view as a customer, you want everything: a wide&#10;assortment of good-quality merchandise; the lowest possible prices; guaranteed satisfaction with what you buy; friendly, knowledgeable service; convenient hours; free parking;&#10;a pleasant shopping experience.&quot;&#10;&#10;- Sam Walton (1918-1992)&#10;&#10;Walmart.com is a lot like your neighborhood Walmart store. We feature a great selection of high-quality merchandise, friendly service and, of course, Every Day Low Prices. We&#10;also have another goal: to bring you the best shopping experience on the Internet.&#10;Founded in January 2000, Walmart.com is a subsidiary of Wal-Mart Stores, Inc. Our headquarters is on the San Francisco Peninsula near Silicon Valley, where we have access to&#10;the world's deepest pool of Internet executive and technical talent.&#10;But we think of ourselves, first and foremost, as a retailer. So our ties to Bentonville, Ark. - where Sam Walton opened the first store that bore the Walton name and where&#10;Wal-Mart Stores, Inc., is still based - give us our foundation." />
                </children>
                <padding>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                  <Insets left="30.0" right="30.0" />
                </padding>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
             </VBox>
-         </top>
-      </BorderPane>
+         </children>
+      </VBox>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1000.0">
          <top>
             <Label text="Nous contacter">
@@ -192,14 +106,14 @@
                   <Insets />
                </opaqueInsets>
                <BorderPane.margin>
-                  <Insets left="30.0" />
+                  <Insets left="60.0" />
                </BorderPane.margin>
             </Label>
          </top>
          <bottom>
             <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1000.0" spacing="80.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="adress1" text="Adresse">
+                  <Label fx:id="adress" text="Adresse">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -210,7 +124,7 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="phone1" text="n° Téléphone">
+                  <Label fx:id="phone" text="n° Téléphone">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -218,7 +132,7 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="adress11" text="Adresse@mail">
+                  <Label fx:id="adress1" text="Adresse@mail">
                      <font>
                         <Font size="17.0" />
                      </font>

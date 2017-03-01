@@ -15,6 +15,7 @@ public class HelloController
     @FXML private TextField lastNameField;
     @FXML private Label messageLabel;
 
+    @SuppressWarnings("Duplicates")
     public void sayHello() {
 
         String firstName = firstNameField.getText();
