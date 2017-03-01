@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.HomeController">
    <content>
       <AnchorPane>
          <children>
@@ -34,27 +34,27 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="100.0" style="-fx-background-color: #000000;">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
+                              <Button fx:id="homeButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                              <Button fx:id="promoButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Informations" textFill="WHITE">
+                              <Button fx:id="infoButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Informations" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
+                              <Button fx:id="productButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="13.0" />
                                  </font>
                               </Button>
-                              <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #000000;" text="A propos" textFill="WHITE">
+                              <Button  fx:id="aboutButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="A propos" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="13.0" />
                                  </font>
