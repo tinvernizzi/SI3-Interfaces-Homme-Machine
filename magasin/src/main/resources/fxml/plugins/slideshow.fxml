@@ -11,30 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="342.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="fr.polytech.si3.ihm.controllers.SlideshowView">
+<AnchorPane id="SlideshowView" fx:id="anchorPane" prefHeight="342.0" prefWidth="1002.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.SlideshowView">
    <children>
-      <ImageView fitHeight="502.0" fitWidth="1002.0" layoutX="-1.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@/images/annonce_neuro_final.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="502.0" fitWidth="1002.0" layoutX="9.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@/images/annonce_science_final.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="502.0" fitWidth="1002.0" layoutX="19.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@/images/annonce_commande_final.png" />
-         </image>
-      </ImageView>
       <VBox alignment="CENTER" layoutX="1.0" layoutY="181.0" prefHeight="86.0" prefWidth="1000.0" spacing="5.0" AnchorPane.bottomAnchor="0.0">
          <children>
             <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnLeftArrow" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@/images/Back-100.png" />
                      </image>
@@ -43,7 +26,7 @@
                      </HBox.margin>
                   </ImageView>
                   <Separator prefHeight="0.0" prefWidth="1000.0" valignment="BOTTOM" HBox.hgrow="ALWAYS" />
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnRightArrow" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@/images/Forward-100.png" />
                      </image>
@@ -55,7 +38,7 @@
             </HBox>
             <HBox alignment="CENTER" spacing="50.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="165.0" stylesheets="@/styles/JMetro.css" text="Découvrir" />
+                  <Button fx:id="button" mnemonicParsing="false" onMouseClicked="#clickOnButton" prefHeight="42.0" prefWidth="165.0" stylesheets="@/styles/JMetro.css" text="Découvrir" />
                   <Separator prefHeight="2.0" prefWidth="252.0" visible="false" />
                   <HBox alignment="CENTER" spacing="10.0">
                      <children>

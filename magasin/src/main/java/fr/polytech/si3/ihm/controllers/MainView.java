@@ -13,8 +13,6 @@ public class MainView {
     private SlideshowView slideshowViewController; // $embeddedElement+Controller
 
     public void initialize() {
-        System.out.println(slideshowViewController);
-        System.out.println(slideshowView);
-        slideshowViewController.test("It works"); //Console print "It works"
+        slideshowViewController.start();
     }
 }
