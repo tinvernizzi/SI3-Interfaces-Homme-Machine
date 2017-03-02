@@ -1,0 +1,17 @@
+.button {  
+    -fx-background-radius: 0;
+    -fx-font-family: "Myriad Set Pro Text";
+    -fx-font-size: 12pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #515661;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #006ecc;
+}

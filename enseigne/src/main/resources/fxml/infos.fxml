@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+  <content>
+    <AnchorPane>
+         <children>
+            <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
+               <children>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0">
+                     <top>
+                        <VBox prefHeight="100.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                                 <children>
+                                    <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@/images/tboth.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets left="130.0" right="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="100.0" style="-fx-background-color: #000000;">
+                                 <children>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Set Pro Text" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Set Pro Text" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Informations" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Set Pro Text" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Set Pro Text" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #000000;" text="A propos" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Set Pro Text" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+                     <top>
+                        <VBox maxHeight="1.7976931348623157E308" prefHeight="570.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text="Informations">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@/images/information.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefWidth="800.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Titre">
+                                             <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="&lt; description de l'information &gt;" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@/images/information.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefWidth="800.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Titre">
+                                             <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label text="&lt; description de l'information &gt;" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@/images/information.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefWidth="800.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Titre">
+                                             <font>
+                                                <Font name="System Bold Italic" size="22.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="&lt; description de l'information &gt;" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1000.0">
+                     <top>
+                        <Label text="Nous contacter">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <BorderPane.margin>
+                              <Insets left="30.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1000.0" spacing="80.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="adress1" text="Adresse">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="phone1" text="n° Téléphone">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label fx:id="adress11" text="Adresse@mail">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

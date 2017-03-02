@@ -20,16 +20,16 @@ public class MainApp extends Application {
 
         log.info("Starting Hello JavaFX and Maven demonstration application");
 
-        String fxmlFile = "/fxml/home.fxml";
+        String fxmlFile = "/fxml/acceuil2.fxml";
         log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
         log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, 1020, 700);
-        //scene.getStylesheets().add("");
+        Scene scene = new Scene(rootNode, 400, 200);
+        scene.getStylesheets().add("/styles/styles.css");
 
-        stage.setTitle("Web Browser - To Be Or To Have");
+        stage.setTitle("Hello JavaFX and Maven");
         stage.setScene(scene);
         stage.show();
     }

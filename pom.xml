@@ -16,6 +16,7 @@
     </organization>
 
     <modules>
+        <module>centre</module>
         <module>enseigne</module>
         <module>magasin</module>
         <module>common</module>
