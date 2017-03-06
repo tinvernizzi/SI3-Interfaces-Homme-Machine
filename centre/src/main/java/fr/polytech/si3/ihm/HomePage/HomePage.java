@@ -1,4 +1,4 @@
-package fr.polytech.si3.ihm;
+package fr.polytech.si3.ihm.HomePage;
 
 /**
  * Created by on 01/03/2017.
