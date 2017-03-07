@@ -5,6 +5,7 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;

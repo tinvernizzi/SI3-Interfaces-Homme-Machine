@@ -54,7 +54,8 @@ public class MainController {
                 bounds.getMinY()) / 2.0;
         double v = scrollPane.getViewportBounds().getHeight();
         System.out.println(h+" "+v+" "+y);
-        System.out.println(scrollPane.getVmax() * ((y * v) / (h - v)));
+        System.out.println(scrollPane.getVmax() * ((y - 0.5* v) / (h - v)));
+        System.out.println(scrollPane.getVmax());
         scrollPane.setVvalue(scrollPane.getVmax() * ((y - 0.5 * v) / (h - v)));
     }
 }
