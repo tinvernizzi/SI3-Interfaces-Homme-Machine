@@ -108,6 +108,7 @@ public class ImageSlide {
     }
 
     public void translate(int sign){
+        System.out.println(actualImage);
         mainAnim.stop();
         if(animationIsFinished) {
             setAnimationIsFinished(false);

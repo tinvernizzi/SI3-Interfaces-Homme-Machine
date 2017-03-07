@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="contactView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.ContactController">
    <top>
       <HBox prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -79,7 +78,7 @@
          <children>
             <ImageView fx:id="map" fitHeight="205.0" fitWidth="336.0" pickOnBounds="true">
                <image>
-                  <Image url="@map.jpg" />
+                  <Image url="@/images/map.jpg" />
                </image>
             </ImageView>
             <VBox prefHeight="205.0" prefWidth="503.0">

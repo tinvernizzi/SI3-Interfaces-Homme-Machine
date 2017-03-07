@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 /**
  * Created by Antoine on 3/1/2017.
  */
-public class SlideshowView {
+public class SlideshowController {
 
 
     @FXML
@@ -56,10 +56,6 @@ public class SlideshowView {
         System.out.println("button clicked");
     }
 
-    public void test(String s) {
-        System.out.println(s);
-    }
-
     public void clickOnLeftArrow(MouseEvent event) {
         System.out.println("left");
         slider.goLeft();
@@ -70,7 +66,8 @@ public class SlideshowView {
         slider.goRight();
     }
 
-    public void start() {
+    @FXML
+    public void initialize() {
         this.slider = new ImageSlide(anchorPane);
         slider.startAnimation();
     }
