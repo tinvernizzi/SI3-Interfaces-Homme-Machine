@@ -26,7 +26,7 @@
                      </HBox.margin>
                   </ImageView>
                   <Separator prefHeight="0.0" prefWidth="1000.0" valignment="BOTTOM" HBox.hgrow="ALWAYS" />
-                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnRightArrow" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="rightArrow" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#clickOnRightArrow" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@/images/Forward-100.png" />
                      </image>

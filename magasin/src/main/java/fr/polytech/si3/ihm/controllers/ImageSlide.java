@@ -3,26 +3,19 @@ package fr.polytech.si3.ihm.controllers;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
-import javafx.application.Application;
-import static javafx.application.Application.launch;
+
+import javafx.animation.*;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class ImageSlide {
@@ -35,12 +28,12 @@ public class ImageSlide {
     private final int SLIDE_FREQ = 4; // in secs
     private final Pane clipPane;
 
+    private int actualImage = 1;
     HBox imgContainer;
+    private Timeline mainAnim;
+    private boolean animationIsFinished = true;
 
     public ImageSlide(AnchorPane ac){
-        /*//root code
-        StackPane root = new StackPane();
-        */
         clipPane = new Pane();
         // To center the slide show incase maximized
         clipPane.setMaxSize(IMG_WIDTH, IMG_HEIGHT);
@@ -96,9 +89,47 @@ public class ImageSlide {
             }
         }
         //add timeLine
-        Timeline anim = new Timeline(keyFrames.toArray(new KeyFrame[NUM_OF_IMGS]));
+        this.mainAnim = new Timeline(keyFrames.toArray(new KeyFrame[NUM_OF_IMGS]));
 
-        anim.setCycleCount(Timeline.INDEFINITE);
-        anim.playFromStart();
+        mainAnim.setCycleCount(Timeline.INDEFINITE);
+        mainAnim.playFromStart();
     }
+
+    public void goRight() {
+        if(actualImage+1<=NUM_OF_IMGS) {
+            translate(-1);
+        }
+    }
+
+    public void goLeft() {
+        if(actualImage-1>0){
+            translate(1);
+        }
+    }
+
+    public void translate(int sign){
+        mainAnim.stop();
+        if(animationIsFinished) {
+            setAnimationIsFinished(false);
+            actualImage-=sign;
+            EventHandler<ActionEvent> slideAction = (ActionEvent t) -> {
+                TranslateTransition  trans = new TranslateTransition(Duration.seconds(0.5), imgContainer);
+                trans.setByX(sign*IMG_WIDTH);
+                trans.setInterpolator(Interpolator.EASE_BOTH);
+                trans.play();
+            };
+            List<KeyFrame> keyFrames = new ArrayList<>();
+            keyFrames.add(new KeyFrame(Duration.seconds(0.1), slideAction));
+            Animation anim = new Timeline(keyFrames.toArray(new KeyFrame[0]));
+            anim.setCycleCount(1);
+            anim.setOnFinished(e -> setAnimationIsFinished(true));
+
+            anim.play();
+        }
+    }
+
+    public void setAnimationIsFinished(boolean animationIsFinished) {
+        this.animationIsFinished = animationIsFinished;
+    }
+
 }

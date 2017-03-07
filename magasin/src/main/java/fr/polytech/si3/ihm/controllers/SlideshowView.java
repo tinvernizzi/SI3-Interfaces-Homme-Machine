@@ -25,6 +25,7 @@ public class SlideshowView {
 
     @FXML
     private Button button;
+    private ImageSlide slider;
 
     /*@FXML
     private Label scheduleTitle;
@@ -61,14 +62,16 @@ public class SlideshowView {
 
     public void clickOnLeftArrow(MouseEvent event) {
         System.out.println("left");
+        slider.goLeft();
     }
 
     public void clickOnRightArrow(MouseEvent event) {
         System.out.println("right");
+        slider.goRight();
     }
 
     public void start() {
-        ImageSlide slider = new ImageSlide(anchorPane);
+        this.slider = new ImageSlide(anchorPane);
         slider.startAnimation();
     }
 }
