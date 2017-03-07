@@ -2,34 +2,31 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="fr.polytech.si3.ihm.controllers.EnteteView" id="enteteView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="enteteView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.EnteteController">
    <top>
       <VBox prefHeight="100.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="570.0">
                      <children>
-                        <Label text="Logo -&gt;" />
-                        <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/tboth.png" />
+                           </image></ImageView>
                      </children>
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </HBox>
-                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="100.0" text="CAP SOPHIA">
-                     <font>
-                        <Font name="Myriad Set Pro Text" size="18.0" />
-                     </font>
-                  </Label>
                   <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="2.0">
                      <children>
                         <TextField promptText="Rechercher">
@@ -51,22 +48,22 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="150.0" style="-fx-background-color: #000000;">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Evenements" textFill="WHITE">
+                  <Button fx:id="accueilButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Enseignes" textFill="WHITE">
+                  <Button fx:id="promotionsButton" onMouseClicked="#promotionButtonClicked" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Information" textFill="WHITE">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>

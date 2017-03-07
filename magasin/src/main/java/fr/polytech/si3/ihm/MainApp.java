@@ -5,6 +5,7 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
@@ -18,6 +19,7 @@ import java.util.List;
 public class MainApp extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
+    private Stage stage;
 
     public static void main(String[] args) throws Exception {
         launch(args);
@@ -26,7 +28,6 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
 
         log.info("Starting Hello JavaFX and Maven demonstration application");
-
         String fxmlFile = "/fxml/MainView.fxml";
         log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
@@ -39,5 +40,21 @@ public class MainApp extends Application {
         stage.setTitle("Hello JavaFX and Maven");
         stage.setScene(scene);
         stage.show();
+        this.stage= stage;
+//        replaceSceneContent("/fxml/page_NosProduits.fxml");
+    }
+
+    private Parent replaceSceneContent(String fxml) throws Exception {
+        Parent page = (Parent) FXMLLoader.load(MainApp.class.getResource(fxml), null, new JavaFXBuilderFactory());
+        Scene scene = stage.getScene();
+        if (scene == null) {
+            scene = new Scene(page, 700, 450);
+            scene.getStylesheets().add(MainApp.class.getResource("demo.css").toExternalForm());
+            stage.setScene(scene);
+        } else {
+            stage.getScene().setRoot(page);
+        }
+        stage.sizeToScene();
+        return page;
     }
 }
