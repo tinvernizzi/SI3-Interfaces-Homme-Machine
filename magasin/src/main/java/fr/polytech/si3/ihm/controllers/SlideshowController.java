@@ -67,7 +67,7 @@ public class SlideshowController {
     }
 
     @FXML
-    public void initialize() {
+    public void start() {
         this.slider = new ImageSlide(anchorPane);
         slider.startAnimation();
     }

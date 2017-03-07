@@ -6,11 +6,11 @@
 <ScrollPane prefHeight="2000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.MainController">
    <content>
       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2540.0" prefWidth="1000.0">
-         <fx:include source="/fxml/plugins/Entete.fxml" />
-         <fx:include source="/fxml/plugins/slideshow.fxml" />
-         <fx:include source="/fxml/plugins/promotions.fxml" />
-         <fx:include source="/fxml/plugins/nos_produits.fxml" />
-         <fx:include source="/fxml/plugins/contact.fxml" />
+         <fx:include fx:id="enteteView" source="/fxml/plugins/Entete.fxml" />
+         <fx:include fx:id="slideshowView" source="/fxml/plugins/slideshow.fxml" />
+         <fx:include fx:id="promotionsView" source="/fxml/plugins/promotions.fxml" />
+         <fx:include fx:id="productView" source="/fxml/plugins/nos_produits.fxml" />
+         <fx:include fx:id="contactView" source="/fxml/plugins/contact.fxml" />
       </VBox>
    </content>
 </ScrollPane>
