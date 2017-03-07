@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.InterfaceAdminButtonController">
+   <top>
+      <Button fx:id="adminButton" mnemonicParsing="false" onMouseClicked="#changeToAdminInterface" text="Interface Administrateur" textAlignment="RIGHT" BorderPane.alignment="TOP_RIGHT" />
+   </top>
+</BorderPane>
