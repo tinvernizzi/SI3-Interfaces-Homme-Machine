@@ -5,7 +5,6 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
@@ -27,7 +26,8 @@ public class MainApp extends Application {
 
     public void start(Stage stage) throws Exception {
 
-        log.info("Starting Hello JavaFX and Maven demonstration application");
+        log.info("Starting magasin To Be Or To Have application");
+
         String fxmlFile = "/fxml/MainView.fxml";
         log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
