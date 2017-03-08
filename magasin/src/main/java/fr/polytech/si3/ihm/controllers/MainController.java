@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.Promotions;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
@@ -30,7 +31,6 @@ public class MainController {
     private Parent slideshowView;
     @FXML
     private SlideshowController slideshowViewController;
-
     @FXML
     private Parent enteteView;
     @FXML
@@ -45,10 +45,11 @@ public class MainController {
     private ProductsController productsViewController;
 
     private boolean isOnMainView = true;
+    private ProductsPageController productsPageViewController;
 
 
     public void initialize() {
-        contactViewController.start();
+        contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
         productsViewController.start(this);
@@ -60,19 +61,16 @@ public class MainController {
         double y = (bounds.getMaxY() +
                 bounds.getMinY()) / 2.0;
         double v = scrollPane.getViewportBounds().getHeight();
-        System.out.println(h+" "+v+" "+y);
-        System.out.println(scrollPane.getVmax() * ((y - 0.5* v) / (h - v)));
-        System.out.println(scrollPane.getVmax());
         scrollPane.setVvalue(scrollPane.getVmax() * ((y - 0.5 * v) / (h - v)));
     }
 
-    public Object addContent(String fxmlPath){
+    public Controller addContent(String fxmlPath){
         InputStream fxmlURL = getClass().getResourceAsStream(fxmlPath);
         FXMLLoader loader = new FXMLLoader();
         try {
             Parent rootNode = loader.load(fxmlURL);
             content.getChildren().add(rootNode);
-            return (Object)loader.getController();
+            return (Controller)loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,15 +81,15 @@ public class MainController {
         return isOnMainView;
     }
 
-    public MainController setProductPage(ProductsController productsController) {
+    public void setProductPage(ProductsController productsController) {
         isOnMainView = false;
         this.productsViewController = productsController;
         content.getChildren().clear();
-        addContent("/fxml/page_NosProduits.fxml");
-        return this;
+        productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
+        setScrollTo(productsPageViewController.getAnchor());
     }
 
-    public MainController setMainPage(EnteteController controller) {
+    public void setMainPage(EnteteController controller) {
         this.isOnMainView = true;
         this.enteteViewController = controller;
         content.getChildren().clear();
@@ -102,7 +100,22 @@ public class MainController {
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
         contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
-        contactViewController.start();
-        return this;
+        contactViewController.start(this);
+        setScrollTo(slideshowView);
+    }
+
+    public void setAdminPage() {
+    }
+
+    public ContactController getContactController() {
+        return contactViewController;
+    }
+
+    public ProductsController getProductsController() {
+        return productsViewController;
+    }
+
+    public PromotionsController getPromotionsController() {
+        return promotionsViewController;
     }
 }

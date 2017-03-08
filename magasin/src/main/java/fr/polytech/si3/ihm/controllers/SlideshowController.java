@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 /**
  * Created by Antoine on 3/1/2017.
  */
-public class SlideshowController {
+public class SlideshowController implements  Controller{
 
 
     @FXML
