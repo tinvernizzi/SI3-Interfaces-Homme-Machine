@@ -11,16 +11,25 @@ public class EnteteController {
     @FXML
     public Button promotionsButton;
     private MainController mainController;
-    private ContactController contactController;
+//    private ContactController contactController;
 
     @FXML
     public void promotionButtonClicked(MouseEvent event) {
-        System.out.println(contactController.getNode());
-        mainController.setScrollTo(contactController.getNode());
+        if(!mainController.isOnMainView()){
+//            mainController.resetMainView();
+        }
+//        mainController.setScrollTo(contactController.getNode());
+        mainController.addContent("/fxml/plugins/slideshow.fxml");
     }
 
-    public void start(MainController mainController, ContactController contactController) {
+    public void start(MainController mainController) {
         this.mainController = mainController;
-        this.contactController = contactController;
+//        this.contactController = contactController;
+    }
+
+    public void OnAccueilButtonClicked(MouseEvent mouseEvent) {
+        if(!mainController.isOnMainView()) {
+            mainController = mainController.setMainPage(this);
+        }
     }
 }

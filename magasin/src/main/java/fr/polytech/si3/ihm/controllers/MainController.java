@@ -2,17 +2,16 @@ package fr.polytech.si3.ihm.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by Antoine on 3/1/2017.
@@ -31,6 +30,7 @@ public class MainController {
     private Parent slideshowView;
     @FXML
     private SlideshowController slideshowViewController;
+
     @FXML
     private Parent enteteView;
     @FXML
@@ -39,12 +39,19 @@ public class MainController {
     private Parent promotionsView;
     @FXML
     private PromotionsController promotionsViewController;
+    @FXML
+    private Parent productsView;
+    @FXML
+    private ProductsController productsViewController;
+
+    private boolean isOnMainView = true;
 
 
     public void initialize() {
         contactViewController.start();
         slideshowViewController.start(this);
-        enteteViewController.start(this,contactViewController);
+        enteteViewController.start(this);
+        productsViewController.start(this);
     }
 
     public void setScrollTo(Node node) {
@@ -57,5 +64,45 @@ public class MainController {
         System.out.println(scrollPane.getVmax() * ((y - 0.5* v) / (h - v)));
         System.out.println(scrollPane.getVmax());
         scrollPane.setVvalue(scrollPane.getVmax() * ((y - 0.5 * v) / (h - v)));
+    }
+
+    public Object addContent(String fxmlPath){
+        InputStream fxmlURL = getClass().getResourceAsStream(fxmlPath);
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent rootNode = loader.load(fxmlURL);
+            content.getChildren().add(rootNode);
+            return (Object)loader.getController();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean isOnMainView() {
+        return isOnMainView;
+    }
+
+    public MainController setProductPage(ProductsController productsController) {
+        isOnMainView = false;
+        this.productsViewController = productsController;
+        content.getChildren().clear();
+        addContent("/fxml/page_NosProduits.fxml");
+        return this;
+    }
+
+    public MainController setMainPage(EnteteController controller) {
+        this.isOnMainView = true;
+        this.enteteViewController = controller;
+        content.getChildren().clear();
+        slideshowViewController = (SlideshowController) addContent("/fxml/plugins/slideshow.fxml");
+        slideshowViewController.start(this);
+        promotionsViewController =(PromotionsController) addContent("/fxml/plugins/promotions.fxml");
+        productsViewController.start(this);
+        productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
+        productsViewController.start(this);
+        contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
+        contactViewController.start();
+        return this;
     }
 }
