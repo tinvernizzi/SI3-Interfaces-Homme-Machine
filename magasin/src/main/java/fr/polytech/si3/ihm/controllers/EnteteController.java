@@ -7,20 +7,42 @@ import javafx.scene.input.MouseEvent;
 /**
  * Created by Antoine on 3/1/2017.
  */
-public class EnteteController {
+public class EnteteController implements Controller{
     @FXML
     public Button promotionsButton;
-    private MainController mainController;
-    private ContactController contactController;
 
-    @FXML
-    public void promotionButtonClicked(MouseEvent event) {
-        System.out.println(contactController.getNode());
-        mainController.setScrollTo(contactController.getNode());
+    private MainController mainController;
+
+    @Override
+    public void start(MainController mainController) {
+        this.mainController = mainController;
     }
 
-    public void start(MainController mainController, ContactController contactController) {
-        this.mainController = mainController;
-        this.contactController = contactController;
+    @FXML
+    public void onPromotionButtonClicked(MouseEvent event) {
+        if(mainController.isOnMainView()) {
+            mainController.setScrollTo(mainController.getPromotionsController().getAnchor());
+        }
+    }
+
+    @FXML
+    public void onContactButtonClicked(MouseEvent event) {
+        if(mainController.isOnMainView()) {
+            mainController.setScrollTo(mainController.getContactController().getAnchor());
+        }
+    }
+
+    @FXML
+    public void onAccueilButtonClicked(MouseEvent mouseEvent) {
+        if(!mainController.isOnMainView()) {
+            mainController.setMainPage(this);
+        }
+    }
+
+    @FXML
+    public void OnProductsButtonClciked(MouseEvent mouseEvent) {
+        if(mainController.isOnMainView()) {
+            mainController.setScrollTo(mainController.getProductsController().getAnchor());
+        }
     }
 }

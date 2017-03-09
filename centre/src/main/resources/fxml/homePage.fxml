@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="700" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.homePage.HomePage">
+    <top>
+        <fx:include source="/fxml/header.fxml"/>
+    </top>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #000000;">
+            <BorderPane>
+                <center>
+                    <fx:include source="/fxml/borderCenter.fxml"/>
+                </center>
+                <bottom>
+                    <fx:include source="/fxml/homePageProducts.fxml"/>
+                </bottom>
+            </BorderPane>
+        </ScrollPane>
+    </center>
+</BorderPane>

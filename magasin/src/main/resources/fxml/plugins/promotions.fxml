@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,9 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<?import javafx.scene.Group?>
-<BorderPane id="promotionsView" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.PromotionsController">
+<BorderPane id="promotionsView" prefHeight="370.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.PromotionsController">
    <center>
       <Group BorderPane.alignment="TOP_LEFT">
          <children>
@@ -79,11 +78,11 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
+                  <VBox fx:id="promoArrowBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeDisplayedPromotions" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
                      <children>
-                        <ImageView fx:id="promo3" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="promo4" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@/images/produits/C1.jpg" />
+                              <Image url="@/images/produits/D1.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets />
@@ -110,11 +109,11 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="promoArrowBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeDisplayedPromotions" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
                      <children>
-                        <ImageView fx:id="promo4" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="promo3" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@/images/produits/D1.jpg" />
+                              <Image url="@/images/produits/C1.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets />
@@ -165,7 +164,7 @@
    <right>
       <ImageView fitHeight="73.0" fitWidth="57.0" onMouseClicked="#changeDisplayedPromotions" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER_RIGHT">
          <image>
-            <Image url="@/images/Forward-100.png" />
+            <Image url="@/images/livres.jpg" />
          </image>
       </ImageView>
    </right>

@@ -8,7 +8,7 @@ import javafx.scene.input.MouseEvent;
 /**
  * Created by Antoine on 3/7/2017.
  */
-public class PromotionsController {
+public class PromotionsController implements Controller{
     @FXML
     public Label mainTitle;
 
@@ -17,5 +17,14 @@ public class PromotionsController {
     }
 
     public void changeDisplayedPromotions(MouseEvent event) {
+    }
+
+    @Override
+    public void start(MainController mainController) {
+
+    }
+
+    public Node getAnchor() {
+        return mainTitle;
     }
 }

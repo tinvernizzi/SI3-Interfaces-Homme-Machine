@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="productView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="productView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.ProductsController">
    <top>
       <Label text="Nos produits" BorderPane.alignment="CENTER_LEFT">
          <font>
@@ -24,8 +24,13 @@
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <center>
-      <VBox prefHeight="431.0" prefWidth="980.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="431.0" prefWidth="980.0" BorderPane.alignment="CENTER">
          <children>
+            <ImageView fx:id="productButton" fitHeight="166.0" fitWidth="816.0" onMouseClicked="#OnProductButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/products_copy.png" />
+               </image>
+            </ImageView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
                   <ImageView fitHeight="167.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">

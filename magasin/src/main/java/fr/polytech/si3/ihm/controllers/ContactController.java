@@ -18,7 +18,7 @@ import java.io.IOException;
 /**
  * Created by Antoine on 3/7/2017.
  */
-public class ContactController {
+public class ContactController implements Controller{
     @FXML
     public Label phone;
     @FXML
@@ -32,7 +32,8 @@ public class ContactController {
     @FXML
     public Label address;
 
-    void start(){
+    @Override
+    public void start(MainController mainController) {
         //Set schedules
         ObservableList<String> items = FXCollections.observableArrayList (
                 "Lundi - 8h à 19h", "Mardi - 8h à 19h", "Mercredi - 8h à 13h", "Jeudi - 8h à 19h", "Vendredi - 8h à 13h", "Samedi - 8h à 12h", "Dimanche - fermé");
@@ -45,7 +46,7 @@ public class ContactController {
         webPage.setText("www.tobeortohave.com");
     }
 
-    public Node getNode() {
+    public Node getAnchor() {
         return address;
     }
 }

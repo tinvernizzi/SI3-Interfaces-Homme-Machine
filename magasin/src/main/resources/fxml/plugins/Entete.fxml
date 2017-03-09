@@ -48,22 +48,22 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="150.0" style="-fx-background-color: #000000;">
                <children>
-                  <Button fx:id="accueilButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
+                  <Button fx:id="accueilButton" mnemonicParsing="false" onMouseClicked="#onAccueilButtonClicked" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="promotionsButton" onMouseClicked="#promotionButtonClicked" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                  <Button fx:id="promotionsButton" mnemonicParsing="false" onMouseClicked="#onPromotionButtonClicked" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#OnProductsButtonClciked" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
+                  <Button contentDisplay="CENTER" onMouseClicked="#onContactButtonClicked"  mnemonicParsing="false" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>

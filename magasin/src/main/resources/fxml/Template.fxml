@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1607.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.MainController">
+   <content>
+      <VBox fx:id="content" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2827.0" prefWidth="1000.0">
+         <children>
+            <fx:include fx:id="enteteView" source="/fxml/plugins/Entete.fxml" />
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
