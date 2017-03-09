@@ -12,190 +12,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.HomeController">
+<?import javafx.scene.control.ListView?>
+<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.HomeController">
    <content>
       <AnchorPane>
          <children>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2540.0" prefWidth="1000.0" spacing="30.0">
                <children>
-                  <VBox prefHeight="100.0" prefWidth="1000.0">
-                     <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
-                           <children>
-                              <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@/images/tboth.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <padding>
-                              <Insets left="130.0" right="30.0" />
-                           </padding>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="100.0" style="-fx-background-color: #000000;">
-                           <children>
-                              <Button fx:id="homeButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
-                                 <font>
-                                    <Font name="Myriad Set Pro Text" size="13.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="promoButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
-                                 <font>
-                                    <Font name="Myriad Set Pro Text" size="13.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="infoButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Informations" textFill="WHITE">
-                                 <font>
-                                    <Font name="Myriad Set Pro Text" size="13.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="productButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
-                                 <font>
-                                    <Font name="Myriad Set Pro Text" size="13.0" />
-                                 </font>
-                              </Button>
-                              <Button  fx:id="aboutButton" mnemonicParsing="false" style="-fx-background-color: #000000;" text="A propos" textFill="WHITE">
-                                 <font>
-                                    <Font name="Myriad Set Pro Text" size="13.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets left="30.0" right="30.0" />
-                           </padding>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+
+                  <BorderPane fx:id="header" />
+
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="880.0">
                      <center>
-                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="1000.0">
-                           <children>
-                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/p_C1.jpg" />
-                                       </image>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </ImageView>
-                                    <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                                       <font>
-                                          <Font name="System Bold" size="21.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Conditions promo">
-                                       <font>
-                                          <Font name="System Bold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="MARQUE">
-                                       <font>
-                                          <Font name="System Bold" size="18.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Description produit" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/p_C2.jpg" />
-                                       </image>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </ImageView>
-                                    <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                                       <font>
-                                          <Font name="System Bold" size="21.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Conditions promo">
-                                       <font>
-                                          <Font name="System Bold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="MARQUE">
-                                       <font>
-                                          <Font name="System Bold" size="18.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Description produit" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/p_C3.jpg" />
-                                       </image>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </ImageView>
-                                    <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                                       <font>
-                                          <Font name="System Bold" size="21.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Conditions promo">
-                                       <font>
-                                          <Font name="System Bold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="MARQUE">
-                                       <font>
-                                          <Font name="System Bold" size="18.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Description produit" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/p_L3.jpg" />
-                                       </image>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </ImageView>
-                                    <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                                       <font>
-                                          <Font name="System Bold" size="21.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Conditions promo">
-                                       <font>
-                                          <Font name="System Bold" size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="MARQUE">
-                                       <font>
-                                          <Font name="System Bold" size="18.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Description produit" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                           </children>
-                        </HBox>
+                         <ListView fx:id="slidePromos" orientation="HORIZONTAL" prefHeight="300.0" prefWidth="880.0" BorderPane.alignment="CENTER" />
                      </center>
                      <top>
                         <Label text="Nos promotions">
