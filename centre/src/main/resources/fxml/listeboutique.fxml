@@ -47,7 +47,7 @@
                            <children>
                               <ImageView fitHeight="200.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/applestore.jpg" />
+                                    <Image url="/images/appleStore.jpg" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
@@ -70,7 +70,7 @@
                            <children>
                               <ImageView fitHeight="200.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/supreme.jpg" />
+                                    <Image url="/images/supreme.jpg" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
@@ -93,7 +93,7 @@
                            <children>
                               <ImageView fitHeight="200.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/vitra-001.jpg" />
+                                    <Image url="/images/vitra.jpg" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
