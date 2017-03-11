@@ -40,7 +40,7 @@ public class EnteteController implements Controller{
     }
 
     @FXML
-    public void OnProductsButtonClciked(MouseEvent mouseEvent) {
+    public void OnProductsButtonClicked(MouseEvent mouseEvent) {
         if(mainController.isOnMainView()) {
             mainController.setScrollTo(mainController.getProductsController().getAnchor());
         }

@@ -5,16 +5,14 @@ import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-/**
- * Created by user on 08/03/2017.
- */
 public class ProductsController implements Controller{
     @FXML
     public ImageView productButton;
-    private MainController mainController;
 
-    public void OnProductButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this);
+    private MainController mainController;
+    
+    public void OnProductButtonClicked(MouseEvent mouseEvent) throws InterruptedException {
+        mainController.setProductPage(this, "book");
     }
 
     public Node getAnchor(){

@@ -58,7 +58,7 @@
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#OnProductsButtonClciked" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#OnProductsButtonClicked" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>

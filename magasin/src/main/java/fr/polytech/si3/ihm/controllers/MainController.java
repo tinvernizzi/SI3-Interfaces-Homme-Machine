@@ -81,11 +81,12 @@ public class MainController {
         return isOnMainView;
     }
 
-    public void setProductPage(ProductsController productsController) {
+    public void setProductPage(ProductsController productsController, String category) {
         isOnMainView = false;
         this.productsViewController = productsController;
         content.getChildren().clear();
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
+        productsPageViewController.initializeData(category);
         setScrollTo(productsPageViewController.getAnchor());
     }
 
@@ -117,5 +118,9 @@ public class MainController {
 
     public PromotionsController getPromotionsController() {
         return promotionsViewController;
+    }
+
+    public VBox getContent() {
+        return content;
     }
 }
