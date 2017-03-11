@@ -1,4 +1,4 @@
-package fr.polytech.si3.ihm.controller;
+package fr.polytech.si3.ihm.controller.elements;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -72,7 +72,7 @@ public class HeaderController {
                 FXMLLoader loader = new FXMLLoader();
                 try {
                     Stage stage = (Stage) infoButton.getScene().getWindow();
-                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/info.fxml"));
+                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/infos.fxml"));
                     Scene scene = new Scene(rootNode);
                     stage.setScene(scene);
                     stage.show();

@@ -1,12 +1,13 @@
-package fr.polytech.si3.ihm.controller;
+package fr.polytech.si3.ihm.controller.elements;
 
 import fr.polytech.si3.ihm.model.Promotion;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class PromotionController {
+public class PromotionSliderController {
 
     @FXML
     private Text produit;

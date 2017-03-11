@@ -1,41 +1,40 @@
 package fr.polytech.si3.ihm.controller;
 
+import fr.polytech.si3.ihm.controller.elements.ContactController;
+import fr.polytech.si3.ihm.controller.elements.InfoSliderController;
+import fr.polytech.si3.ihm.controller.elements.PromotionSliderController;
+import fr.polytech.si3.ihm.model.Info;
+import fr.polytech.si3.ihm.model.ListInfos;
 import fr.polytech.si3.ihm.model.ListPromotions;
 import fr.polytech.si3.ihm.model.Promotion;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Collections;
 
-import static java.lang.Thread.sleep;
+public class HomeController extends Controller {
 
-public class HomeController
-{
     private static final Logger log = LoggerFactory.getLogger(HomeController.class);
-
-    @FXML
-    private BorderPane header;
 
     @FXML
     private ListView<Promotion> slidePromos;
 
     @FXML
+    private ListView<Info> slideInfos;
+
+    @FXML
     private void initialize() {
         displayHeader();
         displayPromotions();
+        displayInfos();
+        displayContact();
     }
 
     private void displayPromotions() {
@@ -51,7 +50,7 @@ public class HomeController
                                         String fxmlFile = "/fxml/elements/home_list_promotion_element.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
-                                        ((PromotionController) loader.getController()).initPromotion(item);
+                                        ((PromotionSliderController) loader.getController()).initPromotion(item);
                                         this.setGraphic(listElement);
                                     } catch (IOException e) {
                                         e.printStackTrace();
@@ -64,18 +63,29 @@ public class HomeController
         );
     }
 
-
-    private void displayHeader() {
-        String fxmlFile = "/fxml/elements/header.fxml";
-        FXMLLoader loader = new FXMLLoader();
-        try {
-            // Load the Header FXML
-            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-            ((HeaderController) loader.getController()).initialize();
-
-            header.setCenter(rootNode);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void displayInfos() {
+        this.slideInfos.setItems(new ListInfos().getListInfos());
+        this.slideInfos.setCellFactory(
+                new Callback<ListView<Info>, ListCell<Info>>() {
+                    public ListCell<Info> call(ListView<Info> listView) {
+                        return new ListCell<Info>() {
+                            protected void updateItem(Info item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (item != null) {
+                                    try {
+                                        String fxmlFile = "/fxml/elements/home_list_info_element.fxml";
+                                        FXMLLoader loader = new FXMLLoader();
+                                        Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
+                                        ((InfoSliderController) loader.getController()).initInfo(item);
+                                        this.setGraphic(listElement);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        };
+                    }
+                }
+        );
     }
 }
