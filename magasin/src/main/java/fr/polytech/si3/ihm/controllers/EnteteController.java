@@ -15,13 +15,17 @@ public class EnteteController implements Controller{
 
     @Override
     public void start(MainController mainController) {
+        System.out.println("ente");
         this.mainController = mainController;
     }
 
     @FXML
     public void onPromotionButtonClicked(MouseEvent event) {
+        System.out.println("yo");
         if(mainController.isOnMainView()) {
             mainController.setScrollTo(mainController.getPromotionsController().getAnchor());
+        }else{
+            mainController.setMainPage(this);
         }
     }
 
@@ -29,6 +33,8 @@ public class EnteteController implements Controller{
     public void onContactButtonClicked(MouseEvent event) {
         if(mainController.isOnMainView()) {
             mainController.setScrollTo(mainController.getContactController().getAnchor());
+        }else{
+            mainController.setMainPage(this);
         }
     }
 
@@ -43,6 +49,8 @@ public class EnteteController implements Controller{
     public void OnProductsButtonClicked(MouseEvent mouseEvent) {
         if(mainController.isOnMainView()) {
             mainController.setScrollTo(mainController.getProductsController().getAnchor());
+        }else{
+            mainController.setMainPage(this);
         }
     }
 }
