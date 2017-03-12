@@ -14,7 +14,7 @@
                   <fx:include fx:id="promotionsView" source="/fxml/plugins/promotions.fxml" />
                   <fx:include fx:id="productsView" source="/fxml/plugins/nos_produits.fxml" />
                   <fx:include fx:id="contactView" source="/fxml/plugins/contact.fxml" />
-                  <fx:include fx:id="InterfaceAdminButton" source="/fxml/plugins/interfaceAdminButton.fxml" />
+                  <fx:include fx:id="interfaceAdminButtonView" source="/fxml/plugins/interfaceAdminButton.fxml" />
                </children>
             </VBox>
          </children>

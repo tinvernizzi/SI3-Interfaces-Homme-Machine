@@ -43,14 +43,10 @@ public class MainController {
     private Parent productsView;
     @FXML
     private ProductsController productsViewController;
-
-
     @FXML
-    private Parent searchView;
+    private Parent interfaceAdminButtonView;
     @FXML
-    private SearchController searchViewController;
-    @FXML
-    private InterfaceAdminButtonController interfaceAdminButtonController;
+    private InterfaceAdminButtonController interfaceAdminButtonViewController;
 
 
     private boolean isOnMainView = true;
@@ -64,7 +60,7 @@ public class MainController {
         slideshowViewController.start(this);
         enteteViewController.start(this);
         productsViewController.start(this);
-        interfaceAdminButtonController.start(this);
+        interfaceAdminButtonViewController.start(this);
     }
 
     public void setScrollTo(Node node) {
@@ -107,7 +103,7 @@ public class MainController {
 
     public void setAdminPage(InterfaceAdminButtonController controller) {
         isOnMainView = false;
-        this.interfaceAdminButtonController = controller;
+        this.interfaceAdminButtonViewController = controller;
         content.getChildren().clear();
         addContent("/fxml/administration.fxml");
     }
@@ -124,8 +120,8 @@ public class MainController {
         productsViewController.start(this);
         contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
         contactViewController.start(this);
-        interfaceAdminButtonController = (InterfaceAdminButtonController) addContent("fxml/plugins/interfaceAdminButton.fxml");
-        interfaceAdminButtonController.start(this);
+        interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("fxml/plugins/interfaceAdminButton.fxml");
+        interfaceAdminButtonViewController.start(this);
         setScrollTo(slideshowView);
     }
 
