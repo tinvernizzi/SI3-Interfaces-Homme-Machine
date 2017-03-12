@@ -14,41 +14,34 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1 " fx:controller="fr.polytech.si3.ihm.information.Controller">
     <top>
-        <fx:include source="/fxml/header.fxml" />
+        <fx:include source="/fxml/header.fxml"/>
     </top>
     <center>
-        <ScrollPane BorderPane.alignment="CENTER">
+        <ScrollPane fitToWidth="true" BorderPane.alignment="CENTER">
             <content>
                 <VBox alignment="CENTER" prefWidth="1000.0">
                     <children>
                         <ImageView fitHeight="328.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="/images/frontDeskText.png" />
+                                <Image url="/images/frontDeskText.png"/>
                             </image>
                         </ImageView>
                         <Accordion>
                             <panes>
-                                <TitledPane animated="false" text="Plan du centre commercial">
-                                    <content>
-                                        <ImageView fitHeight="536.0" fitWidth="738.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@/images/mallmap.jpg" />
-                                            </image>
-                                        </ImageView>
-                                    </content>
-                                </TitledPane>
                                 <TitledPane animated="false" text="Accès au centre">
                                     <content>
-                                        <ImageView fitHeight="718.0" fitWidth="866.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="718.0" fitWidth="866.0" pickOnBounds="true"
+                                                   preserveRatio="true">
                                             <image>
-                                                <Image url="@/images/access.png" />
+                                                <Image url="@/images/access.png"/>
                                             </image>
                                         </ImageView>
                                     </content>
                                 </TitledPane>
-                                <TitledPane animated="false" text="Horaires">
+                                <TitledPane animated="false" text="Horaires et ouvertures exceptionnelles">
                                     <content>
                                         <HBox alignment="CENTER">
                                             <children>
@@ -56,51 +49,57 @@
                                                     <children>
                                                         <VBox>
                                                             <children>
-                                                                <Label text="Horaires en période scolaire">
+                                                                <Label text="Horaires">
                                                                     <VBox.margin>
-                                                                        <Insets bottom="5.0" />
+                                                                        <Insets bottom="5.0"/>
                                                                     </VBox.margin>
                                                                 </Label>
-                                                                <TableView prefHeight="100.0" prefWidth="525.0">
+                                                                <TableView fx:id="tableHours" prefHeight="203.0"
+                                                                           prefWidth="452.0">
                                                                     <columns>
-                                                                        <TableColumn prefWidth="75.0" text="Lun" />
-                                                                        <TableColumn prefWidth="75.0" text="Mar" />
-                                                                        <TableColumn prefWidth="75.0" text="Mer" />
-                                                                        <TableColumn prefWidth="75.0" text="Jeu" />
-                                                                        <TableColumn prefWidth="75.0" text="Ven" />
-                                                                        <TableColumn prefWidth="75.0" text="Sam" />
-                                                                        <TableColumn prefWidth="75.0" text="Dim" />
+                                                                        <TableColumn fx:id="opDate" prefWidth="200.0"
+                                                                                     text="Jour"/>
+                                                                        <TableColumn fx:id="opHour" prefWidth="250.0"
+                                                                                     text="Horaire"/>
                                                                     </columns>
                                                                 </TableView>
                                                             </children>
                                                         </VBox>
-                                                        <VBox>
+                                                        <VBox prefWidth="450.0">
                                                             <children>
-                                                                <Label text="Horaires en période de vacances">
+                                                                <Label text="Ouvertures exceptionnelles">
                                                                     <VBox.margin>
-                                                                        <Insets bottom="5.0" />
+                                                                        <Insets bottom="5.0"/>
                                                                     </VBox.margin>
                                                                 </Label>
-                                                                <TableView prefHeight="100.0" prefWidth="200.0">
+                                                                <TableView fx:id="tableExcept" prefHeight="103.0"
+                                                                           prefWidth="452.0">
                                                                     <columns>
-                                                                        <TableColumn prefWidth="75.0" text="Lun" />
-                                                                        <TableColumn prefWidth="75.0" text="Mar" />
-                                                                        <TableColumn prefWidth="75.0" text="Mer" />
-                                                                        <TableColumn prefWidth="75.0" text="Jeu" />
-                                                                        <TableColumn prefWidth="75.0" text="Ven" />
-                                                                        <TableColumn prefWidth="75.0" text="Sam" />
-                                                                        <TableColumn prefWidth="75.0" text="Dim" />
+                                                                        <TableColumn fx:id="exDate" prefWidth="200.0"
+                                                                                     text="Date"/>
+                                                                        <TableColumn fx:id="exHour" prefWidth="250.0"
+                                                                                     text="Horaire"/>
                                                                     </columns>
                                                                 </TableView>
                                                             </children>
                                                             <VBox.margin>
-                                                                <Insets top="30.0" />
+                                                                <Insets top="30.0"/>
                                                             </VBox.margin>
                                                         </VBox>
                                                     </children>
                                                 </VBox>
                                             </children>
                                         </HBox>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Plan du centre commercial">
+                                    <content>
+                                        <ImageView fitHeight="536.0" fitWidth="738.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@/images/mallmap.jpg"/>
+                                            </image>
+                                        </ImageView>
                                     </content>
                                 </TitledPane>
                                 <TitledPane animated="false" text="Services disponibles">
@@ -113,6 +112,19 @@
                                                         <Label text="Wifi" />
                                                         <Label text="Espace Lounge avec prise électriques" />
                                                     </children>
+                                                    <VBox.margin>
+                                                        <Insets bottom="10.0" />
+                                                    </VBox.margin>
+                                                </VBox>
+                                                <Label text="Famille" />
+                                                <VBox>
+                                                    <children>
+                                                        <Label text="Aire de jeu" />
+                                                        <Label text="Espace bébé" />
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets bottom="10.0" />
+                                                    </VBox.margin>
                                                 </VBox>
                                                 <Label text="Commodité" />
                                                 <VBox>
@@ -121,33 +133,33 @@
                                                         <Label text="La poste" />
                                                         <Label text="Distributeur automatique de billets" />
                                                         <Label text="Vestiaires" />
+                                                        <Label text="Aide à l'invalidité" />
+                                                        <Label text="Espace d'acccueil" />
                                                     </children>
                                                 </VBox>
-                                                <Label text="Aire de jeu" />
-                                                <Label text="Espace d'acceuil" />
-                                                <Label text="Aide à l'invalidité" />
                                             </children>
                                         </VBox>
-                                    </content></TitledPane>
+                                    </content>
+                                </TitledPane>
                             </panes>
                         </Accordion>
                         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                             <children>
                                 <Label text="Contact">
                                     <VBox.margin>
-                                        <Insets top="50.0" />
+                                        <Insets top="50.0"/>
                                     </VBox.margin>
                                 </Label>
-                                <Label text="1 Infinite Loop" />
-                                <Label text="Sophia Antipolis" />
-                                <Label text="06600" />
-                                <Label text="France" />
+                                <Label text="1 Infinite Loop"/>
+                                <Label text="Sophia Antipolis"/>
+                                <Label text="06600"/>
+                                <Label text="France"/>
                                 <Label text="Pour toute demande, suggestion ou retour d'expérience, contactez-nous depuis cette adresse :">
                                     <VBox.margin>
-                                        <Insets top="30.0" />
+                                        <Insets top="30.0"/>
                                     </VBox.margin>
                                 </Label>
-                                <Hyperlink text="centre@capsophia.fr" />
+                                <Hyperlink fx:id="mailAddress" onAction="#toMail" text="centre@capsophia.fr"/>
                             </children>
                         </VBox>
                     </children>
