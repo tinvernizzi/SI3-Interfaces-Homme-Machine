@@ -64,26 +64,39 @@ public class ProductsPageController implements Controller{
 
     public void search(boolean dvds, boolean cds, boolean books, boolean stages) {
         productGrid.getChildren().clear();
-//        dvds?displayDvds():null;
-//        cds?displayCds():null;
+        if(dvds)displayDvds();
+        if(cds)displayCds();
         if(books)displayBooks();
-//        dvds?displayStages():null;
+        if(stages)displayStages();
+    }
+
+    private void displayStages() {
+        ProductCategory data = database.getStages();
+        displayCategory(data);
+    }
+
+    private void displayCds() {
+        ProductCategory data = database.getCds();
+        displayCategory(data);
     }
 
     private void displayBooks() {
-        productGrid.getChildren().clear();
-
         ProductCategory data = database.getBooks();
+        displayCategory(data);
+    }
 
+    private void displayDvds() {
+        ProductCategory data = database.getDvds();
+        displayCategory(data);
+    }
+
+    void displayCategory(ProductCategory category){
         try {
-            for (int i = 0; i < data.getListOfProduct().size(); i++) {
-                addProduct(data.getListOfProduct().get(i));
+            for (int i = 0; i < category.getListOfProduct().size(); i++) {
+                addProduct(category.getListOfProduct().get(i));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private void displayDvds() {
     }
 }
