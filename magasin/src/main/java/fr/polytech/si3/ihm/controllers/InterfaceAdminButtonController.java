@@ -16,11 +16,12 @@ import java.io.IOException;
 public class InterfaceAdminButtonController implements Controller{
 
     @FXML
-    private Button button;
+    private Button adminButton;
+
     private MainController mainController;
 
     public void changeToAdminInterface(MouseEvent mouseEvent) throws IOException {
-        mainController.setAdminPage();
+        mainController.setAdminPage(this);
     }
 
     @Override
