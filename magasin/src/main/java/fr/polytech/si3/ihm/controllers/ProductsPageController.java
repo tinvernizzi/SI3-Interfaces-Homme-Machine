@@ -12,8 +12,11 @@ import javafx.scene.layout.TilePane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * Created by user on 08/03/2017.
@@ -36,14 +39,8 @@ public class ProductsPageController implements Controller{
         productGrid.getChildren().clear();
 
         List<ProductCategory> data = database.getAllItems();
-
-        try {
-            for (ProductCategory c : data) {
-                List<Product> products = c.getListOfProduct();
-                for(int i = 0; i< products.size(); i++) addProduct(products.get(i));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        for (ProductCategory c : data) {
+            displayCategory(c);
         }
     }
 
@@ -62,12 +59,18 @@ public class ProductsPageController implements Controller{
         singleProductController.setProductInformations(product, false);
     }
 
-    public void search(boolean dvds, boolean cds, boolean books, boolean stages) {
+    public void search(boolean dvds, boolean cds, boolean books, boolean stages, int min, int max) {
         productGrid.getChildren().clear();
-        if(dvds)displayDvds();
-        if(cds)displayCds();
-        if(books)displayBooks();
-        if(stages)displayStages();
+        List<ProductCategory> data = new ArrayList<>();
+        if(dvds)data.add(database.getDvds());
+        if(cds)data.add(database.getCds());
+        if(books)data.add(database.getBooks());
+        if(stages)data.add(database.getStages());
+
+        for (ProductCategory c : data) {
+            displayCategory(c,min,max);
+        }
+
     }
 
     private void displayStages() {
@@ -90,13 +93,22 @@ public class ProductsPageController implements Controller{
         displayCategory(data);
     }
 
-    void displayCategory(ProductCategory category){
+    void displayCategory(ProductCategory category, int min, int max){
         try {
-            for (int i = 0; i < category.getListOfProduct().size(); i++) {
-                addProduct(category.getListOfProduct().get(i));
+            List<Product> validItems = category.getListOfProduct().stream()
+                    .filter(product -> product.getPriceInteger()>= min
+                            &&
+                            product.getPriceInteger()<=max)
+                    .collect(Collectors.toList());
+            for (Product p : validItems) {
+                addProduct(p);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    void displayCategory(ProductCategory category){
+        displayCategory(category,0,(int) Integer.MAX_VALUE);
     }
 }

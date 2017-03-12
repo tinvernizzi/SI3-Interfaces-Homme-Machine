@@ -21,23 +21,23 @@ public class ProductDatabase {
         ProductCategory books = new ProductCategory("Book", bookProducts);
 
         List<Product> dvdProducts = Arrays.asList(
-                new Product("Le Yoga Facile pour les Nuls", 16, "/images/produits/D1.jpg", "Par Sara Ivanhoe"),
+                new Product("Le Yoga Facile pour les Nuls", 80, "/images/produits/D1.jpg", "Par Sara Ivanhoe"),
                 new Product("Massages chinois traditionnels", 16, "/images/produits/D2.jpg", "Par Li Xuejon"),
-                new Product("Bien être au réveil", 16, "/images/produits/D3.jpg", "Inspiré du yoga")
+                new Product("Bien être au réveil", 50, "/images/produits/D3.jpg", "Inspiré du yoga")
         );
         ProductCategory dvds = new ProductCategory("DVD", dvdProducts);
 
         List<Product> cdProducts = Arrays.asList(
-                new Product("Coffret ZEN", 16, "/images/produits/C1.jpg", "Musiques & ambiances zen - 10 CD"),
-                new Product("Relaxation", 16, "/images/produits/C2.jpg", "Par les indispensables"),
-                new Product("Méditation et relaxation", 16, "/images/produits/C3.jpg", "2 CD")
+                new Product("Coffret ZEN", 43, "/images/produits/C1.jpg", "Musiques & ambiances zen - 10 CD"),
+                new Product("Relaxation", 67, "/images/produits/C2.jpg", "Par les indispensables"),
+                new Product("Méditation et relaxation", 21, "/images/produits/C3.jpg", "2 CD")
         );
         ProductCategory cds = new ProductCategory("CD", cdProducts);
 
         List<Product> stageProducts = Arrays.asList(
-                new Product("Stage 1", 16, "/images/produits/S1.jpg", ""),
-                new Product("Stage 2", 16, "/images/produits/S2.jpg", ""),
-                new Product("Stage 3", 16, "/images/produits/S3.jpg", "")
+                new Product("Stage 1", 400, "/images/produits/S1.jpg", ""),
+                new Product("Stage 2", 1000, "/images/produits/S2.jpg", ""),
+                new Product("Stage 3", 546, "/images/produits/S3.jpg", "")
         );
         ProductCategory stages = new ProductCategory("Stage", stageProducts);
 

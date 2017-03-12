@@ -32,4 +32,8 @@ public class Product {
     public String getPrix() {
         return ((Integer)prix).toString();
     }
+
+    public int getPriceInteger() {
+        return prix;
+    }
 }
