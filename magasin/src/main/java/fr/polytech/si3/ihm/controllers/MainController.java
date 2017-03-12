@@ -43,6 +43,11 @@ public class MainController {
     private Parent productsView;
     @FXML
     private ProductsController productsViewController;
+    @FXML
+    private Parent searchView;
+    @FXML
+    private SearchController searchViewController;
+
 
     private boolean isOnMainView = true;
     private ProductsPageController productsPageViewController;
@@ -85,6 +90,7 @@ public class MainController {
         isOnMainView = false;
         this.productsViewController = productsController;
         content.getChildren().clear();
+        searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.initializeData();
         setScrollTo(productsPageViewController.getAnchor());

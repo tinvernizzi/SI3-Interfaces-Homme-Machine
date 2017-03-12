@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane  stylesheets="@/styles/JMetro.css" id="enteteView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.EnteteController">
+<BorderPane id="enteteView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0" stylesheets="@/styles/JMetro.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.EnteteController">
    <top>
       <VBox prefHeight="100.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -29,12 +29,12 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="2.0">
                      <children>
-                        <TextField promptText="Rechercher">
+                        <TextField promptText="Rechercher un produit">
                            <font>
                               <Font name="Myriad Set Pro Thin" size="13.0" />
                            </font>
                         </TextField>
-                        <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="34.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
+                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
                            <font>
                               <Font name="Myriad Set Pro Bold" size="13.0" />
                            </font>
@@ -63,7 +63,7 @@
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" onMouseClicked="#onContactButtonClicked"  mnemonicParsing="false" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onContactButtonClicked" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
