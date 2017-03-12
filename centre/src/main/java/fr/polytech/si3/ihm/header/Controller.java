@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ public class Controller {
     private ImageView logo;
 
     @FXML
-    private Label homePageCapSophia;
+    private Label homePage;
 
     @FXML
     private TextField textFieldResearch;
@@ -43,7 +44,13 @@ public class Controller {
     @FXML
     private Button buttonInformation;
 
-    private Stage window;
+    @FXML
+    void toHomePage(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/homePage.fxml"));
+        Stage primaryStage = (Stage) buttonEnseignes.getScene().getWindow();
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
 
     @FXML
     void toEnseignes(ActionEvent event) throws IOException {

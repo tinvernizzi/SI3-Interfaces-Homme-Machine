@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111"
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111"
             xmlns:fx="http://javafx.com/fxml/1 " fx:controller="fr.polytech.si3.ihm.information.Controller">
     <top>
         <fx:include source="/fxml/header.fxml"/>
@@ -106,35 +106,35 @@
                                     <content>
                                         <VBox prefHeight="200.0" prefWidth="100.0">
                                             <children>
-                                                <Label text="Détente" />
+                                                <Label text="Détente"/>
                                                 <VBox>
                                                     <children>
-                                                        <Label text="Wifi" />
-                                                        <Label text="Espace Lounge avec prise électriques" />
+                                                        <Label text="Wifi"/>
+                                                        <Label text="Espace Lounge avec prise électriques"/>
                                                     </children>
                                                     <VBox.margin>
-                                                        <Insets bottom="10.0" />
+                                                        <Insets bottom="10.0"/>
                                                     </VBox.margin>
                                                 </VBox>
-                                                <Label text="Famille" />
+                                                <Label text="Famille"/>
                                                 <VBox>
                                                     <children>
-                                                        <Label text="Aire de jeu" />
-                                                        <Label text="Espace bébé" />
+                                                        <Label text="Aire de jeu"/>
+                                                        <Label text="Espace bébé"/>
                                                     </children>
                                                     <VBox.margin>
-                                                        <Insets bottom="10.0" />
+                                                        <Insets bottom="10.0"/>
                                                     </VBox.margin>
                                                 </VBox>
-                                                <Label text="Commodité" />
+                                                <Label text="Commodité"/>
                                                 <VBox>
                                                     <children>
-                                                        <Label text="Parking protégé" />
-                                                        <Label text="La poste" />
-                                                        <Label text="Distributeur automatique de billets" />
-                                                        <Label text="Vestiaires" />
-                                                        <Label text="Aide à l'invalidité" />
-                                                        <Label text="Espace d'acccueil" />
+                                                        <Label text="Parking protégé"/>
+                                                        <Label text="La poste"/>
+                                                        <Label text="Distributeur automatique de billets"/>
+                                                        <Label text="Vestiaires"/>
+                                                        <Label text="Aide à l'invalidité"/>
+                                                        <Label text="Espace d'acccueil"/>
                                                     </children>
                                                 </VBox>
                                             </children>
