@@ -35,9 +35,9 @@ public class SingleProductController {
         productLogo.setFitWidth(150);
         description.setText(product.getDescription());
         marque.setText(product.getName());
+        this.conditionPromo.setText(product.getPrix() + "€");
         if (!isAPromo) {
             this.isAPromo.setText("");
-            this.conditionPromo.setText("");
         }
     }
 
