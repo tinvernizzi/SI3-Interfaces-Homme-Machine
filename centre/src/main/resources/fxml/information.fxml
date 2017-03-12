@@ -1,129 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <fx:include source="/fxml/header.fxml" />
-   </top>
-   <bottom>
-   </bottom>
-   <center>
-      <ScrollPane hbarPolicy="NEVER" BorderPane.alignment="CENTER">
-         <content>
-            <HBox alignment="CENTER">
-               <children>
-                  <Accordion style="-fx-background-color: null;" HBox.hgrow="ALWAYS">
-                    <panes>
-                      <TitledPane animated="false" text="Plan du centre commercial">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="618.0" prefWidth="1002.0">
-                                 <children>
-                                    <ImageView fitHeight="484.0" fitWidth="887.0" layoutX="125.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@img/mallmap.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" prefHeight="200.0" prefWidth="1000.0" text="Accès au centre">
-                           <content>
-                              <ImageView fitHeight="484.0" fitWidth="887.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@img/access.png" />
-                                 </image>
-                              </ImageView>
-                           </content>
-                      </TitledPane>
-                      <TitledPane animated="false" prefHeight="500.0" prefWidth="1000.0" text="Horaires d'ouverture du centre commercial">
-                        <content>
-                          <AnchorPane>
-                                 <children>
-                                    <TableView layoutX="39.0" layoutY="12.0" style="-fx-background-color: #ffffff;">
-                                      <columns>
-                                        <TableColumn prefWidth="75.0" text="Lun" />
-                                        <TableColumn prefWidth="75.0" text="Mar" />
-                                          <TableColumn prefWidth="75.0" text="Mer" />
-                                          <TableColumn prefWidth="75.0" text="Jeu" />
-                                          <TableColumn prefWidth="75.0" text="Ven" />
-                                          <TableColumn prefWidth="75.0" text="Sam" />
-                                      </columns>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                        <TitledPane animated="false" text="Services disponibles">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox layoutX="30.0" layoutY="7.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Parking" />
-                                          <Label text="Connexion Wifi" />
-                                          <Label text="Borne de chargement" />
-                                          <Label text="Distributeurs automatiques de billets" />
-                                          <Label text="-" />
-                                       </children>
-                                    </VBox>
-                                    <HBox layoutX="26.0" layoutY="118.0" spacing="30.0">
-                                       <children>
-                                          <ImageView fitHeight="74.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@img/No%20Animals-100.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@img/No%20Smoking-100.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ImageView fitHeight="120.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@img/No%20Weapons-100.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </TitledPane>
-                        <TitledPane animated="false" text="Contact">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <Label layoutX="47.0" layoutY="29.0" text="Nous contacter" />
-                                    <Label layoutX="47.0" layoutY="75.0" text="Pour toute demande, suggestion ou retour d'expérience, merci de nous contacter par cette adresse mail :" />
-                                    <Hyperlink layoutX="38.0" layoutY="104.0" text="capsophia@centrecommercial.fr" />
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </TitledPane>
-                    </panes>
-                  </Accordion>
-               </children>
-            </HBox>
-         </content>
-      </ScrollPane>
-   </center>
+<BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <fx:include source="/fxml/header.fxml" />
+    </top>
+    <center>
+        <ScrollPane BorderPane.alignment="CENTER">
+            <content>
+                <VBox alignment="CENTER" prefWidth="1000.0">
+                    <children>
+                        <ImageView fitHeight="328.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="/images/frontDeskText.png" />
+                            </image>
+                        </ImageView>
+                        <Accordion>
+                            <panes>
+                                <TitledPane animated="false" text="Plan du centre commercial">
+                                    <content>
+                                        <ImageView fitHeight="536.0" fitWidth="738.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@/images/mallmap.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Accès au centre">
+                                    <content>
+                                        <ImageView fitHeight="718.0" fitWidth="866.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@/images/access.png" />
+                                            </image>
+                                        </ImageView>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Horaires">
+                                    <content>
+                                        <HBox alignment="CENTER">
+                                            <children>
+                                                <VBox alignment="CENTER">
+                                                    <children>
+                                                        <VBox>
+                                                            <children>
+                                                                <Label text="Horaires en période scolaire">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <TableView prefHeight="100.0" prefWidth="525.0">
+                                                                    <columns>
+                                                                        <TableColumn prefWidth="75.0" text="Lun" />
+                                                                        <TableColumn prefWidth="75.0" text="Mar" />
+                                                                        <TableColumn prefWidth="75.0" text="Mer" />
+                                                                        <TableColumn prefWidth="75.0" text="Jeu" />
+                                                                        <TableColumn prefWidth="75.0" text="Ven" />
+                                                                        <TableColumn prefWidth="75.0" text="Sam" />
+                                                                        <TableColumn prefWidth="75.0" text="Dim" />
+                                                                    </columns>
+                                                                </TableView>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox>
+                                                            <children>
+                                                                <Label text="Horaires en période de vacances">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <TableView prefHeight="100.0" prefWidth="200.0">
+                                                                    <columns>
+                                                                        <TableColumn prefWidth="75.0" text="Lun" />
+                                                                        <TableColumn prefWidth="75.0" text="Mar" />
+                                                                        <TableColumn prefWidth="75.0" text="Mer" />
+                                                                        <TableColumn prefWidth="75.0" text="Jeu" />
+                                                                        <TableColumn prefWidth="75.0" text="Ven" />
+                                                                        <TableColumn prefWidth="75.0" text="Sam" />
+                                                                        <TableColumn prefWidth="75.0" text="Dim" />
+                                                                    </columns>
+                                                                </TableView>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="30.0" />
+                                                            </VBox.margin>
+                                                        </VBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" text="Services disponibles">
+                                    <content>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <Label text="Détente" />
+                                                <VBox>
+                                                    <children>
+                                                        <Label text="Wifi" />
+                                                        <Label text="Espace Lounge avec prise électriques" />
+                                                    </children>
+                                                </VBox>
+                                                <Label text="Commodité" />
+                                                <VBox>
+                                                    <children>
+                                                        <Label text="Parking protégé" />
+                                                        <Label text="La poste" />
+                                                        <Label text="Distributeur automatique de billets" />
+                                                        <Label text="Vestiaires" />
+                                                    </children>
+                                                </VBox>
+                                                <Label text="Aire de jeu" />
+                                                <Label text="Espace d'acceuil" />
+                                                <Label text="Aide à l'invalidité" />
+                                            </children>
+                                        </VBox>
+                                    </content></TitledPane>
+                            </panes>
+                        </Accordion>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label text="Contact">
+                                    <VBox.margin>
+                                        <Insets top="50.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="1 Infinite Loop" />
+                                <Label text="Sophia Antipolis" />
+                                <Label text="06600" />
+                                <Label text="France" />
+                                <Label text="Pour toute demande, suggestion ou retour d'expérience, contactez-nous depuis cette adresse :">
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Hyperlink text="centre@capsophia.fr" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
 </BorderPane>

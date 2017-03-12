@@ -47,8 +47,6 @@ public class Controller {
 
     @FXML
     void toEnseignes(ActionEvent event) throws IOException {
-
-        System.out.println("Click");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/listeBoutique.fxml"));
         Stage primaryStage = (Stage) buttonEnseignes.getScene().getWindow();
         primaryStage.setTitle("Liste des boutiques du centre");
@@ -57,18 +55,30 @@ public class Controller {
     }
 
     @FXML
-    void toEvenements(ActionEvent event) {
-
+    void toEvenements(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/evenement.fxml"));
+        Stage primaryStage = (Stage) buttonEvenements.getScene().getWindow();
+        primaryStage.setTitle("Evènements en cours");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
     @FXML
-    void toInformation(ActionEvent event) {
-
+    void toInformation(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/information.fxml"));
+        Stage primaryStage = (Stage) buttonInformation.getScene().getWindow();
+        primaryStage.setTitle("Informations");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
     @FXML
-    void toPromotions(ActionEvent event) {
-
+    void toPromotions(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/promotion.fxml"));
+        Stage primaryStage = (Stage) buttonPromotions.getScene().getWindow();
+        primaryStage.setTitle("Promotions en cours");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 
 }
