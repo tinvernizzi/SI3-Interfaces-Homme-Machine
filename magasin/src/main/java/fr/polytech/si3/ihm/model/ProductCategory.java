@@ -11,11 +11,14 @@ import java.util.List;
 public class ProductCategory {
 
     String name;
-    private List<Product> listOfProducts;
+    private List<Product> listOfProduct;
 
     public ProductCategory(String name, List<Product> listOfProducts) {
         this.name = name;
-        this.listOfProducts = listOfProducts;
+        this.listOfProduct = listOfProducts;
     }
 
+    public List<Product> getListOfProduct() {
+        return listOfProduct;
+    }
 }

@@ -2,6 +2,7 @@ package fr.polytech.si3.ihm.controllers;
 
 import fr.polytech.si3.ihm.model.Product;
 import fr.polytech.si3.ihm.model.ProductCategory;
+import fr.polytech.si3.ihm.model.ProductDatabase;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -29,24 +30,17 @@ public class ProductsPageController implements Controller{
 
     }
 
-    public void initializeData(String category) {
+    public void initializeData() {
         productGrid.getChildren().clear();
 
-        List<Product> bookProduct = Arrays.asList(
-                new Product("Le Yoga Facile pour les Nuls", 16, "/images/produits/D1.jpg", ""),
-                new Product("Le Yoga Facile pour les Bons", 16, "/images/produits/L1.jpg", ""),
-                new Product("Le Yoga Facile pour les Nuls", 16, "/images/produits/L2.jpg", "")
-        );
+        ProductDatabase database = new ProductDatabase();
 
-        ProductCategory book = new ProductCategory("Book", bookProduct);
+        ProductCategory data = database.getBooks();
 
         try {
-            addProduct(bookProduct.get(0));
-            addProduct(bookProduct.get(1));
-            addProduct(bookProduct.get(0));
-            addProduct(bookProduct.get(1));
-            addProduct(bookProduct.get(0));
-            addProduct(bookProduct.get(1));
+            for (int i = 0; i < data.getListOfProduct().size(); i++) {
+                addProduct(data.getListOfProduct().get(i));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

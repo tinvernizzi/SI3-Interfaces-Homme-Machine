@@ -86,7 +86,7 @@ public class MainController {
         this.productsViewController = productsController;
         content.getChildren().clear();
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
-        productsPageViewController.initializeData(category);
+        productsPageViewController.initializeData();
         setScrollTo(productsPageViewController.getAnchor());
     }
 
