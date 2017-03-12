@@ -24,29 +24,28 @@ public class ProductsPageController implements Controller{
 
     @FXML
     public TilePane productGrid;
+    private ProductDatabase database;
 
     @Override
     public void start(MainController mainController) {
-
+        this.database = new ProductDatabase();
+        displayAll();
     }
 
-    public void initializeData() {
+    public void displayAll() {
         productGrid.getChildren().clear();
 
-        ProductDatabase database = new ProductDatabase();
-
-        ProductCategory data = database.getBooks();
+        List<ProductCategory> data = database.getAllItems();
 
         try {
-            for (int i = 0; i < data.getListOfProduct().size(); i++) {
-                addProduct(data.getListOfProduct().get(i));
+            for (ProductCategory c : data) {
+                List<Product> products = c.getListOfProduct();
+                for(int i = 0; i< products.size(); i++) addProduct(products.get(i));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
 
     public Node getAnchor() {
         return title;
@@ -61,5 +60,30 @@ public class ProductsPageController implements Controller{
         productGrid.getChildren().add(node);
         SingleProductController singleProductController = fxmlLoader.getController();
         singleProductController.setProductInformations(product, false);
+    }
+
+    public void search(boolean dvds, boolean cds, boolean books, boolean stages) {
+        productGrid.getChildren().clear();
+//        dvds?displayDvds():null;
+//        cds?displayCds():null;
+        if(books)displayBooks();
+//        dvds?displayStages():null;
+    }
+
+    private void displayBooks() {
+        productGrid.getChildren().clear();
+
+        ProductCategory data = database.getBooks();
+
+        try {
+            for (int i = 0; i < data.getListOfProduct().size(); i++) {
+                addProduct(data.getListOfProduct().get(i));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void displayDvds() {
     }
 }

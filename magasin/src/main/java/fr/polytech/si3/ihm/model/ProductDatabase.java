@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,9 +9,10 @@ import java.util.List;
  */
 public class ProductDatabase {
 
-    ProductCategory books;
+    List<ProductCategory> dataBase;
 
     public ProductDatabase () {
+        dataBase = new ArrayList<>();
         List<Product> bookProduct = Arrays.asList(
                 new Product("Le Yoga Facile pour les Nuls", 16, "/images/produits/D1.jpg", "Par Sara Ivanhoe"),
                 new Product("Vivez mieux et plus longtemps", 24, "/images/produits/L1.jpg", "Par Mychel Cymes"),
@@ -18,10 +20,18 @@ public class ProductDatabase {
                 new Product("Pratique du massage chinois", 18, "/images/produits/L3.jpg", "Par Dr. You-Wa Chen")
         );
 
-        books = new ProductCategory("Book", bookProduct);
+        ProductCategory books = new ProductCategory("Book", bookProduct);
+        dataBase.add(books);
     }
 
     public ProductCategory getBooks() {
-        return books;
+        for(ProductCategory c : dataBase){
+            if(c.name.equals("Book")) return c;
+        }
+        return null;
+    }
+
+    public List<ProductCategory> getAllItems() {
+        return dataBase;
     }
 }
