@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -59,7 +60,7 @@ public class ProductsPageController implements Controller{
         singleProductController.setProductInformations(product, false);
     }
 
-    public void search(boolean dvds, boolean cds, boolean books, boolean stages, int min, int max) {
+    public void search(boolean dvds, boolean cds, boolean books, boolean stages, int min, int max, Optional<String> searchName) {
         productGrid.getChildren().clear();
         List<ProductCategory> data = new ArrayList<>();
         if(dvds)data.add(database.getDvds());
@@ -68,7 +69,7 @@ public class ProductsPageController implements Controller{
         if(stages)data.add(database.getStages());
 
         for (ProductCategory c : data) {
-            displayCategory(c,min,max);
+            displayCategory(c,min,max,searchName);
         }
 
     }
@@ -93,13 +94,25 @@ public class ProductsPageController implements Controller{
         displayCategory(data);
     }
 
-    void displayCategory(ProductCategory category, int min, int max){
+    void displayCategory(ProductCategory category, int min, int max, Optional<String> searchName){
         try {
-            List<Product> validItems = category.getListOfProduct().stream()
-                    .filter(product -> product.getPriceInteger()>= min
-                            &&
-                            product.getPriceInteger()<=max)
-                    .collect(Collectors.toList());
+
+            List<Product> validItems = new ArrayList<>();
+            if(searchName.isPresent()){
+                validItems = category.getListOfProduct().stream()
+                        .filter(product -> product.getPriceInteger()>= min
+                                &&
+                                product.getPriceInteger()<=max
+                                &&
+                                product.getName().contains(searchName.get())
+                        ).collect(Collectors.toList());
+            }else{
+                validItems = category.getListOfProduct().stream()
+                        .filter(product -> product.getPriceInteger()>= min
+                                &&
+                                product.getPriceInteger()<=max)
+                        .collect(Collectors.toList());
+            }
             for (Product p : validItems) {
                 addProduct(p);
             }
@@ -109,6 +122,6 @@ public class ProductsPageController implements Controller{
     }
 
     void displayCategory(ProductCategory category){
-        displayCategory(category,0,(int) Integer.MAX_VALUE);
+        displayCategory(category,0,(int) Integer.MAX_VALUE,Optional.empty());
     }
 }

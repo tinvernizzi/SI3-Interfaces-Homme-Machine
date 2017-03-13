@@ -60,6 +60,7 @@ public class MainController {
         slideshowViewController.start(this);
         enteteViewController.start(this);
         productsViewController.start(this);
+        System.out.println(interfaceAdminButtonViewController);
         interfaceAdminButtonViewController.start(this);
     }
 
@@ -120,7 +121,7 @@ public class MainController {
         productsViewController.start(this);
         contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
         contactViewController.start(this);
-        interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("fxml/plugins/interfaceAdminButton.fxml");
+        interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("/fxml/plugins/interfaceAdminButton.fxml");
         interfaceAdminButtonViewController.start(this);
         setScrollTo(slideshowView);
     }
