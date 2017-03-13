@@ -31,7 +31,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode, 1019, 1000);
         stage.setResizable(false);
         scene.getStylesheets().add("/styles/styles.css");
-        stage.setTitle("Hello JavaFX and Maven");
+        stage.setTitle("Magasin To Be Or To Have");
         stage.setScene(scene);
         stage.show();
     }
