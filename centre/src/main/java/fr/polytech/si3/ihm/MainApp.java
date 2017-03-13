@@ -29,7 +29,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode, 1000, 700);
         scene.getStylesheets().add("/styles/styles.css");
 
-        stage.setTitle("Hello JavaFX and Maven");
+        stage.setTitle("Page d'acceuil - Cap Sophia");
         stage.setScene(scene);
         stage.show();
     }

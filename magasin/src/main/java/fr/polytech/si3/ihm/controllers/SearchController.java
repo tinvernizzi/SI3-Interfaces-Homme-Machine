@@ -2,6 +2,7 @@ package fr.polytech.si3.ihm.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -17,6 +18,10 @@ public class SearchController  implements Controller{
     public CheckBox cdCheckBox;
     @FXML
     public CheckBox bookCheckBox;
+    @FXML
+    public TextField minimumPrice;
+    @FXML
+    public TextField maximumPrice;
 
     private MainController mainController;
     private ProductsPageController productPageController;
@@ -33,7 +38,11 @@ public class SearchController  implements Controller{
 
     public void onSearchButtonClicked(MouseEvent mouseEvent) {
         System.out.println("search :"+dvdCheckBox.isSelected()+cdCheckBox.isSelected()+bookCheckBox.isSelected()+stageCheckBox.isSelected());
-        productPageController.search(dvdCheckBox.isSelected(),cdCheckBox.isSelected(),bookCheckBox.isSelected(),stageCheckBox.isSelected());
+        System.out.println();
+        System.out.println(maximumPrice.getCharacters());
+        int min = Integer.parseInt(minimumPrice.getCharacters().toString());
+        int max = Integer.parseInt(maximumPrice.getCharacters().toString());
+        productPageController.search(dvdCheckBox.isSelected(),cdCheckBox.isSelected(),bookCheckBox.isSelected(),stageCheckBox.isSelected(),min,max);
     }
 
 

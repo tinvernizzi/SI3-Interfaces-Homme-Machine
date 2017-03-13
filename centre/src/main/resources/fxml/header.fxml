@@ -11,90 +11,104 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefWidth="1000.0" stylesheets="@../styles/headerDefault.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.header.Controller">
-   <children>
-      <HBox alignment="CENTER" spacing="100.0" VBox.vgrow="NEVER">
-         <children>
-            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0">
-               <children>
-                  <ImageView fx:id="logo" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@/images/logoTemp.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </HBox>
-            <Label fx:id="homePageCapSophia" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" text="C A P   S O P H I A">
-               <font>
-                  <Font name="Baskerville" size="34.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="2.0">
-               <children>
-                  <TextField fx:id="textFieldResearch" prefHeight="25.0" prefWidth="143.0" promptText="Rechercher">
-                     <font>
-                        <Font name="Myriad Set Pro Thin" size="13.0" />
-                     </font>
-                  </TextField>
-                  <Button fx:id="buttonOk" mnemonicParsing="false" prefHeight="27.0" prefWidth="37.0" stylesheets="@/styles/headerDefOkButton.css" text="Ok" textFill="WHITE">
-                     <font>
-                        <Font name="Myriad Set Pro Text" size="13.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-         <padding>
-            <Insets left="30.0" right="30.0" />
-         </padding>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="30.0" spacing="150.0" style="-fx-background-color: #000000;" VBox.vgrow="NEVER">
-         <children>
-            <Button fx:id="buttonEvenements" mnemonicParsing="false" onAction="#toEvenements" style="-fx-background-color: #000000;" text="Evenements" textFill="WHITE">
-               <font>
-                  <Font name="SF UI Display Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="buttonEnseignes" mnemonicParsing="false" onAction="#toEnseignes" style="-fx-background-color: #000000;" text="Enseignes" textFill="WHITE">
-               <font>
-                  <Font name="SF UI Display Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="buttonPromotions" mnemonicParsing="false" onAction="#toPromotions" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
-               <font>
-                  <Font name="SF UI Display Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="buttonInformation" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toInformation" style="-fx-background-color: #000000;" text="Information" textFill="WHITE">
-               <font>
-                  <Font name="SF UI Display Regular" size="13.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-         <padding>
-            <Insets left="30.0" right="30.0" />
-         </padding>
-      </HBox>
-   </children>
+<VBox prefWidth="1000.0" stylesheets="@../styles/headerDefault.css" xmlns="http://javafx.com/javafx/8.0.111"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.header.Controller">
+    <children>
+        <HBox alignment="CENTER" spacing="100.0" VBox.vgrow="NEVER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fx:id="logo" onMouseClicked="#toHomePage" fitHeight="50.0" fitWidth="50.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/logoTemp.png"/>
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </children>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </HBox>
+                <Label fx:id="homePage" alignment="CENTER" onMouseClicked="#toHomePage" prefHeight="40.0"
+                       prefWidth="350.0" text="C A P   S O P H I A">
+                    <font>
+                        <Font name="Baskerville" size="34.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="2.0">
+                    <children>
+                        <TextField fx:id="textFieldResearch" prefHeight="25.0" prefWidth="143.0"
+                                   promptText="Rechercher">
+                            <font>
+                                <Font name="Myriad Set Pro Thin" size="13.0"/>
+                            </font>
+                        </TextField>
+                        <Button fx:id="buttonOk" mnemonicParsing="false" prefHeight="27.0" prefWidth="37.0"
+                                stylesheets="@/styles/headerDefOkButton.css" text="Ok" textFill="WHITE">
+                            <font>
+                                <Font name="Myriad Set Pro Text" size="13.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="30.0" right="30.0"/>
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="30.0" spacing="150.0" style="-fx-background-color: #000000;"
+              VBox.vgrow="NEVER">
+            <children>
+                <Button fx:id="buttonEvenements" mnemonicParsing="false" onAction="#toEvenements"
+                        style="-fx-background-color: #000000;" text="Evenements" textFill="WHITE">
+                    <font>
+                        <Font name="SF UI Display Regular" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonEnseignes" mnemonicParsing="false" onAction="#toEnseignes"
+                        style="-fx-background-color: #000000;" text="Enseignes" textFill="WHITE">
+                    <font>
+                        <Font name="SF UI Display Regular" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonPromotions" mnemonicParsing="false" onAction="#toPromotions"
+                        style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                    <font>
+                        <Font name="SF UI Display Regular" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonInformation" contentDisplay="CENTER" mnemonicParsing="false"
+                        onAction="#toInformation" style="-fx-background-color: #000000;" text="Information"
+                        textFill="WHITE">
+                    <font>
+                        <Font name="SF UI Display Regular" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="30.0" right="30.0"/>
+            </padding>
+        </HBox>
+    </children>
 </VBox>
