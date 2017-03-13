@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<BorderPane maxHeight="150" maxWidth="1000" minHeight="150" minWidth="1000" prefHeight="150" prefWidth="1000"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.ContactController">
-    <top>
-        <BorderPane>
-            <left>
-                <Text style="-fx-font-size: 25" text="Nous contacter" />
-            </left>
-            <padding>
-                <Insets left="35" />
-            </padding>
-        </BorderPane>
-    </top>
-    <center>
-        <HBox alignment="CENTER" prefHeight="80" prefWidth="1000" spacing="80">
-            <padding>
-                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
-            </padding>
-            <Text style="-fx-font-size: 17" fx:id="address" />
-            <Text style="-fx-font-size: 17" fx:id="phone" />
-            <Text style="-fx-font-size: 17" fx:id="mailaddress" />
-        </HBox>
-    </center>
-</BorderPane>
+<VBox spacing="25" prefHeight="250" prefWidth="1000" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.ContactController">
+    <Text style="-fx-font-size: 25" text="Nous contacter"/>
+    <HBox alignment="CENTER" prefHeight="80" prefWidth="1000" spacing="110">
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="address" />
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="phone" />
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="mailaddress" />
+    </HBox>
+    <padding>
+        <Insets left="30" right="30" />
+    </padding>
+</VBox>

@@ -9,7 +9,7 @@
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.HomeController">
     <BorderPane>
         <center>
-            <VBox alignment="TOP_CENTER" prefWidth="1000.0" spacing="30.0">
+            <VBox alignment="TOP_CENTER" spacing="30.0">
                 <BorderPane fx:id="header"/>
                 <BorderPane fx:id="slideshow"/>
                 <BorderPane>

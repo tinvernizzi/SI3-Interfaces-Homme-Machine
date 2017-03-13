@@ -16,5 +16,5 @@
         </center>
     </BorderPane>
     <Text fx:id="titre" style="-fx-font-family: System Bold; -fx-font-size: 20"/>
-    <Text fx:id="description" style="-fx-text-alignment: center"/>
+    <Text fx:id="description" style="-fx-text-alignment: center" wrappingWidth="160"/>
 </VBox>

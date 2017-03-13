@@ -10,7 +10,7 @@
   <content>
     <AnchorPane>
          <children>
-            <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
+            <VBox spacing="30.0">
                <children>
 
                   <BorderPane fx:id="header" />

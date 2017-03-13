@@ -5,59 +5,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
-  <content>
+<ScrollPane prefHeight="700.0" prefWidth="1015" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
     <AnchorPane>
-         <children>
-            <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
-               <children>
-
-                  <BorderPane fx:id="header" />
-
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                     <children>
-                        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0">
-                           <center>
-                              <ImageView fitHeight="250" fitWidth="500" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@/images/enseigne.jpg" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-
-                         <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                             <padding>
-                                 <Insets left="30.0" right="30.0"/>
-                             </padding>
-                             <BorderPane maxWidth="940" minWidth="940" prefWidth="940.0">
-                                 <left>
-                                     <Text text="A propos de 'To Be or To Have'">
-                                         <font>
-                                             <Font name="System Bold" size="25.0"/>
-                                         </font>
-                                     </Text>
-                                 </left>
-                                 <padding>
-                                     <Insets left="30"/>
-                                 </padding>
-                             </BorderPane>
-                             <BorderPane maxWidth="940" minWidth="940" prefWidth="940.0">
-                                 <center>
-                                     <Text fx:id="enseigneDescription"/>
-                                 </center>
-                             </BorderPane>
-                         </VBox>
-                     </children>
-                  </VBox>
-
-                   <BorderPane fx:id="contact" />
-
-               </children>
-            </VBox>
-         </children></AnchorPane>
-  </content>
+        <VBox alignment="TOP_CENTER" spacing="30.0">
+            <BorderPane fx:id="header"/>
+            <ImageView fitHeight="250" fitWidth="500" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/enseigne.jpg"/>
+            </ImageView>
+            <BorderPane>
+                <left>
+                    <Text style="-fx-font-family: System; -fx-font-size: 25" text="A propos de To Be or To Have " />
+                </left>
+                <padding>
+                    <Insets left="30"/>
+                </padding>
+            </BorderPane>
+            <Text fx:id="enseigneDescription" wrappingWidth="970"/>
+            <BorderPane fx:id="contact"/>
+        </VBox>
+    </AnchorPane>
 </ScrollPane>
