@@ -2,26 +2,19 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.*?>
-
 <?import javafx.scene.layout.BorderPane?>
-<VBox alignment="TOP_CENTER" maxWidth="220" maxHeight="300" prefWidth="220.0" prefHeight="300" minWidth="220" minHeight="300" spacing="6"
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<VBox maxWidth="220" maxHeight="300" prefWidth="220.0" prefHeight="300" minWidth="220" minHeight="300" spacing="12" alignment="CENTER"
       fx:controller="fr.polytech.si3.ihm.controller.elements.InfoSliderController" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <BorderPane maxHeight="160" maxWidth="160" prefHeight="160" prefWidth="160" minHeight="160" minWidth="160">
-            <center>
-                <ImageView fx:id="image" preserveRatio="true" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" />
-            </center>
-        </BorderPane>
-        <Text fx:id="titre">
-            <font>
-                <Font name="System Bold" size="21.0" />
-            </font>
-        </Text>
-        <Text fx:id="description" style="-fx-alignment: center" />
-    </children>
     <padding>
-        <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+        <Insets bottom="20.0" left="10.0" right="10.0" top="20.0"/>
     </padding>
+    <BorderPane maxHeight="160" maxWidth="160" prefHeight="160" prefWidth="160" minHeight="160" minWidth="160">
+        <center>
+            <ImageView fx:id="image" preserveRatio="true" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true"/>
+        </center>
+    </BorderPane>
+    <Text fx:id="titre" style="-fx-font-family: System Bold; -fx-font-size: 20"/>
+    <Text fx:id="description" style="-fx-text-alignment: center"/>
 </VBox>
