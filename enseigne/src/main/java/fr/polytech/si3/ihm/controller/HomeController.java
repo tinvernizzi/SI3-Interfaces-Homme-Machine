@@ -1,7 +1,9 @@
 package fr.polytech.si3.ihm.controller;
 
+import fr.polytech.si3.ihm.controller.elements.HeaderController;
 import fr.polytech.si3.ihm.controller.elements.InfoSliderController;
 import fr.polytech.si3.ihm.controller.elements.PromotionSliderController;
+import fr.polytech.si3.ihm.controller.elements.SlideshowController;
 import fr.polytech.si3.ihm.model.Info;
 import fr.polytech.si3.ihm.model.ListeInfos;
 import fr.polytech.si3.ihm.model.ListePromotions;
@@ -11,6 +13,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,11 +33,27 @@ public class HomeController extends Controller {
     private ListView<Info> slideInfos;
 
     @FXML
+    private BorderPane slideshow;
+
+    @FXML
     private void initialize() {
         displayHeader(this);
+        displaySlideshow();
         displayPromotions();
         displayInfos();
         displayContact();
+    }
+
+    private void displaySlideshow() { String fxmlFile = "/fxml/elements/slideshow.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+            ((SlideshowController) loader.getController()).start();
+
+            slideshow.setCenter(rootNode);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void displayPromotions() {

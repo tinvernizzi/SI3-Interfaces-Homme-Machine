@@ -11,7 +11,8 @@
         <center>
             <VBox alignment="TOP_CENTER" prefWidth="1000.0" spacing="30.0">
                 <BorderPane fx:id="header"/>
-                <BorderPane maxWidth="880.0" prefWidth="880.0" minWidth="880">
+                <BorderPane fx:id="slideshow"/>
+                <BorderPane>
                     <top>
                         <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos promotions">
                             <BorderPane.margin>
@@ -24,7 +25,7 @@
                                   minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER"/>
                     </center>
                 </BorderPane>
-                <BorderPane maxHeight="300.0" prefHeight="300.0" maxWidth="880.0" prefWidth="880.0">
+                <BorderPane>
                     <top>
                         <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Informations">
                             <BorderPane.margin>

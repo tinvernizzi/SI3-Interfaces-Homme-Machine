@@ -12,8 +12,6 @@ public class ListePromotions {
     public ListePromotions() {
 
         listePromotions = FXCollections.observableArrayList(new ArrayList<Promotion>());
-        listePromotions.add(new Promotion("CD cool","Marque cool","-100% !", "FFFFFF","/images/p_C3.jpg"));
-        listePromotions.add(new Promotion("CD cool","Marque cool","-100% !", "DDDDDD","/images/p_C1.jpg"));
         listePromotions.add(new Promotion("CD cool","Marque cool","-100% !", "FFFFFF","/images/p_C2.jpg"));
         listePromotions.add(new Promotion("Livre cool","Marque cool","-100% !", "DDDDDD","/images/p_L3.jpg"));
         listePromotions.add(new Promotion("DVD cool","Marque cool","-100% !", "FFFFFF","/images/p_D3.jpg"));
