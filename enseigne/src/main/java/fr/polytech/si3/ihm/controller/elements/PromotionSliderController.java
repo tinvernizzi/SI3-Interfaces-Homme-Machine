@@ -30,5 +30,7 @@ public class PromotionSliderController {
         this.marque.setText(promotion.getMarque());
         this.offre.setText(promotion.getOffre());
         this.image.setImage(new Image(promotion.getImagePath()));
+
+        produit.getParent().setStyle("-fx-background-color: #" + promotion.getColor() + ";");
     }
 }

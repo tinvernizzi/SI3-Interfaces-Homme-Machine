@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controller.elements;
 
+import fr.polytech.si3.ihm.controller.*;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,13 +30,22 @@ public class HeaderController {
     private Button aboutButton;
 
     @FXML
-    public void initialize() {
+    public void initialize(Controller currentController) {
 
-        assert homeButton != null;
-        assert promoButton != null;
-        assert infoButton != null;
-        assert productButton != null;
-        assert aboutButton != null;
+        // Couleur du bouton de la page active
+        String currentColor = "666666";
+
+        // Change la couleur du bouton de la page active;
+        if (currentController instanceof HomeController)
+            homeButton.setStyle("-fx-background-color: #" + currentColor + ";");
+        else if (currentController instanceof PromoController)
+            promoButton.setStyle("-fx-background-color: #" + currentColor + ";");
+        else if (currentController instanceof InfoController)
+            infoButton.setStyle("-fx-background-color: #" + currentColor + ";");
+        else if (currentController instanceof ProductsController)
+            productButton.setStyle("-fx-background-color: #" + currentColor + ";");
+        else if (currentController instanceof AboutController)
+            aboutButton.setStyle("-fx-background-color: #" + currentColor + ";");
 
         homeButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
@@ -57,7 +67,7 @@ public class HeaderController {
                 FXMLLoader loader = new FXMLLoader();
                 try {
                     Stage stage = (Stage) promoButton.getScene().getWindow();
-                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/promos.fxml"));
+                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/promo.fxml"));
                     Scene scene = new Scene(rootNode);
                     stage.setScene(scene);
                     stage.show();
@@ -72,7 +82,7 @@ public class HeaderController {
                 FXMLLoader loader = new FXMLLoader();
                 try {
                     Stage stage = (Stage) infoButton.getScene().getWindow();
-                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/infos.fxml"));
+                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/info.fxml"));
                     Scene scene = new Scene(rootNode);
                     stage.setScene(scene);
                     stage.show();

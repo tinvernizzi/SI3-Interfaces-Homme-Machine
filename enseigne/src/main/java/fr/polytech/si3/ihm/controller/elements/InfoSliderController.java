@@ -26,5 +26,7 @@ public class InfoSliderController {
         this.titre.setText(info.getTitre());
         this.description.setText(info.getDescription());
         this.image.setImage(new Image(info.getImagePath()));
+
+        titre.getParent().setStyle("-fx-background-color: #" + info.getColor() + ";");
     }
 }

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111"
+<ScrollPane prefHeight="700.0" prefWidth="1015.0"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.HomeController">
    <content>
       <AnchorPane>
@@ -48,7 +48,7 @@
                         </Label>
                      </top>
                      <center>
-                        <ListView fx:id="slideInfos" orientation="HORIZONTAL" prefHeight="300.0" prefWidth="880.0" BorderPane.alignment="CENTER" />
+                        <ListView fx:id="slideInfos" orientation="HORIZONTAL" maxHeight="330" prefHeight="330" minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
 

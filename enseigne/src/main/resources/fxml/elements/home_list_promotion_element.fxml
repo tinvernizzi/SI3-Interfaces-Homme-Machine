@@ -5,11 +5,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.scene.layout.BorderPane?>
 <VBox alignment="TOP_CENTER" maxWidth="220" maxHeight="300" prefWidth="220.0" prefHeight="300" minWidth="220" minHeight="300" spacing="6"
       fx:controller="fr.polytech.si3.ihm.controller.elements.PromotionSliderController" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="image" fitHeight="160.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" />
-        <Text style="-fx-backgrund-color: YELLOW;" text="PROMO" stroke="RED">
+        <BorderPane maxHeight="160" maxWidth="160" prefHeight="160" prefWidth="160" minHeight="160" minWidth="160">
+            <center>
+                <ImageView fx:id="image" preserveRatio="true" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" />
+            </center>
+        </BorderPane>
+        <Text text="PROMO" stroke="RED">
             <font>
                 <Font name="System Bold" size="21.0" />
             </font>

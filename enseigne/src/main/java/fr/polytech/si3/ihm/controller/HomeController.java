@@ -31,7 +31,7 @@ public class HomeController extends Controller {
 
     @FXML
     private void initialize() {
-        displayHeader();
+        displayHeader(this);
         displayPromotions();
         displayInfos();
         displayContact();

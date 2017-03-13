@@ -6,7 +6,7 @@ public class ProductsController extends Controller {
 
     @FXML
     public void initialize() {
-        displayHeader();
+        displayHeader(this);
         displayContact();
     }
 }
