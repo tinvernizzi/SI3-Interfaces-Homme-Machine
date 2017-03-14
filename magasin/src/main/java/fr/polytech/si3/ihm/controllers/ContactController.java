@@ -51,7 +51,7 @@ public class ContactController implements Controller{
     
     @Override
     public void start(MainController mainController) {
-        openingHours = new ArrayList<>();
+        openingHours = new ArrayList<Schedule>();
 
         openingHours.add((new Schedule("Lun", "09:00 à 19:00")));
         openingHours.add((new Schedule("Mar", "09:00 à 19:00")));
@@ -62,11 +62,11 @@ public class ContactController implements Controller{
         openingHours.add((new Schedule("Dim", "Fermé")));
 
         //Set schedules
-        ObservableList<Schedule> openingHours = FXCollections.observableArrayList();
+        ObservableList<Schedule> horaires = FXCollections.observableArrayList(openingHours);
 
         date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
         hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
-        schedules.setItems(openingHours);
+        schedules.setItems(horaires);
         //settings of tableView
         schedules.setEditable(false);
         schedules.setMouseTransparent(true);

@@ -140,6 +140,7 @@ public class MainController {
         contactViewController.setWebPage(contact.getWebPage());
         contactViewController.setPhoneNumber(contact.getPhoneNumber());
         contactViewController.setAdress(contact.getAdress());
+        contactViewController.setHoraires(contact.getSchedules());
     }
 
     public ContactController getContactController() {
