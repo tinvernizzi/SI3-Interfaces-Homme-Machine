@@ -20,17 +20,16 @@ public class MeansOfSaleGraph extends VendorsGraph {
 
     private void displayMeansOfSaleGraph(Stage stage) {
         Scene scene = new Scene(new Group());
-        stage.setTitle("Imported Fruits");
+        stage.setTitle("Moyens de vente sur le mois dernier");
         stage.setWidth(500);
         stage.setHeight(500);
 
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
-                        new PieChart.Data("Grapefruit", 13),
-                        new PieChart.Data("Oranges", 25),
-                        new PieChart.Data("Plums", 10),
-                        new PieChart.Data("Pears", 22),
-                        new PieChart.Data("Apples", 30));
+                        new PieChart.Data("Internet, livraison", 13),
+                        new PieChart.Data("Internet, récupération", 25),
+                        new PieChart.Data("Vente en magasin", 10),
+                        new PieChart.Data("Autres", 30));
         final PieChart chart = new PieChart(pieChartData);
         chart.setTitle("Imported Fruits");
 
