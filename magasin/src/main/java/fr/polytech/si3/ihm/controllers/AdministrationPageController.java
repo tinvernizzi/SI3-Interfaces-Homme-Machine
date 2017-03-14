@@ -35,6 +35,10 @@ public class AdministrationPageController implements Controller {
     public TextField reducPrice;
     public Button registerButton;
     public Button lastMonthsMeansOfSale;
+    public TextField webPage;
+    public TextField phoneNumber;
+    public TextField adress;
+    public Button buttonRegister;
 
     @FXML
     private TableView<Vendeur> statVendeurs;
@@ -49,6 +53,7 @@ public class AdministrationPageController implements Controller {
     private TableColumn<Vendeur, String> sales;
     private ProductDatabase database;
     private Product itemCurrentlySelected;
+    private ContactController contact;
 
 
     public void displayLastWeekPerformance(MouseEvent mouseEvent) throws Exception {
@@ -63,6 +68,7 @@ public class AdministrationPageController implements Controller {
 
     public void start(MainController mainController) {
         this.database = mainController.getProductDatabase();
+        this.contact = mainController.getContactController();
         
         ArrayList<String> productNameList = new ArrayList<>();
 
@@ -76,6 +82,10 @@ public class AdministrationPageController implements Controller {
 
         ObservableList<String> list = FXCollections.observableArrayList(productNameList);
         listOfProducts.setItems(list);
+
+        webPage.setText(mainController.getContactController().getWebPage());
+        phoneNumber.setText(mainController.getContactController().getPhoneNumber());
+        adress.setText(mainController.getContactController().getAdress());
     }
 
     @FXML
@@ -93,7 +103,7 @@ public class AdministrationPageController implements Controller {
         }
     }
 
-    public void clickToRegister(MouseEvent mouseEvent) {
+    public void clickToRegisterProduct(MouseEvent mouseEvent) {
         itemCurrentlySelected.setPrix(Integer.parseInt(normalPrice.getText()));
         if (isOnPromo.isSelected()) {
             itemCurrentlySelected.setPromotion(Integer.parseInt(reducPrice.getText()));
@@ -106,5 +116,13 @@ public class AdministrationPageController implements Controller {
     public void displayMeansOfSale(MouseEvent mouseEvent) throws Exception {
         MeansOfSaleGraph graph = new MeansOfSaleGraph();
         graph.start();
+    }
+
+
+    public void clickToRegisterContact(MouseEvent mouseEvent) {
+        contact.setWebPage(webPage.getText());
+        contact.setPhoneNumber(phoneNumber.getText());
+        contact.setAdress(adress.getText());
+        System.out.println(contact);
     }
 }

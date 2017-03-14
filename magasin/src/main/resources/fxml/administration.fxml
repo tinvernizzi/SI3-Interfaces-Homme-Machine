@@ -93,11 +93,32 @@
                         <Label layoutX="467.0" layoutY="134.0" text="Prix normal : " />
                         <TextField fx:id="reducPrice" layoutX="565.0" layoutY="167.0" prefHeight="26.0" prefWidth="74.0" />
                         <Label layoutX="467.0" layoutY="172.0" prefHeight="16.0" prefWidth="91.0" text="Prix réduit :" />
-                        <Button fx:id="registerButton" layoutX="607.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#clickToRegister" text="Enregistrer les modifications" />
+                        <Button fx:id="registerButton" layoutX="607.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterProduct" text="Enregistrer les modifications" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
+            <Tab text="Modifier la zone contact">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <Label layoutX="15.0" layoutY="11.0" text="Modifier la zone de contact">
+                                <font>
+                                    <Font size="36.0" />
+                                </font>
+                            </Label>
+                        <TextField fx:id="webPage" layoutX="188.0" layoutY="235.0" />
+                        <TextField fx:id="phoneNumber" layoutX="188.0" layoutY="127.0" />
+                        <TextField fx:id="adress" layoutX="188.0" layoutY="182.0" />
+                        <Button fx:id="buttonRegister" layoutX="427.0" layoutY="291.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterContact" text="Enregistrer les modifications" />
+                        <Label layoutX="60.0" layoutY="241.0" text="Page web :" />
+                        <Label layoutX="66.0" layoutY="188.0" text="Adresse :" />
+                        <Label layoutX="21.0" layoutY="133.0" text="Numéro de téléphone :" />
+                        <Label layoutX="395.0" layoutY="81.0" text="Horaires :" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
         </tabs>
       </TabPane>
    </center>

@@ -26,6 +26,8 @@ public class MainController {
     public ScrollPane scrollPane;
     @FXML
     private Parent contactView;
+
+
     @FXML
     private ContactController contactViewController;
     @FXML
@@ -129,7 +131,13 @@ public class MainController {
         promotionsViewController.start(this,productDatabase);
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
-        contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
+        if (contactViewController == null) {
+            contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
+        }
+        else {
+            addContent("/fxml/plugins/contact.fxml");
+            System.out.println(contactViewController.getAdress());
+        }
         contactViewController.start(this);
         interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("/fxml/plugins/interfaceAdminButton.fxml");
         interfaceAdminButtonViewController.start(this);
@@ -150,5 +158,9 @@ public class MainController {
 
     public VBox getContent() {
         return content;
+    }
+
+    public ContactController getContactViewController() {
+        return contactViewController;
     }
 }

@@ -47,6 +47,8 @@ public class ContactController implements Controller{
 
     @Override
     public void start(MainController mainController) {
+
+        System.out.println(this);
         //Set schedules
         final ObservableList<Schedule> openingHours = FXCollections.observableArrayList(
                 new Schedule("Lun", "09:00 à 19:00"),
@@ -74,5 +76,29 @@ public class ContactController implements Controller{
 
     public Node getAnchor() {
         return address;
+    }
+
+    public String getWebPage() {
+        return webPage.getText();
+    }
+
+    public String getPhoneNumber() {
+        return phone.getText();
+    }
+
+    public String getAdress() {
+        return address.getText();
+    }
+
+    public void setWebPage(String webPage) {
+        this.webPage.setText(webPage);
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        phone.setText(phoneNumber);
+    }
+
+    public void setAdress(String adress) {
+        address.setText(adress);
     }
 }
