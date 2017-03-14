@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.ShopsController">
+    <AnchorPane>
+        <VBox spacing="30">
+            <BorderPane fx:id="header"/>
+            <VBox>
+                <padding>
+                    <Insets top="30" left="30.0" right="30.0"/>
+                </padding>
+
+                <Pane>
+                    <padding>
+                        <Insets left="30"/>
+                    </padding>
+                    <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos magasins" />
+                </Pane>
+
+                <BorderPane>
+                    <center>
+                        <TableView fx:id="magasins" maxWidth="800" focusTraversable="false">
+                            <columns>
+                                <TableColumn fx:id="nom" prefWidth="200" text="Nom" />
+                                <TableColumn fx:id="ville" prefWidth="150" text="Ville" />
+                                <TableColumn fx:id="region" prefWidth="150" text="Région" />
+                                <TableColumn fx:id="site" prefWidth="300" text="Site Internet" />
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+
+            </VBox>
+            <BorderPane fx:id="contact"/>
+        </VBox>
+    </AnchorPane>
+</ScrollPane>

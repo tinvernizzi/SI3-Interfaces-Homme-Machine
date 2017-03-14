@@ -24,6 +24,7 @@ public class PromoController extends Controller {
         displayHeader(this);
         displayContact();
     }
+
     private void displayPromotions() {
         ObservableList<Promotion> liste = new ListePromotions().getListePromotions();
         this.listepromo.setPrefHeight(188 * liste.size());

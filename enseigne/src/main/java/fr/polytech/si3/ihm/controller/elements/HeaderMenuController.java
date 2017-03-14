@@ -27,6 +27,9 @@ public class HeaderMenuController {
     private Button productButton;
 
     @FXML
+    private Button shopsButton;
+
+    @FXML
     private Button aboutButton;
 
     @FXML
@@ -44,6 +47,8 @@ public class HeaderMenuController {
             infoButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof ProductsController)
             productButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
+        else if (currentController instanceof ShopsController)
+            shopsButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof AboutController)
             aboutButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
 
@@ -107,6 +112,21 @@ public class HeaderMenuController {
             }
         });
 
+        shopsButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent event) {
+                FXMLLoader loader = new FXMLLoader();
+                try {
+                    Stage stage = (Stage) shopsButton.getScene().getWindow();
+                    Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/shops.fxml"));
+                    Scene scene = new Scene(rootNode);
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         aboutButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 FXMLLoader loader = new FXMLLoader();
@@ -122,5 +142,4 @@ public class HeaderMenuController {
             }
         });
     }
-
 }
