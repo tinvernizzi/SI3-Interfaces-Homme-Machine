@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.promoPage.Controller">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.eventPage.Controller">
     <top>
         <fx:include source="/fxml/header.fxml"/>
     </top>
@@ -20,7 +20,7 @@
                     <content>
                         <VBox alignment="TOP_CENTER" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" BorderPane.alignment="CENTER">
                             <children>
-                                <Label text="Promotions en cours">
+                                <Label text="Evènements en cours">
                                     <font>
                                         <Font size="30.0"/>
                                     </font>
