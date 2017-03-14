@@ -121,7 +121,7 @@ public class MainController {
         slideshowViewController = (SlideshowController) addContent("/fxml/plugins/slideshow.fxml");
         slideshowViewController.start(this);
         promotionsViewController =(PromotionsController) addContent("/fxml/plugins/promotions.fxml");
-        productsViewController.start(this);
+        promotionsViewController.start(this,productDatabase);
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
         contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");

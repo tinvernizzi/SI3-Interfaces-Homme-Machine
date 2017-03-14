@@ -32,6 +32,9 @@ public class ProductDatabase {
         );
 
         dataBase.addAll(products);
+        for(int i = 0; i < 7; i++){
+            dataBase.get(i).setPromotion(60);
+        }
     }
 
 
