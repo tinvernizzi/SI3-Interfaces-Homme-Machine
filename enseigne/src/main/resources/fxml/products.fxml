@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.ProductsController">
-    <AnchorPane>
+    <AnchorPane styleClass="rootNode">
         <VBox spacing="30">
             <BorderPane fx:id="header"/>
             <VBox>
@@ -16,9 +16,9 @@
                     <padding>
                         <Insets left="30"/>
                     </padding>
-                    <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos produits" />
+                    <Text styleClass="sectionTitle" text="Nos produits" />
                 </Pane>
-                <GridPane fx:id="gridDisplay" hgap="30.0" vgap="30.0" minHeight="690.0" minWidth="920.0" style="-fx-background-color: #dddddd;">
+                <GridPane fx:id="gridDisplay" hgap="30.0" vgap="30.0" minHeight="690.0" minWidth="920.0" styleClass="productGrid">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0"/>

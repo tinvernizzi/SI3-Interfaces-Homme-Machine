@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <ScrollPane prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.PromoController">
-    <AnchorPane>
+    <AnchorPane styleClass="rootNode">
         <VBox spacing="30">
 
             <BorderPane fx:id="header"/>
@@ -15,7 +15,7 @@
                 <padding>
                     <Insets left="30" right="30"/>
                 </padding>
-                <Text text="Nos promotions" style="-fx-font-family: System; -fx-font-size: 25"/>
+                <Text text="Nos promotions" styleClass="sectionTitle"/>
                 <ListView fx:id="listepromo" prefHeight="100"/>
             </VBox>
 

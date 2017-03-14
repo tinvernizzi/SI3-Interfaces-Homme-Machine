@@ -5,7 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<AnchorPane id="slideshowView" fx:id="anchorPane" prefHeight="300.0" prefWidth="1000.0" style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.SlideshowController">
+<AnchorPane id="slideshowView" fx:id="anchorPane" prefHeight="300.0" prefWidth="1000.0" styleClass="slideShow" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.SlideshowController">
    <VBox alignment="CENTER" layoutX="1.0" layoutY="181.0" prefHeight="86.0" prefWidth="1000.0" spacing="5.0"
          AnchorPane.bottomAnchor="0.0">
       <HBox alignment="CENTER" VBox.vgrow="ALWAYS">

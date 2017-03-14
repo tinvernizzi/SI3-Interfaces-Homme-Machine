@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 <ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.ShopsController">
-    <AnchorPane>
+    <AnchorPane styleClass="rootNode">
         <VBox spacing="30">
             <BorderPane fx:id="header"/>
             <VBox>
@@ -19,7 +19,7 @@
                     <padding>
                         <Insets left="30"/>
                     </padding>
-                    <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos magasins" />
+                    <Text styleClass="sectionTitle" text="Nos magasins" />
                 </Pane>
 
                 <BorderPane>

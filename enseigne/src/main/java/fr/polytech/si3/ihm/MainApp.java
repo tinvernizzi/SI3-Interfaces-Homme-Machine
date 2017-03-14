@@ -11,12 +11,12 @@ import org.slf4j.LoggerFactory;
 public class MainApp extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
-    private static boolean adminMode = false;
+    private static String styleSheet = "/styles/default.css";
 
     public static void main(String[] args) throws Exception {
 
         for (String arg : args)
-                adminMode = arg.equals("-admin") || adminMode;
+                styleSheet = "/style/" + arg + ".css";
 
         launch(args);
     }
@@ -25,7 +25,7 @@ public class MainApp extends Application {
 
         log.info("Starting enseigne application");
 
-        String fxmlFile = (adminMode ? "/fxml/admin_home.fxml" : "/fxml/home.fxml");
+        String fxmlFile = "/fxml/home.fxml";
 
         log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
@@ -33,7 +33,7 @@ public class MainApp extends Application {
 
         log.debug("Showing JFX scene");
         Scene scene = new Scene(rootNode);
-        scene.getStylesheets().add("/styles/default.css");
+        scene.getStylesheets().add(styleSheet);
 
         stage.setTitle("To Be Or To Have - Enseigne Application");
         stage.setScene(scene);

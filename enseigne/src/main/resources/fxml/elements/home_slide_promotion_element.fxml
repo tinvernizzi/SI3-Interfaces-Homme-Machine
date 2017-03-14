@@ -20,7 +20,7 @@
         </padding>
     </BorderPane>
 
-    <Text text="PROMO" stroke="#FF0000" strokeWidth="0.5" styleClass="infoTitle"/>
+    <Text text="PROMO" stroke="#FF0000" strokeWidth="0.3" styleClass="infoTitle"/>
     <Text fx:id="offre" styleClass="infoDescr"/>
     <Text fx:id="marque" styleClass="infoDescr"/>
     <Text fx:id="produit" styleClass="infoDescr"/>

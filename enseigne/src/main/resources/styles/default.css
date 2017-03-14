@@ -22,13 +22,21 @@
     -fx-font-family: System;
     -fx-font-size: 25;
 }
+.slideShow {
+    -fx-background-color: #000000;
+}
 .infoTitle {
     -fx-font-family: System Bold;
-    -fx-font-size: 20;
+    -fx-font-size: 18;
 }
-
 .infoDescr {
     -fx-text-alignment: center;
+}
+.productGrid {
+    -fx-background-color: #dddddd;
+}
+.productGridElement {
+    -fx-font-size: 8;
 }
 
         /* Contact */
