@@ -51,10 +51,10 @@ public class SearchController  implements Controller{
         this.mainController = mainController;
     }
 
-    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<Type> optType, Optional<Category> category, ProductDatabase database) {
+    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<Type> optType, Optional<Category> category) {
         this.mainController = mainController;
         this.productPageController = productsPageViewController;
-        this.database = new ProductDatabase();
+        this.database = mainController.getProductDatabase();
 
         //adding checkboxes in a array
         this.typeCheckBoxes = new ArrayList<>();

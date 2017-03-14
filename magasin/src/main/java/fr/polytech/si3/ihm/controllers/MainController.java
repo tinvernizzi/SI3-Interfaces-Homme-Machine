@@ -55,6 +55,11 @@ public class MainController {
     private ProductsPageController productsPageViewController;
     private SearchController searchViewController;
     private AdministrationPageController administrationPageController;
+
+    public ProductDatabase getProductDatabase() {
+        return productDatabase;
+    }
+
     private ProductDatabase productDatabase;
 
 
@@ -101,7 +106,7 @@ public class MainController {
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.start(this);
-        searchViewController.start(this,productsPageViewController,type,category,productDatabase);
+        searchViewController.start(this,productsPageViewController,type,category);
 
         setScrollTo(productsPageViewController.getAnchor());
     }
@@ -111,7 +116,7 @@ public class MainController {
         this.interfaceAdminButtonViewController = controller;
         content.getChildren().clear();
         administrationPageController = (AdministrationPageController) addContent("/fxml/administration.fxml");
-        administrationPageController.start(this, productDatabase);
+        administrationPageController.start(this);
     }
 
     public void setMainPage(EnteteController controller) {
