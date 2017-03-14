@@ -13,7 +13,7 @@
     </padding>
     <BorderPane prefHeight="150.0" prefWidth="150.0">
         <center>
-            <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
         </center>
     </BorderPane>
     <VBox spacing="15.0">
