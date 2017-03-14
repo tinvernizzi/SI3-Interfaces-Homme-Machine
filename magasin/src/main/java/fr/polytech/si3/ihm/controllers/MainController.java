@@ -63,9 +63,10 @@ public class MainController {
     }
 
     private ProductDatabase productDatabase;
-    private Contact contact = new Contact();
+    private Contact contact;
 
     public void initialize() {
+        this.contact = new Contact();
         productDatabase = new ProductDatabase();
         contactViewController.start(this);
         slideshowViewController.start(this);
