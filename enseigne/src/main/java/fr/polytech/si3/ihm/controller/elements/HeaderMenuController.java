@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HeaderController {
+public class HeaderMenuController {
 
     @FXML
     private Button homeButton;

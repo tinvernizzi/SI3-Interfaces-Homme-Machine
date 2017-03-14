@@ -1,7 +1,7 @@
 package fr.polytech.si3.ihm.controller;
 
 import fr.polytech.si3.ihm.controller.elements.ContactController;
-import fr.polytech.si3.ihm.controller.elements.HeaderController;
+import fr.polytech.si3.ihm.controller.elements.HeaderMenuController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,12 +17,12 @@ public class Controller {
     @FXML
     private BorderPane contact;
 
-    public void displayHeader(Controller currentController) {
+    void displayHeader(Controller currentController) {
         String fxmlFile = "/fxml/elements/header.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {
             Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-            ((HeaderController) loader.getController()).initialize(currentController);
+            ((HeaderMenuController) loader.getController()).initialize(currentController);
 
             header.setCenter(rootNode);
         } catch (IOException e) {
@@ -30,7 +30,7 @@ public class Controller {
         }
     }
 
-    public void displayContact() {
+    void displayContact() {
         String fxmlFile = "/fxml/elements/contact.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {

@@ -6,10 +6,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-/**
- * Created by user on 13/03/2017.
- */
-public class PromoListeController {
+public class PromotionListeController {
+
     @FXML
     private Text description;
 
@@ -26,5 +24,7 @@ public class PromoListeController {
         this.description.setText(promotion.getDescription());
         this.title.setText(promotion.getTitle());
         this.image.setImage(new Image(promotion.getImagePath()));
+
+        description.getParent().getParent().setStyle("-fx-background-color: #" + promotion.getColor() + ";");
     }
 }

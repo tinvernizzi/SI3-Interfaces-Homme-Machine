@@ -1,16 +1,14 @@
 package fr.polytech.si3.ihm.controller;
 
-import fr.polytech.si3.ihm.controller.elements.PromoListeController;
-import fr.polytech.si3.ihm.controller.elements.PromotionSliderController;
-import fr.polytech.si3.ihm.model.ListPromotions;
+import fr.polytech.si3.ihm.controller.elements.PromotionListeController;
+import fr.polytech.si3.ihm.model.ListePromotions;
 import fr.polytech.si3.ihm.model.Promotion;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -18,17 +16,19 @@ import java.io.IOException;
 public class PromoController extends Controller {
 
     @FXML
-    private ListView<Promotion> promos;
+    private ListView<Promotion> listepromo;
 
     @FXML
-     public void initialize() {
-         displayHeader(this);
-         displayContact();
-         displayPromotions();
-     }
+    public void initialize() {
+        displayPromotions();
+        displayHeader(this);
+        displayContact();
+    }
     private void displayPromotions() {
-        this.promos.setItems(new ListPromotions().getListPromotions());
-        this.promos.setCellFactory(
+        ObservableList<Promotion> liste = new ListePromotions().getListePromotions();
+        this.listepromo.setPrefHeight(188 * liste.size());
+        this.listepromo.setItems(liste);
+        this.listepromo.setCellFactory(
                 new Callback<ListView<Promotion>, ListCell<Promotion>>() {
                     public ListCell<Promotion> call(ListView<Promotion> listView) {
                         return new ListCell<Promotion>() {
@@ -36,10 +36,10 @@ public class PromoController extends Controller {
                                 super.updateItem(item, empty);
                                 if (item != null) {
                                     try {
-                                        String fxmlFile = "/fxml/elements/promo_list.fxml";
+                                        String fxmlFile = "/fxml/elements/promo_list_promo_element.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
-                                        ((PromoListeController) loader.getController()).initPromotion(item);
+                                        ((PromotionListeController) loader.getController()).initPromotion(item);
                                         this.setGraphic(listElement);
                                     } catch (IOException e) {
                                         e.printStackTrace();

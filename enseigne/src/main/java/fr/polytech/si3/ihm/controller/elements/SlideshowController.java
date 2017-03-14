@@ -1,9 +1,8 @@
 package fr.polytech.si3.ihm.controller.elements;
 
+import fr.polytech.si3.ihm.model.ImageSlide;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**

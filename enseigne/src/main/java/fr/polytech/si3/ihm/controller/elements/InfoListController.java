@@ -6,9 +6,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-/**
- * Created by user on 13/03/2017.
- */
 public class InfoListController {
     @FXML
     private Text description;
@@ -26,5 +23,7 @@ public class InfoListController {
         this.description.setText(info.getDescription());
         this.title.setText(info.getTitre());
         this.image.setImage(new Image(info.getImagePath()));
+
+        description.getParent().getParent().setStyle("-fx-background-color: #" + info.getColor() + ";");
     }
 }

@@ -1,4 +1,4 @@
-package fr.polytech.si3.ihm.controller.elements;
+package fr.polytech.si3.ihm.model;
 
 import javafx.animation.*;
 import javafx.collections.FXCollections;
@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
-class ImageSlide {
+public class ImageSlide {
 
     private final int NUM_OF_IMGS = 4;
 
@@ -30,7 +30,7 @@ class ImageSlide {
     private Timeline mainAnim;
     private boolean animationIsFinished = true;
 
-    ImageSlide(AnchorPane ac){
+    public ImageSlide(AnchorPane ac){
         Pane clipPane = new Pane();
         double IMG_HEIGHT = 300;
         clipPane.setMaxSize(IMG_WIDTH, IMG_HEIGHT);
@@ -55,7 +55,7 @@ class ImageSlide {
         ac.getChildren().setAll(workingCollection);
     }
 
-    void startAnimation() {
+    public void startAnimation() {
 
         EventHandler<ActionEvent> slideAction = (ActionEvent t) -> {
             TranslateTransition trans = new TranslateTransition(Duration.seconds(1.5), imgContainer);
@@ -87,14 +87,14 @@ class ImageSlide {
         mainAnim.playFromStart();
     }
 
-    void goRight() {
+    public void goRight() {
         if(currentImage < NUM_OF_IMGS)
             translate(-1);
         else
             translate(NUM_OF_IMGS -1);
     }
 
-    void goLeft() {
+    public void goLeft() {
         if(currentImage > 1)
             translate(1);
         else

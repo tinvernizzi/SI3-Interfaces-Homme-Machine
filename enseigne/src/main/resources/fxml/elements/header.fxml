@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <BorderPane maxHeight="120" maxWidth="1000" minHeight="120" minWidth="1000" prefHeight="120" prefWidth="1000"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.HeaderController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.HeaderMenuController">
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="80">
             <ImageView fitHeight="60" fitWidth="240" pickOnBounds="true" preserveRatio="true">
