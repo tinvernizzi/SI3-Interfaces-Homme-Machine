@@ -1,6 +1,7 @@
 package fr.polytech.si3.ihm.controllers;
 
 import fr.polytech.si3.ihm.model.Category;
+import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Type;
 import javafx.fxml.FXML;
@@ -51,7 +52,6 @@ public class MainController {
     @FXML
     private InterfaceAdminButtonController interfaceAdminButtonViewController;
 
-
     private boolean isOnMainView = true;
 
     private ProductsPageController productsPageViewController;
@@ -63,7 +63,7 @@ public class MainController {
     }
 
     private ProductDatabase productDatabase;
-
+    private Contact contact = new Contact();
 
     public void initialize() {
         productDatabase = new ProductDatabase();
@@ -131,18 +131,14 @@ public class MainController {
         promotionsViewController.start(this,productDatabase);
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
-        if (contactViewController == null) {
-            contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
-            System.out.println(contactViewController.getAdress());
-        }
-        else {
-            addContent("/fxml/plugins/contact.fxml");
-            System.out.println(contactViewController.getAdress());
-        }
+        contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
         contactViewController.start(this);
         interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("/fxml/plugins/interfaceAdminButton.fxml");
         interfaceAdminButtonViewController.start(this);
         setScrollTo(slideshowView);
+        contactViewController.setWebPage(contact.getWebPage());
+        contactViewController.setPhoneNumber(contact.getPhoneNumber());
+        contactViewController.setAdress(contact.getAdress());
     }
 
     public ContactController getContactController() {
@@ -161,7 +157,7 @@ public class MainController {
         return content;
     }
 
-    public ContactController getContactViewController() {
-        return contactViewController;
+    public Contact getContactInformations() {
+        return contact;
     }
 }

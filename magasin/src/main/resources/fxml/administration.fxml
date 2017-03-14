@@ -44,9 +44,9 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="261.0" prefWidth="780.0">
+                        <HBox layoutX="14.0" layoutY="1.0" prefHeight="335.0" prefWidth="985.0">
                            <children>
-                              <BorderPane prefHeight="333.0" prefWidth="500.0">
+                              <BorderPane prefHeight="322.0" prefWidth="994.0">
                                  <top>
                                     <Label text="Statistiques" BorderPane.alignment="CENTER">
                                        <font>
@@ -55,21 +55,23 @@
                                     </Label>
                                  </top>
                                  <center>
-                                    <VBox alignment="CENTER" layoutX="10.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                    <VBox alignment="CENTER" layoutX="10.0" prefHeight="277.0" prefWidth="520.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <TableView fx:id="statVendeurs" prefHeight="293.0" prefWidth="495.0">
-                                            <columns>
-                                              <TableColumn fx:id="jour" prefWidth="89.0" text="Jour" />
-                                              <TableColumn fx:id="vendeur" prefWidth="150.0" text="Vendeur" />
-                                                <TableColumn fx:id="sales" prefWidth="255.0" text="Montant des ventes" />
-                                            </columns>
-                                          </TableView>
-                                          <Button fx:id="lastMonthsPerf" mnemonicParsing="false" onMouseClicked="#display12MonthsPerformance" text="Afficher la performance des vendeurs sur 12 mois" />
+                                          <Button fx:id="lastMonthsPerf" mnemonicParsing="false" onMouseClicked="#display12MonthsPerformance" prefHeight="28.0" prefWidth="348.0" text="Afficher la performance des vendeurs sur 12 mois" />
                                           <Button fx:id="lastWeekPerf" mnemonicParsing="false" onMouseClicked="#displayLastWeekPerformance" text="Afficher la performance des vendeurs pour la semaine dernière" />
                                           <Button fx:id="lastMonthsMeansOfSale" mnemonicParsing="false" onMouseClicked="#displayMeansOfSale" text="Afficher les moyens de vente du mois dernier" />
                                        </children>
                                     </VBox>
                                  </center>
+                                 <left>
+                                    <TableView fx:id="statVendeurs" prefHeight="293.0" prefWidth="495.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TableColumn fx:id="jour" prefWidth="89.0" text="Jour" />
+                                        <TableColumn fx:id="vendeur" prefWidth="150.0" text="Vendeur" />
+                                          <TableColumn fx:id="sales" prefWidth="255.0" text="Montant des ventes" />
+                                      </columns>
+                                    </TableView>
+                                 </left>
                               </BorderPane>
                            </children>
                         </HBox>

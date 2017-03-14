@@ -129,6 +129,5 @@ public class AdministrationPageController implements Controller {
         contact.setWebPage(webPage.getText());
         contact.setPhoneNumber(phoneNumber.getText());
         contact.setAdress(adress.getText());
-        System.out.println(contact);
     }
 }
