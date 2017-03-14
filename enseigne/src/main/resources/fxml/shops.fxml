@@ -24,12 +24,12 @@
 
                 <BorderPane>
                     <center>
-                        <TableView fx:id="magasins" maxWidth="800" focusTraversable="false">
+                        <TableView fx:id="magasinsTable" maxWidth="800" focusTraversable="false">
                             <columns>
-                                <TableColumn fx:id="nom" prefWidth="200" text="Nom" />
-                                <TableColumn fx:id="ville" prefWidth="150" text="Ville" />
-                                <TableColumn fx:id="region" prefWidth="150" text="Région" />
-                                <TableColumn fx:id="site" prefWidth="300" text="Site Internet" />
+                                <TableColumn styleClass="shopsTableColumn" fx:id="nom" prefWidth="200" text="Nom" />
+                                <TableColumn styleClass="shopsTableColumn" fx:id="ville" prefWidth="150" text="Ville" />
+                                <TableColumn styleClass="shopsTableColumn" fx:id="region" prefWidth="150" text="Région" />
+                                <TableColumn styleClass="shopsTableColumn" fx:id="site" text="Site Internet" />
                             </columns>
                         </TableView>
                     </center>
