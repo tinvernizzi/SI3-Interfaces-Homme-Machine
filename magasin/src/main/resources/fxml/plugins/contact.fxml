@@ -10,11 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.ContactController">
    <top>
       <HBox prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nous contacter">
+            <Label fx:id="title" text="Nous contacter">
                <font>
                   <Font size="39.0" />
                </font>
@@ -83,7 +85,7 @@
             </ImageView>
             <VBox prefHeight="205.0" prefWidth="503.0">
                <children>
-                  <Label text="Horaires" underline="true">
+                  <Label text="Horaires d'ouverture" underline="true">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -91,7 +93,16 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <ListView fx:id="schedules" prefHeight="200.0" prefWidth="200.0" />
+                  <TableView fx:id="schedules" prefHeight="203.0"
+                             prefWidth="452.0">
+                     <columns>
+                        <TableColumn fx:id="date" prefWidth="200.0"
+                                     text="Jour"/>
+                        <TableColumn fx:id="hour" prefWidth="250.0"
+                                     text="Horaire"/>
+                     </columns>
+                  </TableView>
+                  <!--<ListView fx:id="schedules" prefHeight="200.0" prefWidth="200.0" />-->
                </children>
             </VBox>
          </children>
