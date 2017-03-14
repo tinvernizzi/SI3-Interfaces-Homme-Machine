@@ -57,9 +57,9 @@
                                  <center>
                                     <VBox alignment="CENTER" layoutX="10.0" prefHeight="277.0" prefWidth="520.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <Button fx:id="lastMonthsPerf" mnemonicParsing="false" onMouseClicked="#display12MonthsPerformance" prefHeight="28.0" prefWidth="348.0" text="Afficher la performance des vendeurs sur 12 mois" />
+                                          <Button fx:id="lastMonthsPerf" mnemonicParsing="false" onMouseClicked="#display12MonthsPerformance" prefHeight="28.0" prefWidth="431.0" text="Afficher la performance des vendeurs sur 12 mois" />
                                           <Button fx:id="lastWeekPerf" mnemonicParsing="false" onMouseClicked="#displayLastWeekPerformance" text="Afficher la performance des vendeurs pour la semaine dernière" />
-                                          <Button fx:id="lastMonthsMeansOfSale" mnemonicParsing="false" onMouseClicked="#displayMeansOfSale" text="Afficher les moyens de vente du mois dernier" />
+                                          <Button fx:id="lastMonthsMeansOfSale" mnemonicParsing="false" onMouseClicked="#displayMeansOfSale" prefHeight="26.0" prefWidth="430.0" text="Afficher les moyens de vente du mois dernier" />
                                        </children>
                                     </VBox>
                                  </center>
