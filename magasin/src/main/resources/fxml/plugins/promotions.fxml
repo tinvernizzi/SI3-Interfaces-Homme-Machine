@@ -1,171 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<BorderPane id="promotionsView" prefHeight="370.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.PromotionsController">
-   <center>
-      <Group BorderPane.alignment="TOP_LEFT">
+<ScrollPane  id="promotionsView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015.0"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.PromotionsController">
+  <content>
+    <AnchorPane>
          <children>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="1000.0">
+            <VBox spacing="30.0">
                <children>
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
-                     <children>
-                        <ImageView fx:id="promo1" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/images/produits/L3.jpg" />
-                           </image>
-                           <VBox.margin>
+
+                  <BorderPane fx:id="header" />
+
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+                     <top>
+                        <Label fx:id = "mainTitle" text="Nos promotions">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <opaqueInsets>
                               <Insets />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                           <font>
-                              <Font name="System Bold" size="21.0" />
-                           </font>
+                           </opaqueInsets>
+                           <BorderPane.margin>
+                              <Insets left="30.0" />
+                           </BorderPane.margin>
                         </Label>
-                        <Label text="Conditions promo">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label text="MARQUE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label text="Description produit" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
-                     <children>
-                        <ImageView fx:id="promo2" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/images/produits/C2.jpg" />
-                           </image>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                           <font>
-                              <Font name="System Bold" size="21.0" />
-                           </font>
-                        </Label>
-                        <Label text="Conditions promo">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label text="MARQUE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label text="Description produit" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
-                  <VBox fx:id="promoArrowBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeDisplayedPromotions" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #dddddd;">
-                     <children>
-                        <ImageView fx:id="promo4" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/images/produits/D1.jpg" />
-                           </image>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                           <font>
-                              <Font name="System Bold" size="21.0" />
-                           </font>
-                        </Label>
-                        <Label text="Conditions promo">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label text="MARQUE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label text="Description produit" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="5.0">
-                     <children>
-                        <ImageView fx:id="promo3" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/images/produits/C1.jpg" />
-                           </image>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label style="-fx-background-color: YELLOW;" text="PROMO" textFill="RED">
-                           <font>
-                              <Font name="System Bold" size="21.0" />
-                           </font>
-                        </Label>
-                        <Label text="Conditions promo">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Label text="MARQUE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label text="Description produit" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
+                     </top>
+                     <center>
+
+                        <ListView fx:id="listepromo" prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+
+                     </center>
+                  </BorderPane>
+
+
+                   <BorderPane />
+
                </children>
-            </HBox>
-         </children>
-         <BorderPane.margin>
-            <Insets top="10.0" />
-         </BorderPane.margin>
-      </Group>
-   </center>
-   <top>
-      <Label fx:id="mainTitle" text="Promotions" BorderPane.alignment="TOP_LEFT">
-         <font>
-            <Font name="System Bold" size="34.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets left="30.0" />
-         </BorderPane.margin>
-      </Label>
-   </top>
-   <padding>
-      <Insets top="10.0" />
-   </padding>
-   <right>
-      <ImageView fitHeight="73.0" fitWidth="57.0" onMouseClicked="#changeDisplayedPromotions" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER_RIGHT">
-         <image>
-            <Image url="@/images/livres.jpg" />
-         </image>
-      </ImageView>
-   </right>
-</BorderPane>
+            </VBox>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

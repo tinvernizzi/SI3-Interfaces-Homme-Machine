@@ -3,6 +3,8 @@ package fr.polytech.si3.ihm.model;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.Optional;
+
 import static fr.polytech.si3.ihm.model.Category.NO_CATEGORY;
 
 public class Product {
@@ -13,6 +15,7 @@ public class Product {
     private String description;
     private Category category;
     private Type type;
+    private Optional<Promotion> promotion = Optional.empty();
 
     public Product(String name, int prix, String ImagePath, String description,Type type,Category category) {
         this.name = name;
@@ -45,7 +48,9 @@ public class Product {
     }
 
     public String getPrix() {
-        return ((Integer)prix).toString();
+        if(promotion.isPresent()) {
+            return promotion.get().getPromoPrice()+"";
+        } else return prix+"";
     }
 
     public int getPriceInteger() {
@@ -58,5 +63,13 @@ public class Product {
 
     public Type getType() {
         return type;
+    }
+
+    public void setPromotion(int promoPrice){
+        this.promotion = Optional.of(new Promotion(prix,promoPrice));
+    }
+
+    public void removePromotion(){
+        this.promotion = Optional.empty();
     }
 }
