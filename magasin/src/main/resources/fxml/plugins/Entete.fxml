@@ -34,7 +34,7 @@
                               <Font name="Myriad Set Pro Thin" size="13.0" />
                            </font>
                         </TextField>
-                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
+                        <Button onMouseClicked="#onSearchButtonClicked" mnemonicParsing="false" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
                            <font>
                               <Font name="Myriad Set Pro Bold" size="13.0" />
                            </font>

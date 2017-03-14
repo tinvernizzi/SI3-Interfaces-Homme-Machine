@@ -102,9 +102,8 @@ public class MainController {
         return isOnMainView;
     }
 
-    public void setProductPage(ProductsController productsController, Optional<Type> type, Optional<Category> category) {
+    public void setProductPage(Optional<Type> type, Optional<Category> category) {
         isOnMainView = false;
-        this.productsViewController = productsController;
         content.getChildren().clear();
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
@@ -114,17 +113,15 @@ public class MainController {
         setScrollTo(productsPageViewController.getAnchor());
     }
 
-    public void setAdminPage(InterfaceAdminButtonController controller) {
+    public void setAdminPage() {
         isOnMainView = false;
-        this.interfaceAdminButtonViewController = controller;
         content.getChildren().clear();
         administrationPageController = (AdministrationPageController) addContent("/fxml/administration.fxml");
         administrationPageController.start(this);
     }
 
-    public void setMainPage(EnteteController controller) {
+    public void setMainPage() {
         this.isOnMainView = true;
-        this.enteteViewController = controller;
         content.getChildren().clear();
         slideshowViewController = (SlideshowController) addContent("/fxml/plugins/slideshow.fxml");
         slideshowViewController.start(this);
