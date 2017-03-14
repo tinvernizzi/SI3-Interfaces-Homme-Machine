@@ -45,7 +45,7 @@ public class ProductsPageController implements Controller{
         Node node = fxmlLoader.load();
         productGrid.getChildren().add(node);
         SingleProductController singleProductController = fxmlLoader.getController();
-        singleProductController.setProductInformations(product, false);
+        singleProductController.setProductInformations(product);
     }
 
     public void display(List<Product> data) {

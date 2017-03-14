@@ -53,6 +53,10 @@ public class Product {
         } else return prix+"";
     }
 
+    public int getPrixOutsideOfPromotion() {
+        return prix;
+    }
+
     public int getPriceInteger() {
         return prix;
     }
@@ -75,5 +79,9 @@ public class Product {
 
     public boolean isOnPromotion() {
         return promotion.isPresent();
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
     }
 }

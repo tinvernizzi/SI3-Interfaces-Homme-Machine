@@ -29,12 +29,12 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="80.0" prefWidth="300.0" spacing="2.0">
                      <children>
-                        <TextField promptText="Rechercher un produit">
+                        <TextField fx:id="barreRecherche" promptText="Rechercher un produit">
                            <font>
                               <Font name="Myriad Set Pro Thin" size="13.0" />
                            </font>
                         </TextField>
-                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
+                        <Button onMouseClicked="#onSearchButtonClicked" mnemonicParsing="false" prefHeight="29.0" prefWidth="48.0" style="-fx-background-color: #353C45;" text="Ok" textFill="WHITE">
                            <font>
                               <Font name="Myriad Set Pro Bold" size="13.0" />
                            </font>
@@ -48,12 +48,12 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="150.0" style="-fx-background-color: #000000;">
                <children>
-                  <Button fx:id="accueilButton" mnemonicParsing="false" onMouseClicked="#onAccueilButtonClicked" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#onAccueilButtonClicked" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="promotionsButton" mnemonicParsing="false" onMouseClicked="#onPromotionButtonClicked" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#onPromotionButtonClicked" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>

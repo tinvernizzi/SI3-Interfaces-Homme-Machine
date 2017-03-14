@@ -15,6 +15,6 @@
             <ImageView fx:id="image" preserveRatio="true" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true"/>
         </center>
     </BorderPane>
-    <Text fx:id="titre" style="-fx-font-family: System Bold; -fx-font-size: 20"/>
-    <Text fx:id="description" style="-fx-text-alignment: center" wrappingWidth="160"/>
+    <Text fx:id="titre" styleClass="infoTitle"/>
+    <Text fx:id="description" styleClass="infoDescr" wrappingWidth="160"/>
 </VBox>

@@ -33,7 +33,7 @@ public class MainApp extends Application {
 
         log.debug("Showing JFX scene");
         Scene scene = new Scene(rootNode);
-        //scene.getStylesheets().add("/styles/default.css");
+        scene.getStylesheets().add("/styles/default.css");
 
         stage.setTitle("To Be Or To Have - Enseigne Application");
         stage.setScene(scene);

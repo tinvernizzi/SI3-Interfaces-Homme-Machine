@@ -5,16 +5,16 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
-<ScrollPane prefHeight="700" prefWidth="1015"
+<ScrollPane prefHeight="700" prefWidth="1006"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.HomeController">
-    <BorderPane>
+    <BorderPane styleClass="rootNode">
         <center>
             <VBox alignment="TOP_CENTER" spacing="30.0">
                 <BorderPane fx:id="header"/>
                 <BorderPane fx:id="slideshow"/>
                 <BorderPane>
                     <top>
-                        <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos promotions">
+                        <Text styleClass="sectionTitle" text="Nos promotions">
                             <BorderPane.margin>
                                 <Insets left="30.0" top="10" bottom="10" />
                             </BorderPane.margin>
@@ -27,7 +27,7 @@
                 </BorderPane>
                 <BorderPane>
                     <top>
-                        <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Informations">
+                        <Text styleClass="sectionTitle" text="Informations">
                             <BorderPane.margin>
                                 <Insets left="30.0" top="10" bottom="10" />
                             </BorderPane.margin>

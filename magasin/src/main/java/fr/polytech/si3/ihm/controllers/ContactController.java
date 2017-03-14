@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.Schedule;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +20,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Double.MAX_VALUE;
 
@@ -45,18 +48,36 @@ public class ContactController implements Controller{
     @FXML
     public Label title;
 
+    private List<Schedule> openingHours;
+    
     @Override
     public void start(MainController mainController) {
+        Contact contact = mainController.getContactInformations();
+
         //Set schedules
-        final ObservableList<Schedule> openingHours = FXCollections.observableArrayList(
-                new Schedule("Lun", "09:00 à 19:00"),
-                new Schedule("Mar", "09:00 à 19:00"),
-                new Schedule("Mer", "09:00 à 19:00"),
-                new Schedule("Jeu", "09:00 à 19:00"),
-                new Schedule("Ven", "09:00 à 19:00"),
-                new Schedule("Sam", "09:00 à 12:00"),
-                new Schedule("Dim", "Fermé")
-        );
+        openingHours = contact.getSchedules();
+        System.out.println(openingHours);
+        ObservableList<Schedule> horaires = FXCollections.observableArrayList(openingHours);
+        date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
+        hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
+        schedules.setItems(horaires);
+        //settings of tableView
+        schedules.setEditable(false);
+        schedules.setMouseTransparent(true);
+        schedules.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        //set others infos
+        address.setText(contact.getAdress());
+        phone.setText(contact.getPhoneNumber());
+        webPage.setText(contact.getPhoneNumber());
+    }
+
+    public Node getAnchor() {
+        return address;
+    }
+
+    public void setHoraires(List<Schedule> listSchedules) {
+        final ObservableList<Schedule> openingHours = FXCollections.observableArrayList(listSchedules);
 
         date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
         hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
@@ -65,14 +86,5 @@ public class ContactController implements Controller{
         schedules.setEditable(false);
         schedules.setMouseTransparent(true);
         schedules.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-
-        //set others infos
-        address.setText("06600 Antibes");
-        phone.setText("06.72.98.21.21");
-        webPage.setText("www.tobeortohave.com");
-    }
-
-    public Node getAnchor() {
-        return address;
     }
 }

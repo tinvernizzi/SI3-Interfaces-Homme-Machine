@@ -11,9 +11,7 @@
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="80">
             <ImageView fitHeight="60" fitWidth="240" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@/images/tboth.png" />
-                </image>
+                <Image url="@/images/tboth.png"/>
             </ImageView>
             <padding>
                 <Insets left="130.0"/>
@@ -21,18 +19,16 @@
         </HBox>
     </top>
     <center>
-        <HBox alignment="CENTER" maxHeight="35" minHeight="35" prefHeight="35" prefWidth="1000.0" spacing="60" style="-fx-background-color: #000000;">
-            <children>
-                <Button prefWidth="150" fx:id="homeButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Accueil" textFill="WHITE"/>
-                <Button prefWidth="150" fx:id="promoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Promotions" textFill="WHITE"/>
-                <Button prefWidth="150" fx:id="infoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Informations" textFill="WHITE"/>
-                <Button prefWidth="150" fx:id="productButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Produits" textFill="WHITE"/>
-                <Button prefWidth="150" fx:id="shopsButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Magasins" textFill="WHITE"/>
-                <Button prefWidth="150" fx:id="aboutButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="A propos" textFill="WHITE"/>
-            </children>
+        <HBox styleClass="headerMenu" alignment="CENTER" prefHeight="35" prefWidth="1000.0" spacing="40">
             <padding>
-                <Insets left="50" right="50" />
+                <Insets left="40" right="40"/>
             </padding>
+            <Button prefWidth="150" fx:id="homeButton" mnemonicParsing="false" styleClass="headerButton" text="Accueil" textFill="WHITE"/>
+            <Button prefWidth="150" fx:id="promoButton" mnemonicParsing="false" styleClass="headerButton" text="Promotions" textFill="WHITE"/>
+            <Button prefWidth="150" fx:id="infoButton" mnemonicParsing="false" styleClass="headerButton" text="Informations" textFill="WHITE"/>
+            <Button prefWidth="150" fx:id="productButton" mnemonicParsing="false" styleClass="headerButton" text="Produits" textFill="WHITE"/>
+            <Button prefWidth="150" fx:id="shopsButton" mnemonicParsing="false" styleClass="headerButton" text="Magasins" textFill="WHITE"/>
+            <Button prefWidth="150" fx:id="aboutButton" mnemonicParsing="false" styleClass="headerButton" text="A propos" textFill="WHITE"/>
         </HBox>
     </center>
 </BorderPane>
