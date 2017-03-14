@@ -35,35 +35,35 @@ public class ProductsController implements Controller{
     }
 
     public void OnProductButtonClicked(MouseEvent mouseEvent) throws InterruptedException {
-        mainController.setProductPage(this, Optional.empty(), Optional.empty());
+        mainController.setProductPage(Optional.empty(), Optional.empty());
     }
 
     public void OnNeuroButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.empty(), Optional.of(NEUROLOGIC));
+        mainController.setProductPage(Optional.empty(), Optional.of(NEUROLOGIC));
 
     }
 
     public void OnScienceButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.empty(),Optional.of(SCIENTIFIC));
+        mainController.setProductPage(Optional.empty(),Optional.of(SCIENTIFIC));
 
 
     }
 
     public void OnDvdButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.of(DVD), Optional.empty());
+        mainController.setProductPage(Optional.of(DVD), Optional.empty());
     }
 
     public void OnCdButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.of(CD), Optional.empty());
+        mainController.setProductPage(Optional.of(CD), Optional.empty());
     }
 
     public void OnBookButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.of(BOOK), Optional.empty());
+        mainController.setProductPage(Optional.of(BOOK), Optional.empty());
 
     }
 
     public void OnStageButtonClicked(MouseEvent mouseEvent) {
-        mainController.setProductPage(this, Optional.of(STAGE), Optional.empty());
+        mainController.setProductPage(Optional.of(STAGE), Optional.empty());
 
     }
 }
