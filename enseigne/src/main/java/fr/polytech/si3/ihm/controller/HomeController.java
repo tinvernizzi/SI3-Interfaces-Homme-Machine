@@ -1,17 +1,20 @@
 package fr.polytech.si3.ihm.controller;
 
-import fr.polytech.si3.ihm.controller.elements.ContactController;
+import fr.polytech.si3.ihm.controller.elements.HeaderController;
 import fr.polytech.si3.ihm.controller.elements.InfoSliderController;
 import fr.polytech.si3.ihm.controller.elements.PromotionSliderController;
+import fr.polytech.si3.ihm.controller.elements.SlideshowController;
 import fr.polytech.si3.ihm.model.Info;
-import fr.polytech.si3.ihm.model.ListInfos;
-import fr.polytech.si3.ihm.model.ListPromotions;
+import fr.polytech.si3.ihm.model.ListeInfos;
+import fr.polytech.si3.ihm.model.ListePromotions;
 import fr.polytech.si3.ihm.model.Promotion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import org.slf4j.Logger;
@@ -30,15 +33,31 @@ public class HomeController extends Controller {
     private ListView<Info> slideInfos;
 
     @FXML
+    private BorderPane slideshow;
+
+    @FXML
     private void initialize() {
-        displayHeader();
+        displayHeader(this);
+        displaySlideshow();
         displayPromotions();
         displayInfos();
         displayContact();
     }
 
+    private void displaySlideshow() { String fxmlFile = "/fxml/elements/slideshow.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        try {
+            Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
+            ((SlideshowController) loader.getController()).start();
+
+            slideshow.setCenter(rootNode);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void displayPromotions() {
-        this.slidePromos.setItems(new ListPromotions().getListPromotions());
+        this.slidePromos.setItems(new ListePromotions().getListePromotions());
         this.slidePromos.setCellFactory(
                 new Callback<ListView<Promotion>, ListCell<Promotion>>() {
                     public ListCell<Promotion> call(ListView<Promotion> listView) {
@@ -64,7 +83,7 @@ public class HomeController extends Controller {
     }
 
     private void displayInfos() {
-        this.slideInfos.setItems(new ListInfos().getListInfos());
+        this.slideInfos.setItems(new ListeInfos().getListeInfos());
         this.slideInfos.setCellFactory(
                 new Callback<ListView<Info>, ListCell<Info>>() {
                     public ListCell<Info> call(ListView<Info> listView) {

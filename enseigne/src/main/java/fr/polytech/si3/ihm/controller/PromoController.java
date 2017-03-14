@@ -22,7 +22,7 @@ public class PromoController extends Controller {
 
     @FXML
      public void initialize() {
-         displayHeader();
+         displayHeader(this);
          displayContact();
          displayPromotions();
      }

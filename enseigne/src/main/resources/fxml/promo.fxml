@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015.0"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.PromoController">
+  <content>
+    <AnchorPane>
+         <children>
+            <VBox spacing="30.0">
+               <children>
+
+                  <BorderPane fx:id="header" />
+
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+                     <top>
+                        <Label text="Nos promotions">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <BorderPane.margin>
+                              <Insets left="30.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                     <center>
+
+                        <ListView fx:id="listepromo" prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+
+                     </center>
+                  </BorderPane>
+
+
+                   <BorderPane fx:id="contact" />
+
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

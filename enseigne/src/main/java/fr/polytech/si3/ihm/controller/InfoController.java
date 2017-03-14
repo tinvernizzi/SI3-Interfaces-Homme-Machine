@@ -14,9 +14,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-/**
- * Created by Elliot on 11/03/2017.
- */
 public class InfoController extends Controller {
 
     private static final Logger log = LoggerFactory.getLogger(InfoController.class);
@@ -26,7 +23,7 @@ public class InfoController extends Controller {
 
     @FXML
     public void initialize() {
-        displayHeader();
+        displayHeader(this);
         displayContact();
         displayInfos();
     }

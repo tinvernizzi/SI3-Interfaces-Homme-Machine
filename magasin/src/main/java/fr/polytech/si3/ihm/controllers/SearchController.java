@@ -5,6 +5,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.util.Optional;
+
 /**
  * Created by user on 12/03/2017.
  */
@@ -22,6 +24,8 @@ public class SearchController  implements Controller{
     public TextField minimumPrice;
     @FXML
     public TextField maximumPrice;
+    @FXML
+    public TextField textField;
 
     private MainController mainController;
     private ProductsPageController productPageController;
@@ -37,12 +41,14 @@ public class SearchController  implements Controller{
     }
 
     public void onSearchButtonClicked(MouseEvent mouseEvent) {
-        System.out.println("search :"+dvdCheckBox.isSelected()+cdCheckBox.isSelected()+bookCheckBox.isSelected()+stageCheckBox.isSelected());
-        System.out.println();
-        System.out.println(maximumPrice.getCharacters());
         int min = Integer.parseInt(minimumPrice.getCharacters().toString());
         int max = Integer.parseInt(maximumPrice.getCharacters().toString());
-        productPageController.search(dvdCheckBox.isSelected(),cdCheckBox.isSelected(),bookCheckBox.isSelected(),stageCheckBox.isSelected(),min,max);
+        String searchName = textField.getCharacters().toString();
+        Optional<String> name = Optional.empty();
+        if(!searchName.equals("")){
+            name = Optional.of(searchName);
+        }
+        productPageController.search(dvdCheckBox.isSelected(),cdCheckBox.isSelected(),bookCheckBox.isSelected(),stageCheckBox.isSelected(),min,max,name);
     }
 
 

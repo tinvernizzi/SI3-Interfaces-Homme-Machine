@@ -8,18 +8,18 @@ public class Info {
 
     private StringProperty titre;
     private StringProperty description;
-    private Color color;
+    private StringProperty color;
     private String imagePath;
 
-    public Info(String titre, String description, Color color, String imagePath) {
+    public Info(String titre, String description, String color, String imagePath) {
         this.titre = new SimpleStringProperty(titre);
         this.description = new SimpleStringProperty(description);
-        this.color = color;
+        this.color = new SimpleStringProperty(color);
         this.imagePath = imagePath;
     }
 
-    public Color getColor() {
-        return color;
+    public String getColor() {
+        return color.get();
     }
 
     public String getImagePath() {

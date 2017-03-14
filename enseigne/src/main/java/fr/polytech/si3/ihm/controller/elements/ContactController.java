@@ -16,8 +16,8 @@ public class ContactController {
 
     @FXML
     public void initialize() {
-        address.setText("Addresse :\n31 rue verte\n06000 Nice");
-        phone.setText("Tél. : +33 4 61 XX XX XX");
-        mailaddress.setText("Mail : contact@tobeortohave.com");
+        address.setText("Addresse :\n13 Rue de Lorem\n06500 Nice");
+        phone.setText("Tél. :\n+33 4 61 XX XX XX");
+        mailaddress.setText("Adresse Mail :\ncontact@tobeortohave.com");
     }
 }

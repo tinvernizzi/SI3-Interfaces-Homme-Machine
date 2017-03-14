@@ -1,59 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015.0"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
-  <content>
+<?import javafx.scene.text.Text?>
+<ScrollPane prefHeight="700.0" prefWidth="1015" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
     <AnchorPane>
-         <children>
-            <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
-               <children>
-
-                  <BorderPane fx:id="header" />
-
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                     <children>
-                        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0">
-                           <center>
-                              <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" BorderPane.alignment="CENTER">
-                                 <image>
-                                    <Image url="@/images/enseigne.png" />
-                                 </image>
-                              </ImageView>
-                           </center>
-                        </BorderPane>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-                           <children>
-                              <Label text="A propos de 'To Be or To Have'">
-                                 <font>
-                                    <Font name="System Bold" size="25.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <padding>
-                                    <Insets left="30.0" />
-                                 </padding>
-                              </Label>
-                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="940.0" text="&quot;The secret of successful retailing is to give your customers what they want. And really, if you think about it from your point of view as a customer, you want everything: a wide&#10;assortment of good-quality merchandise; the lowest possible prices; guaranteed satisfaction with what you buy; friendly, knowledgeable service; convenient hours; free parking;&#10;a pleasant shopping experience.&quot;&#10;&#10;- Sam Walton (1918-1992)&#10;&#10;Walmart.com is a lot like your neighborhood Walmart store. We feature a great selection of high-quality merchandise, friendly service and, of course, Every Day Low Prices. We&#10;also have another goal: to bring you the best shopping experience on the Internet.&#10;Founded in January 2000, Walmart.com is a subsidiary of Wal-Mart Stores, Inc. Our headquarters is on the San Francisco Peninsula near Silicon Valley, where we have access to&#10;the world's deepest pool of Internet executive and technical talent.&#10;But we think of ourselves, first and foremost, as a retailer. So our ties to Bentonville, Ark. - where Sam Walton opened the first store that bore the Walton name and where&#10;Wal-Mart Stores, Inc., is still based - give us our foundation." />
-                           </children>
-                           <padding>
-                              <Insets left="30.0" right="30.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                  </VBox>
-
-                   <BorderPane fx:id="contact" />
-
-               </children>
-            </VBox>
-         </children></AnchorPane>
-  </content>
+        <VBox alignment="TOP_CENTER" spacing="30.0">
+            <BorderPane fx:id="header"/>
+            <ImageView fitHeight="250" fitWidth="500" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/enseigne.jpg"/>
+            </ImageView>
+            <BorderPane>
+                <left>
+                    <Text style="-fx-font-family: System; -fx-font-size: 25" text="A propos de To Be or To Have " />
+                </left>
+                <padding>
+                    <Insets left="30"/>
+                </padding>
+            </BorderPane>
+            <Text fx:id="enseigneDescription" wrappingWidth="970"/>
+            <BorderPane fx:id="contact"/>
+        </VBox>
+    </AnchorPane>
 </ScrollPane>

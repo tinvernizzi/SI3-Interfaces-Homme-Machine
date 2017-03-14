@@ -17,13 +17,12 @@ public class Controller {
     @FXML
     private BorderPane contact;
 
-    public void displayHeader() {
+    public void displayHeader(Controller currentController) {
         String fxmlFile = "/fxml/elements/header.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {
-            // Load the Header FXML
             Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
-            ((HeaderController) loader.getController()).initialize();
+            ((HeaderController) loader.getController()).initialize(currentController);
 
             header.setCenter(rootNode);
         } catch (IOException e) {
@@ -35,7 +34,6 @@ public class Controller {
         String fxmlFile = "/fxml/elements/contact.fxml";
         FXMLLoader loader = new FXMLLoader();
         try {
-            // Load the Header FXML
             Parent rootNode = loader.load(getClass().getResourceAsStream(fxmlFile));
             ((ContactController) loader.getController()).initialize();
 

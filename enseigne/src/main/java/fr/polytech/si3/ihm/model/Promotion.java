@@ -9,16 +9,16 @@ public class Promotion {
     private StringProperty produit;
     private StringProperty marque;
     private StringProperty offre;
-    private Color color;
+    private StringProperty color;
     private String imagePath;
     private String description;
     private String title;
 
-    public Promotion(String produit, String marque, String offre, Color color, String imagePath) {
+    public Promotion(String produit, String marque, String offre, String color, String imagePath) {
         this.produit = new SimpleStringProperty(produit);
         this.marque = new SimpleStringProperty(marque);
         this.offre = new SimpleStringProperty(offre);
-        this.color = color;
+        this.color = new SimpleStringProperty(color);
         this.imagePath = imagePath;
         this.title=produit+" "+offre;
         this.description= produit+" de "+marque+" vous offre "+offre;
@@ -36,8 +36,8 @@ public class Promotion {
         return offre.get();
     }
 
-    public Color getColor() {
-        return color;
+    public String getColor() {
+        return color.get();
     }
 
     public String getDescription(){ return this.description;}
@@ -46,17 +46,5 @@ public class Promotion {
 
     public String getImagePath() {
         return imagePath;
-    }
-
-    public StringProperty getProduitProperty() {
-        return produit;
-    }
-
-    public StringProperty getMarqueProperty() {
-        return marque;
-    }
-
-    public StringProperty getOffreProperty() {
-        return offre;
     }
 }
