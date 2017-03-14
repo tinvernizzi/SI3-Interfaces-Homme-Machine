@@ -35,22 +35,25 @@ public class HeaderMenuController {
     @FXML
     public void initialize(Controller currentController) {
 
-        // Couleur du bouton de la page active
-        String currentColor = "666666";
-
-        // Change la couleur du bouton de la page active;
-        if (currentController instanceof HomeController)
-            homeButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
-        else if (currentController instanceof PromoController)
-            promoButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
-        else if (currentController instanceof InfoController)
-            infoButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
-        else if (currentController instanceof ProductsController)
-            productButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
-        else if (currentController instanceof ShopsController)
-            shopsButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
-        else if (currentController instanceof AboutController)
-            aboutButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
+        if (currentController instanceof HomeController) {
+            homeButton.getStyleClass().remove("headerButton");
+            homeButton.getStyleClass().add("headerCurrentButton");
+        } else if (currentController instanceof PromoController) {
+            promoButton.getStyleClass().remove("headerButton");
+            promoButton.getStyleClass().add("headerCurrentButton");
+        } else if (currentController instanceof InfoController) {
+            infoButton.getStyleClass().remove("headerButton");
+            infoButton.getStyleClass().add("headerCurrentButton");
+        } else if (currentController instanceof ProductsController) {
+            productButton.getStyleClass().remove("headerButton");
+            productButton.getStyleClass().add("headerCurrentButton");
+        } else if (currentController instanceof ShopsController) {
+            shopsButton.getStyleClass().remove("headerButton");
+            shopsButton.getStyleClass().add("headerCurrentButton");
+        } else if (currentController instanceof AboutController) {
+            aboutButton.getStyleClass().remove("headerButton");
+            aboutButton.getStyleClass().add("headerCurrentButton");
+        }
 
         homeButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
@@ -59,6 +62,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) homeButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/home.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -74,6 +78,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) promoButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/promo.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -89,6 +94,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) infoButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/info.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -104,6 +110,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) productButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/products.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -119,6 +126,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) shopsButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/shops.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -134,6 +142,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) aboutButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/about.fxml"));
                     Scene scene = new Scene(rootNode);
+                    scene.getStylesheets().add("/styles/default.css");
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {

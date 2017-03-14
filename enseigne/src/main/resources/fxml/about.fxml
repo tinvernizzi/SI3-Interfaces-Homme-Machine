@@ -6,8 +6,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
-<ScrollPane prefHeight="700.0" prefWidth="1015" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
-    <AnchorPane>
+<ScrollPane prefHeight="700.0" prefWidth="1006" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.AboutController">
+    <AnchorPane styleClass="rootNode">
         <VBox alignment="TOP_CENTER" spacing="30.0">
             <BorderPane fx:id="header"/>
             <ImageView fitHeight="250" fitWidth="500" pickOnBounds="true" preserveRatio="true">

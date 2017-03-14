@@ -1,9 +1,38 @@
 
-.root {
+.rootNode {
+    -fx-background-color: #f0f0ff;
     -fx-font-family: "Verdana";
 }
 
-.header-menu {
+        /* Header */
+.headerMenu {
     -fx-background-color: #000000;
-    -fx-text-fill: #FFFFFF;
+}
+.headerButton {
+    -fx-background-color: #000000;
+    -fx-font-size: 12;
+}
+.headerCurrentButton {
+    -fx-background-color: #666666;
+    -fx-font-size: 12;
+}
+
+        /* Sections */
+.sectionTitle {
+    -fx-font-family: System;
+    -fx-font-size: 25;
+}
+.infoTitle {
+    -fx-font-family: System Bold;
+    -fx-font-size: 20;
+}
+
+.infoDescr {
+    -fx-text-alignment: center;
+}
+
+        /* Contact */
+.contactText {
+    -fx-font-size: 17;
+    -fx-text-alignment: center;
 }
