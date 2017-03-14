@@ -3,6 +3,7 @@ package fr.polytech.si3.ihm.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -12,15 +13,20 @@ public class PromotionsController implements Controller{
     @FXML
     public Label mainTitle;
 
+    @FXML
+    public ListView listepromo;
+
     public Node getNode() {
         return mainTitle;
     }
 
-    public void changeDisplayedPromotions(MouseEvent event) {
-    }
-
     @Override
     public void start(MainController mainController) {
+        System.out.println("hello"+listepromo);
+        fillPromoList();
+    }
+
+    private void fillPromoList() {
 
     }
 

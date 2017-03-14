@@ -21,7 +21,6 @@ public class EnteteController implements Controller{
 
     @FXML
     public void onPromotionButtonClicked(MouseEvent event) {
-        System.out.println("yo");
         if(mainController.isOnMainView()) {
             mainController.setScrollTo(mainController.getPromotionsController().getAnchor());
         }else{
