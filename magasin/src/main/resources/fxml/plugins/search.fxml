@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.SearchController">
    <center>
       <VBox alignment="BOTTOM_CENTER" prefHeight="173.0" prefWidth="1007.0" spacing="10.0">
@@ -56,9 +55,9 @@
    <top>
       <Pane prefHeight="28.0" prefWidth="977.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="28.0" prefWidth="180.0" text="Critères de sélection">
+            <Label prefHeight="36.0" prefWidth="256.0" text="Critères de sélection">
                <font>
-                  <Font name="Arial Bold" size="16.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
          </children>

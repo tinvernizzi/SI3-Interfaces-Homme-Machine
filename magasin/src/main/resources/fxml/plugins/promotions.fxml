@@ -8,7 +8,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.PromotionsController">
      <top>
-        <Label fx:id="mainTitle" text="Nos promotions">
+        <Label fx:id="mainTitle" prefHeight="13.0" prefWidth="191.0" text="Nos promotions">
            <font>
               <Font name="System Bold" size="25.0" />
            </font>
@@ -16,11 +16,14 @@
               <Insets />
            </opaqueInsets>
            <BorderPane.margin>
-              <Insets left="30.0" />
+              <Insets bottom="10.0" left="30.0" />
            </BorderPane.margin>
         </Label>
      </top>
      <center>
         <ListView fx:id="promoList" orientation="HORIZONTAL" prefHeight="300.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
      </center>
+   <padding>
+      <Insets top="30.0" />
+   </padding>
 </BorderPane>

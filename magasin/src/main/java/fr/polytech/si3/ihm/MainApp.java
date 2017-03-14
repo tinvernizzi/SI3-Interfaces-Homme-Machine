@@ -27,9 +27,9 @@ public class MainApp extends Application {
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
         log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, 1019, 1000);
+        Scene scene = new Scene(rootNode, 1005, 1000);
         stage.setResizable(false);
-        scene.getStylesheets().add("/styles/styles.css");
+        scene.getStylesheets().add("/styles/JMetro.css");
         stage.setTitle("Magasin To Be Or To Have");
         stage.setScene(scene);
         stage.show();

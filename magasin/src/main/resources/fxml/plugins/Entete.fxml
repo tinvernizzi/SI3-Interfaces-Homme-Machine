@@ -46,24 +46,24 @@
                   <Insets left="30.0" right="30.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="150.0" style="-fx-background-color: #000000;">
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" spacing="150.0" style="-fx-background-color: #1d1d1d;">
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#onAccueilButtonClicked" style="-fx-background-color: #000000;" text="Accueil" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#onAccueilButtonClicked" text="Accueil" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#onPromotionButtonClicked" style="-fx-background-color: #000000;" text="Promotions" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#onPromotionButtonClicked" text="Promotions" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#OnProductsButtonClicked" style="-fx-background-color: #000000;" text="Produits" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#OnProductsButtonClicked" text="Produits" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onContactButtonClicked" style="-fx-background-color: #000000;" text="Contact" textFill="WHITE">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onContactButtonClicked" text="Contact" textFill="WHITE">
                      <font>
                         <Font name="Myriad Set Pro Text" size="13.0" />
                      </font>
