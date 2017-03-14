@@ -70,7 +70,7 @@ public class MainController {
         contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
-        promotionsViewController.start(this,productDatabase);
+        promotionsViewController.start(this);
         productsViewController.start(this);
         interfaceAdminButtonViewController.start(this);
     }
@@ -128,7 +128,7 @@ public class MainController {
         slideshowViewController = (SlideshowController) addContent("/fxml/plugins/slideshow.fxml");
         slideshowViewController.start(this);
         promotionsViewController =(PromotionsController) addContent("/fxml/plugins/promotions.fxml");
-        promotionsViewController.start(this,productDatabase);
+        promotionsViewController.start(this);
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
         if (contactViewController == null) {
