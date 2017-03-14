@@ -51,10 +51,10 @@ public class SearchController  implements Controller{
         this.mainController = mainController;
     }
 
-    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<Type> optType, Optional<Category> category, ProductDatabase database) {
+    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<String> optSearchName, Optional<Type> optType, Optional<Category> category) {
         this.mainController = mainController;
         this.productPageController = productsPageViewController;
-        this.database = new ProductDatabase();
+        this.database = mainController.getProductDatabase();
 
         //adding checkboxes in a array
         this.typeCheckBoxes = new ArrayList<>();
@@ -66,7 +66,7 @@ public class SearchController  implements Controller{
         this.categoryCheckBoxes = new ArrayList<>();
         this.categoryCheckBoxes.add(scientificCheckBox);
         this.categoryCheckBoxes.add(neurologicCheckBox);
-        search(optType,category);
+        search(optSearchName,optType,category);
     }
 
 
@@ -102,10 +102,17 @@ public class SearchController  implements Controller{
         productPageController.display(data);
     }
 
-    private void search(Optional<Type> optType, Optional<Category> category) {
+    private void search(Optional<String> optSearchName, Optional<Type> optType, Optional<Category> category) {
         changeTypesCheckbox(optType);
         changeCategoryCheckbox(category);
+        changeSearchBar(optSearchName);
         search();
+    }
+
+    private void changeSearchBar(Optional<String> optSearchName) {
+        if(optSearchName.isPresent()){
+            textField.setText(optSearchName.get());
+        }
     }
 
     private void changeCategoryCheckbox(Optional<Category> category) {

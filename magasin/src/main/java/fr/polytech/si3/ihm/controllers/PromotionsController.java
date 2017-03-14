@@ -5,6 +5,7 @@ import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Promotion;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.input.ScrollEvent;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -33,16 +35,15 @@ public class PromotionsController implements Controller{
         return mainTitle;
     }
 
-    public void start(MainController mainController, ProductDatabase database) {
-        this.database = database;
-        System.out.println("hello"+ promoList);
+    public void start(MainController mainController) {
+        this.database = mainController.getProductDatabase();
         fillPromoList();
     }
 
     private void fillPromoList() {
         List<Product> promoProducts = database.getPromoProducts();
         ObservableList<Product> list = FXCollections.observableArrayList(promoProducts);
-        promoList.setPrefHeight(320);
+        promoList.setPrefHeight(325);
         promoList.setEditable(false);
         promoList.setCellFactory(
                 new Callback<ListView<Product>, ListCell<Product>>() {
@@ -70,10 +71,5 @@ public class PromotionsController implements Controller{
 
     public Node getAnchor() {
         return mainTitle;
-    }
-
-    @Override
-    public void start(MainController mainController) {
-
     }
 }

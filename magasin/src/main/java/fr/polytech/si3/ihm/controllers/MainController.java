@@ -1,6 +1,7 @@
 package fr.polytech.si3.ihm.controllers;
 
 import fr.polytech.si3.ihm.model.Category;
+import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Type;
 import javafx.fxml.FXML;
@@ -26,6 +27,8 @@ public class MainController {
     public ScrollPane scrollPane;
     @FXML
     private Parent contactView;
+
+
     @FXML
     private ContactController contactViewController;
     @FXML
@@ -49,21 +52,29 @@ public class MainController {
     @FXML
     private InterfaceAdminButtonController interfaceAdminButtonViewController;
 
-
     private boolean isOnMainView = true;
 
     private ProductsPageController productsPageViewController;
     private SearchController searchViewController;
     private AdministrationPageController administrationPageController;
-    private ProductDatabase productDatabase;
 
+    public ProductDatabase getProductDatabase() {
+        return productDatabase;
+    }
+
+    private ProductDatabase productDatabase;
+    private Contact contact;
 
     public void initialize() {
-        productDatabase = new ProductDatabase();
+        //init of model
+        this.contact = new Contact();
+        this.productDatabase = new ProductDatabase();
+
+        //init of all controllers
         contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
-        promotionsViewController.start(this,productDatabase);
+        promotionsViewController.start(this);
         productsViewController.start(this);
         interfaceAdminButtonViewController.start(this);
     }
@@ -94,34 +105,31 @@ public class MainController {
         return isOnMainView;
     }
 
-    public void setProductPage(ProductsController productsController, Optional<Type> type, Optional<Category> category) {
+    public void setProductPage(Optional<String> searchName,Optional<Type> type, Optional<Category> category) {
         isOnMainView = false;
-        this.productsViewController = productsController;
         content.getChildren().clear();
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.start(this);
-        searchViewController.start(this,productsPageViewController,type,category,productDatabase);
+        searchViewController.start(this,productsPageViewController,searchName,type,category);
 
         setScrollTo(productsPageViewController.getAnchor());
     }
 
-    public void setAdminPage(InterfaceAdminButtonController controller) {
+    public void setAdminPage() {
         isOnMainView = false;
-        this.interfaceAdminButtonViewController = controller;
         content.getChildren().clear();
         administrationPageController = (AdministrationPageController) addContent("/fxml/administration.fxml");
-        administrationPageController.start(this, productDatabase);
+        administrationPageController.start(this);
     }
 
-    public void setMainPage(EnteteController controller) {
+    public void setMainPage() {
         this.isOnMainView = true;
-        this.enteteViewController = controller;
         content.getChildren().clear();
         slideshowViewController = (SlideshowController) addContent("/fxml/plugins/slideshow.fxml");
         slideshowViewController.start(this);
         promotionsViewController =(PromotionsController) addContent("/fxml/plugins/promotions.fxml");
-        promotionsViewController.start(this,productDatabase);
+        promotionsViewController.start(this);
         productsViewController =(ProductsController) addContent("/fxml/plugins/nos_produits.fxml");
         productsViewController.start(this);
         contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
@@ -145,5 +153,9 @@ public class MainController {
 
     public VBox getContent() {
         return content;
+    }
+
+    public Contact getContactInformations() {
+        return contact;
     }
 }

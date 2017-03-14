@@ -21,7 +21,7 @@ public class InterfaceAdminButtonController implements Controller{
     private MainController mainController;
 
     public void changeToAdminInterface(MouseEvent mouseEvent) throws IOException {
-        mainController.setAdminPage(this);
+        mainController.setAdminPage();
     }
 
     @Override
