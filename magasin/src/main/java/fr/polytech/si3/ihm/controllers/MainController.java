@@ -102,13 +102,13 @@ public class MainController {
         return isOnMainView;
     }
 
-    public void setProductPage(Optional<Type> type, Optional<Category> category) {
+    public void setProductPage(Optional<String> searchName,Optional<Type> type, Optional<Category> category) {
         isOnMainView = false;
         content.getChildren().clear();
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.start(this);
-        searchViewController.start(this,productsPageViewController,type,category);
+        searchViewController.start(this,productsPageViewController,searchName,type,category);
 
         setScrollTo(productsPageViewController.getAnchor());
     }

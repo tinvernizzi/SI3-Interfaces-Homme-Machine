@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.util.Optional;
+
 /**
  * Created by Antoine on 3/1/2017.
  */
@@ -55,6 +57,6 @@ public class EnteteController implements Controller{
     }
 
     public void onSearchButtonClicked(MouseEvent mouseEvent) {
-//        mainController.setProductPage();
+        mainController.setProductPage(Optional.of(barreRecherche.getCharacters().toString()), Optional.empty(),Optional.empty());
     }
 }
