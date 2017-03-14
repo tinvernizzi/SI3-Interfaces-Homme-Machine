@@ -133,6 +133,7 @@ public class MainController {
         productsViewController.start(this);
         if (contactViewController == null) {
             contactViewController = (ContactController) addContent("/fxml/plugins/contact.fxml");
+            System.out.println(contactViewController.getAdress());
         }
         else {
             addContent("/fxml/plugins/contact.fxml");

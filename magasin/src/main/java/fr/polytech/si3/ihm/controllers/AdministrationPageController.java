@@ -39,6 +39,12 @@ public class AdministrationPageController implements Controller {
     public TextField phoneNumber;
     public TextField adress;
     public Button buttonRegister;
+    public TextField jeudi;
+    public TextField vendredi;
+    public TextField mercredi;
+    public TextField mardi;
+    public TextField samedi;
+    public TextField lundi;
 
     @FXML
     private TableView<Vendeur> statVendeurs;
