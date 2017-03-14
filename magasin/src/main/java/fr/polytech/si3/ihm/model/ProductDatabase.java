@@ -3,78 +3,97 @@ package fr.polytech.si3.ihm.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static fr.polytech.si3.ihm.model.Type.*;
 
 /**
  * Created by tanguy on 12/03/17.
  */
 public class ProductDatabase {
 
-    List<ProductCategory> dataBase;
+    List<Product> dataBase;
 
     public ProductDatabase () {
         dataBase = new ArrayList<>();
-        List<Product> bookProducts = Arrays.asList(
-                new Product("Vivez mieux et plus longtemps", 24, "/images/produits/L1.jpg", "Par Mychel Cymes"),
-                new Product("Mon cahier yoga méditation", 12, "/images/produits/L2.jpg", "Par Agathe Thine"),
-                new Product("Pratique du massage chinois", 18, "/images/produits/L3.jpg", "Par Dr. You-Wa Chen")
+        List<Product> products = Arrays.asList(
+                new Product("Vivez mieux et plus longtemps", 24, "/images/produits/L1.jpg", "Par Mychel Cymes",BOOK,Category.SCIENTIFIC),
+                new Product("Mon cahier yoga méditation", 12, "/images/produits/L2.jpg", "Par Agathe Thine",BOOK),
+                new Product("Pratique du massage chinois", 18, "/images/produits/L3.jpg", "Par Dr. You-Wa Chen",BOOK),
+                new Product("Le Yoga Facile pour les Nuls", 80, "/images/produits/D1.jpg", "Par Sara Ivanhoe",DVD),
+                new Product("Massages chinois traditionnels", 16, "/images/produits/D2.jpg", "Par Li Xuejon",DVD),
+                new Product("Bien être au réveil", 50, "/images/produits/D3.jpg", "Inspiré du yoga",DVD,Category.NEUROLOGIC),
+                new Product("Coffret ZEN", 43, "/images/produits/C1.jpg", "Musiques & ambiances zen - 10 CD",CD),
+                new Product("Relaxation", 67, "/images/produits/C2.jpg", "Par les indispensables",CD),
+                new Product("Méditation et relaxation", 21, "/images/produits/C3.jpg", "2 CD",CD),
+                new Product("Stage 1", 400, "/images/produits/S1.jpg", "",STAGE),
+                new Product("Stage 2", 1000, "/images/produits/S2.jpg", "",STAGE),
+                new Product("Stage 3", 546, "/images/produits/S3.jpg", "",STAGE)
         );
-        ProductCategory books = new ProductCategory("Book", bookProducts);
 
-        List<Product> dvdProducts = Arrays.asList(
-                new Product("Le Yoga Facile pour les Nuls", 80, "/images/produits/D1.jpg", "Par Sara Ivanhoe"),
-                new Product("Massages chinois traditionnels", 16, "/images/produits/D2.jpg", "Par Li Xuejon"),
-                new Product("Bien être au réveil", 50, "/images/produits/D3.jpg", "Inspiré du yoga")
-        );
-        ProductCategory dvds = new ProductCategory("DVD", dvdProducts);
-
-        List<Product> cdProducts = Arrays.asList(
-                new Product("Coffret ZEN", 43, "/images/produits/C1.jpg", "Musiques & ambiances zen - 10 CD"),
-                new Product("Relaxation", 67, "/images/produits/C2.jpg", "Par les indispensables"),
-                new Product("Méditation et relaxation", 21, "/images/produits/C3.jpg", "2 CD")
-        );
-        ProductCategory cds = new ProductCategory("CD", cdProducts);
-
-        List<Product> stageProducts = Arrays.asList(
-                new Product("Stage 1", 400, "/images/produits/S1.jpg", ""),
-                new Product("Stage 2", 1000, "/images/produits/S2.jpg", ""),
-                new Product("Stage 3", 546, "/images/produits/S3.jpg", "")
-        );
-        ProductCategory stages = new ProductCategory("Stage", stageProducts);
-
-
-        dataBase.add(books);
-        dataBase.add(dvds);
-        dataBase.add(cds);
-        dataBase.add(stages);
-
+        dataBase.addAll(products);
     }
 
 
 
-    public List<ProductCategory> getAllItems() {
+    public List<Product> getAllItems() {
         return dataBase;
     }
 
-    public ProductCategory getDvds() {
-        return getCategory("DVD");
+    public List<Product> getDvds() {
+        return getProductsByType(DVD);
     }
 
-    public ProductCategory getCds() {
-        return getCategory("CD");
+    public List<Product> getCds() {
+        return getProductsByType(CD);
     }
 
-    public ProductCategory getBooks() {
-        return getCategory("Book");
+    public List<Product> getBooks() {
+        return getProductsByType(BOOK);
     }
 
-    public ProductCategory getStages() {
-        return getCategory("Stage");
+    public List<Product> getStages() {
+        return getProductsByType(STAGE);
     }
 
-    public ProductCategory getCategory(String categoryName){
-        for(ProductCategory c : dataBase){
-            if(c.name.equals(categoryName)) return c;
+    private List<Product> getProductsByType(Type type) {
+        List<Product> productCategory = new ArrayList<>();
+        for(Product p : dataBase){
+            if(p.getType().equals(type)) productCategory.add(p);
         }
-        return null;
+        return productCategory;
+    }
+
+    public List<Product> getCategory(Category categoryName){
+        List<Product> productCategory = new ArrayList<>();
+        for(Product p : dataBase){
+            if(p.getCategory().equals(categoryName)) productCategory.add(p);
+        }
+        return productCategory;
+    }
+
+    public List<Product> getItemsBetween(List<Product> list, int min, int max) {
+        List<Product> validItems = new ArrayList<>();
+        return validItems = list.stream()
+                .filter(product -> product.getPriceInteger()>= min
+                        &&
+                        product.getPriceInteger()<=max
+                ).collect(Collectors.toList());
+    }
+
+    public List<Product> getItemsByName(List<Product> list, String searchName) {
+        List<Product> validItems = new ArrayList<>();
+        return validItems = list.stream()
+                .filter(product ->
+                        product.getName().contains(searchName)
+                ).collect(Collectors.toList());
+    }
+
+    public List<Product> removeItemsWithCategory(List<Product> list,Category category) {
+        List<Product> validItems = new ArrayList<>();
+        return validItems = list.stream()
+                .filter(product ->
+                        !product.getCategory().equals(category)
+                ).collect(Collectors.toList());
     }
 }

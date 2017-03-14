@@ -12,11 +12,19 @@
    <children>
       <HBox alignment="CENTER" prefHeight="37.0" prefWidth="427.0" spacing="50.0">
          <children>
-            <Label text="Type :" />
+            <Label text="Types :" />
             <CheckBox fx:id="dvdCheckBox" mnemonicParsing="false" text="DVD" />
             <CheckBox fx:id="cdCheckBox" mnemonicParsing="false" text="CD" />
             <CheckBox fx:id="bookCheckBox" mnemonicParsing="false" text="Livre" />
             <CheckBox fx:id="stageCheckBox" mnemonicParsing="false" text="Stage" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="37.0" prefWidth="427.0" spacing="50.0">
+         <children>
+            <Label text="Catégories :" />
+            <CheckBox fx:id="scientificCheckBox" mnemonicParsing="false" text="Scientifique" />
+            <CheckBox fx:id="neurologicCheckBox" mnemonicParsing="false" text="Neurologique" />
+            <CheckBox fx:id="othersCategoryCheckBox" mnemonicParsing="false" text="Autres" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="37.0" prefWidth="427.0" spacing="50.0">
@@ -28,7 +36,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Name :" />
+            <Label text="Nom du produit :" />
             <TextField fx:id="textField" prefHeight="25.0" prefWidth="301.0" />
          </children>
       </HBox>

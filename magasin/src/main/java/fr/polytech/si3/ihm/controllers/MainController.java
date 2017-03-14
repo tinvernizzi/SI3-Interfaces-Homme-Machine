@@ -1,18 +1,18 @@
 package fr.polytech.si3.ihm.controllers;
 
-import fr.polytech.si3.ihm.Promotions;
+import fr.polytech.si3.ihm.model.Category;
+import fr.polytech.si3.ihm.model.Type;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Optional;
 
 /**
  * Created by Antoine on 3/1/2017.
@@ -90,14 +90,14 @@ public class MainController {
         return isOnMainView;
     }
 
-    public void setProductPage(ProductsController productsController, String category) {
+    public void setProductPage(ProductsController productsController, Optional<Type> type, Optional<Category> category) {
         isOnMainView = false;
         this.productsViewController = productsController;
         content.getChildren().clear();
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.start(this);
-        searchViewController.start(this,productsPageViewController);
+        searchViewController.start(this,productsPageViewController,type,category);
 
         setScrollTo(productsPageViewController.getAnchor());
     }

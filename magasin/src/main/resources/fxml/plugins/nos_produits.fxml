@@ -33,7 +33,7 @@
             </ImageView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <ImageView fitHeight="167.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="neuroProductButton" fitHeight="167.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnNeuroButtonClicked">
                      <image>
                         <Image url="@/images/neuro.png" />
                      </image>
@@ -41,7 +41,7 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="139.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="scienceProductButton" fitHeight="139.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnScienceButtonClicked">
                      <image>
                         <Image url="@/images/sciences.png" />
                      </image>
@@ -66,7 +66,7 @@
                      <center>
                         <VBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="dvdButton" fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnDvdButtonClicked">
                                  <image>
                                     <Image url="@/images/Dvd-video-logo.svg.png" />
                                  </image>
@@ -95,9 +95,9 @@
                      <center>
                         <VBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="cdButton" fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnCdButtonClicked">
                                  <image>
-                                    <Image url="@/images/dvd.jpg" />
+                                    <Image url="@/images/cd.jpg" />
                                  </image>
                                  <VBox.margin>
                                     <Insets />
@@ -124,7 +124,7 @@
                      <center>
                         <VBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="bookButton" fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnBookButtonClicked">
                                  <image>
                                     <Image url="@/images/livres.jpg" />
                                  </image>
@@ -153,7 +153,7 @@
                      <center>
                         <VBox alignment="CENTER" spacing="5.0">
                            <children>
-                              <ImageView fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="stageButton" fitHeight="163.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OnStageButtonClicked">
                                  <image>
                                     <Image url="@/images/stage.jpg" />
                                  </image>

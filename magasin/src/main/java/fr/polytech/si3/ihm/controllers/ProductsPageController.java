@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.model.Category;
 import fr.polytech.si3.ihm.model.Product;
 import fr.polytech.si3.ihm.model.ProductCategory;
 import fr.polytech.si3.ihm.model.ProductDatabase;
@@ -25,24 +26,11 @@ import java.util.stream.Collectors;
 public class ProductsPageController implements Controller{
     @FXML
     public Label title;
-
     @FXML
     public TilePane productGrid;
-    private ProductDatabase database;
 
     @Override
     public void start(MainController mainController) {
-        this.database = new ProductDatabase();
-        displayAll();
-    }
-
-    public void displayAll() {
-        productGrid.getChildren().clear();
-
-        List<ProductCategory> data = database.getAllItems();
-        for (ProductCategory c : data) {
-            displayCategory(c);
-        }
     }
 
     public Node getAnchor() {
@@ -60,68 +48,14 @@ public class ProductsPageController implements Controller{
         singleProductController.setProductInformations(product, false);
     }
 
-    public void search(boolean dvds, boolean cds, boolean books, boolean stages, int min, int max, Optional<String> searchName) {
+    public void display(List<Product> data) {
         productGrid.getChildren().clear();
-        List<ProductCategory> data = new ArrayList<>();
-        if(dvds)data.add(database.getDvds());
-        if(cds)data.add(database.getCds());
-        if(books)data.add(database.getBooks());
-        if(stages)data.add(database.getStages());
-
-        for (ProductCategory c : data) {
-            displayCategory(c,min,max,searchName);
-        }
-
-    }
-
-    private void displayStages() {
-        ProductCategory data = database.getStages();
-        displayCategory(data);
-    }
-
-    private void displayCds() {
-        ProductCategory data = database.getCds();
-        displayCategory(data);
-    }
-
-    private void displayBooks() {
-        ProductCategory data = database.getBooks();
-        displayCategory(data);
-    }
-
-    private void displayDvds() {
-        ProductCategory data = database.getDvds();
-        displayCategory(data);
-    }
-
-    void displayCategory(ProductCategory category, int min, int max, Optional<String> searchName){
-        try {
-
-            List<Product> validItems = new ArrayList<>();
-            if(searchName.isPresent()){
-                validItems = category.getListOfProduct().stream()
-                        .filter(product -> product.getPriceInteger()>= min
-                                &&
-                                product.getPriceInteger()<=max
-                                &&
-                                product.getName().contains(searchName.get())
-                        ).collect(Collectors.toList());
-            }else{
-                validItems = category.getListOfProduct().stream()
-                        .filter(product -> product.getPriceInteger()>= min
-                                &&
-                                product.getPriceInteger()<=max)
-                        .collect(Collectors.toList());
-            }
-            for (Product p : validItems) {
+        for (Product p : data) {
+            try {
                 addProduct(p);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-    }
-
-    void displayCategory(ProductCategory category){
-        displayCategory(category,0,(int) Integer.MAX_VALUE,Optional.empty());
     }
 }
