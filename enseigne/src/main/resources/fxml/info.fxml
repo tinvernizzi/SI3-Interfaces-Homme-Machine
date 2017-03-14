@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 <ScrollPane prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="fr.polytech.si3.ihm.controller.InfoController">
-   <AnchorPane>
+   <AnchorPane styleClass="rootNode">
       <VBox spacing="30.0">
 
          <BorderPane fx:id="header"/>
@@ -16,7 +16,7 @@
               <padding>
                   <Insets left="30" right="30"/>
               </padding>
-              <Text text="Informations" style="-fx-font-family: System; -fx-font-size: 25"/>
+              <Text text="Informations" styleClass="sectionTitle"/>
               <ListView fx:id="listeinfo" prefHeight="100"/>
           </VBox>
 

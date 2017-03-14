@@ -10,19 +10,25 @@
     <AnchorPane styleClass="rootNode">
         <VBox alignment="TOP_CENTER" spacing="30.0">
             <BorderPane fx:id="header"/>
+
             <ImageView fitHeight="250" fitWidth="500" pickOnBounds="true" preserveRatio="true">
                 <Image url="@/images/enseigne.jpg"/>
             </ImageView>
+
             <BorderPane>
                 <left>
-                    <Text style="-fx-font-family: System; -fx-font-size: 25" text="A propos de To Be or To Have " />
+                    <Text styleClass="sectionTitle" text="A propos de To Be or To Have " />
                 </left>
                 <padding>
                     <Insets left="30"/>
                 </padding>
+
             </BorderPane>
+
             <Text fx:id="enseigneDescription" wrappingWidth="970"/>
+
             <BorderPane fx:id="contact"/>
+
         </VBox>
     </AnchorPane>
 </ScrollPane>
