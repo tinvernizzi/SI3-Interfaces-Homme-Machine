@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.AdministrationPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.AdministrationPageController">
    <top>
       <HBox prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -66,6 +66,7 @@
                                           </TableView>
                                           <Button fx:id="lastMonthsPerf" mnemonicParsing="false" onMouseClicked="#display12MonthsPerformance" text="Afficher la performance des vendeurs sur 12 mois" />
                                           <Button fx:id="lastWeekPerf" mnemonicParsing="false" onMouseClicked="#displayLastWeekPerformance" text="Afficher la performance des vendeurs pour la semaine dernière" />
+                                          <Button fx:id="lastMonthsMeansOfSale" mnemonicParsing="false" onMouseClicked="#displayMeansOfSale" text="Afficher les moyens de vente du mois dernier" />
                                        </children>
                                     </VBox>
                                  </center>

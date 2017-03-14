@@ -3,6 +3,7 @@ package fr.polytech.si3.ihm.controllers;
 import fr.polytech.si3.ihm.model.Product;
 import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Vendeur;
+import fr.polytech.si3.ihm.statistics.MeansOfSaleGraph;
 import fr.polytech.si3.ihm.statistics.MonthsPerformance;
 import fr.polytech.si3.ihm.statistics.WeekPerformance;
 import javafx.collections.FXCollections;
@@ -33,6 +34,7 @@ public class AdministrationPageController implements Controller {
     public TextField normalPrice;
     public TextField reducPrice;
     public Button registerButton;
+    public Button lastMonthsMeansOfSale;
 
     @FXML
     private TableView<Vendeur> statVendeurs;
@@ -99,5 +101,10 @@ public class AdministrationPageController implements Controller {
         else {
             itemCurrentlySelected.removePromotion();
         }
+    }
+
+    public void displayMeansOfSale(MouseEvent mouseEvent) throws Exception {
+        MeansOfSaleGraph graph = new MeansOfSaleGraph();
+        graph.start();
     }
 }
