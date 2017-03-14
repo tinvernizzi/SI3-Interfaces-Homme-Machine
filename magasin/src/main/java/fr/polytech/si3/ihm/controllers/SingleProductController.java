@@ -29,14 +29,14 @@ public class SingleProductController {
 
     }
 
-    public void setProductInformations(Product product, boolean isAPromo) {
+    public void setProductInformations(Product product) {
         productLogo.setImage(product.getImage());
-        productLogo.setFitHeight(300);
-        productLogo.setFitWidth(150);
         description.setText(product.getDescription());
         marque.setText(product.getName());
         this.conditionPromo.setText(product.getPrix() + "€");
-        if (!isAPromo) {
+        if (product.isOnPromotion()) {
+            this.isAPromo.setText("PROMO");
+        }else{
             this.isAPromo.setText("");
         }
     }
