@@ -11,6 +11,8 @@ public class Promotion {
     private StringProperty offre;
     private Color color;
     private String imagePath;
+    private String description;
+    private String title;
 
     public Promotion(String produit, String marque, String offre, Color color, String imagePath) {
         this.produit = new SimpleStringProperty(produit);
@@ -18,6 +20,8 @@ public class Promotion {
         this.offre = new SimpleStringProperty(offre);
         this.color = color;
         this.imagePath = imagePath;
+        this.title=produit+" "+offre;
+        this.description= produit+" de "+marque+" vous offre "+offre;
     }
 
     public String getProduit() {
@@ -35,6 +39,10 @@ public class Promotion {
     public Color getColor() {
         return color;
     }
+
+    public String getDescription(){ return this.description;}
+
+    public String getTitle(){ return  this.title;}
 
     public String getImagePath() {
         return imagePath;

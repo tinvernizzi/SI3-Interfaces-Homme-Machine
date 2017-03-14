@@ -14,140 +14,38 @@
 
 <?import javafx.scene.control.ListView?>
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1015.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="fr.polytech.si3.ihm.controller.PromoController">
-  <content>
-    <AnchorPane>
-         <children>
-            <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
-               <children>
+    <content>
+        <AnchorPane>
+            <children>
+                <VBox prefHeight="1610.0" prefWidth="1000.0" spacing="30.0">
+                    <children>
 
-                  <BorderPane fx:id="header" />
+                        <BorderPane fx:id="header" />
 
-                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
-                     <top>
-                        <Label text="Nos promotions">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <BorderPane.margin>
-                              <Insets left="30.0" />
-                           </BorderPane.margin>
-                        </Label>
-                     </top>
-                     <center>
-                        <VBox prefHeight="0.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                 <children>
-                                    <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0">
-                                       <center>
-                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                             <image>
-                                                <Image url="@/images/p_C2.jpg" />
-                                             </image>
-                                          </ImageView>
-                                       </center>
-                                    </BorderPane>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre de la promotion" textFill="#e81414">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="25.0" />
-                                             </padding>
-                                          </Label>
-                                          <Label text="&lt; description promo (marque, produit, réduction,  conditions, etc. &gt;" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </VBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </HBox>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                 <children>
-                                    <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0">
-                                       <center>
-                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                             <image>
-                                                <Image url="@/images/p_D1.jpg" />
-                                             </image>
-                                          </ImageView>
-                                       </center>
-                                    </BorderPane>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre de la promotion" textFill="#e81414">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="25.0" />
-                                             </padding>
-                                          </Label>
-                                          <Label text="&lt; description promo (marque, produit, réduction,  conditions, etc. &gt;" />
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </HBox>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                 <children>
-                                    <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0">
-                                       <center>
-                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                             <image>
-                                                <Image url="@/images/p_L1.jpg" />
-                                             </image>
-                                          </ImageView>
-                                       </center>
-                                    </BorderPane>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre de la promotion" textFill="#e81414">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="25.0" />
-                                             </padding>
-                                          </Label>
-                                          <Label text="&lt; description promo (marque, produit, réduction,  conditions, etc. &gt;" />
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </HBox>
-                           </children>
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                           <BorderPane.margin>
-                              <Insets top="20.0" />
-                           </BorderPane.margin>
-                        </VBox>
-                     </center>
-                  </BorderPane>
+                        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+                            <top>
+                                <Label text="Nos promotions">
+                                    <font>
+                                        <Font name="System Bold" size="25.0" />
+                                    </font>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <BorderPane.margin>
+                                        <Insets left="30.0" />
+                                    </BorderPane.margin>
+                                </Label>
+                            </top>
+                            <center>
+                                <ListView fx:id="promos" orientation="VERTICAL" maxHeight="400" prefHeight="330" minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER" />
+                            </center>
+                        </BorderPane>
 
 
-                   <BorderPane fx:id="contact" />
+                        <BorderPane fx:id="contact" />
 
-               </children>
-            </VBox>
-         </children></AnchorPane>
-  </content>
+                    </children>
+                </VBox>
+            </children></AnchorPane>
+    </content>
 </ScrollPane>

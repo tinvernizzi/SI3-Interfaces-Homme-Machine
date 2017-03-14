@@ -17,121 +17,21 @@
 
                   <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
                      <top>
-                        <VBox maxHeight="1.7976931348623157E308" prefHeight="570.0" prefWidth="1000.0" spacing="30.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <Label text="Informations">
-                                 <font>
-                                    <Font name="System Bold" size="25.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <VBox.margin>
-                                    <Insets left="30.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/information.png" />
-                                       </image>
-                                    </ImageView>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Label>
-                                          <Label text="&lt; description de l'information &gt;" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                       </padding>
-                                    </VBox>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/information.png" />
-                                       </image>
-                                    </ImageView>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Label>
-                                          <Label text="&lt; description de l'information &gt;" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                       </padding>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </HBox>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@/images/information.png" />
-                                       </image>
-                                    </ImageView>
-                                    <VBox prefWidth="800.0" spacing="10.0">
-                                       <children>
-                                          <Label text="Titre">
-                                             <font>
-                                                <Font name="System Bold Italic" size="22.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets left="20.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label text="&lt; description de l'information &gt;" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                       </padding>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </HBox>
-                           </children>
-                           <padding>
-                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-                           </padding>
-                           <BorderPane.margin>
+                        <Label text="Nos promotions">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <opaqueInsets>
                               <Insets />
+                           </opaqueInsets>
+                           <BorderPane.margin>
+                              <Insets left="30.0" />
                            </BorderPane.margin>
-                        </VBox>
+                        </Label>
                      </top>
+                     <center>
+                        <ListView fx:id="infos" orientation="VERTICAL" maxHeight="400" prefHeight="330" minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER" />
+                     </center>
                   </BorderPane>
 
                   <BorderPane fx:id="contact" />
