@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <BorderPane maxHeight="120" maxWidth="1000" minHeight="120" minWidth="1000" prefHeight="120" prefWidth="1000"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.HeaderController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.HeaderMenuController">
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="80">
             <ImageView fitHeight="60" fitWidth="240" pickOnBounds="true" preserveRatio="true">
@@ -23,11 +23,12 @@
     <center>
         <HBox alignment="CENTER" maxHeight="35" minHeight="35" prefHeight="35" prefWidth="1000.0" spacing="60" style="-fx-background-color: #000000;">
             <children>
-                <Button prefWidth="180" fx:id="homeButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 13;" text="Accueil" textFill="WHITE"/>
-                <Button prefWidth="180" fx:id="promoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 13;" text="Promotions" textFill="WHITE"/>
-                <Button prefWidth="180" fx:id="infoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 13;" text="Informations" textFill="WHITE"/>
-                <Button prefWidth="180" fx:id="productButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 13;" text="Produits" textFill="WHITE"/>
-                <Button prefWidth="180" fx:id="aboutButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 13;" text="A propos" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="homeButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Accueil" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="promoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Promotions" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="infoButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Informations" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="productButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Produits" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="shopsButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="Magasins" textFill="WHITE"/>
+                <Button prefWidth="150" fx:id="aboutButton" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-font-size: 10;" text="A propos" textFill="WHITE"/>
             </children>
             <padding>
                 <Insets left="50" right="50" />

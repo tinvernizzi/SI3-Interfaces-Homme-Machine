@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<HBox prefHeight="180" prefWidth="900" spacing="30.0"
+      fx:controller="fr.polytech.si3.ihm.controller.elements.InfoListController" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="15" bottom="15" left="20.0"/>
+    </padding>
+    <BorderPane prefHeight="150.0" prefWidth="150.0">
+        <center>
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+        </center>
+    </BorderPane>
+    <VBox spacing="15.0">
+        <Text fx:id="title" style="-fx-font-family: System; -fx-font-size: 25" />
+        <Text fx:id="description"/>
+    </VBox>
+</HBox>
+

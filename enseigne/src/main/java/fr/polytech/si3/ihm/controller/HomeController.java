@@ -1,6 +1,5 @@
 package fr.polytech.si3.ihm.controller;
 
-import fr.polytech.si3.ihm.controller.elements.HeaderController;
 import fr.polytech.si3.ihm.controller.elements.InfoSliderController;
 import fr.polytech.si3.ihm.controller.elements.PromotionSliderController;
 import fr.polytech.si3.ihm.controller.elements.SlideshowController;
@@ -13,8 +12,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.util.Callback;
 import org.slf4j.Logger;
@@ -66,7 +63,7 @@ public class HomeController extends Controller {
                                 super.updateItem(item, empty);
                                 if (item != null) {
                                     try {
-                                        String fxmlFile = "/fxml/elements/home_list_promotion_element.fxml";
+                                        String fxmlFile = "/fxml/elements/home_slide_promotion_element.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((PromotionSliderController) loader.getController()).initPromotion(item);
@@ -92,7 +89,7 @@ public class HomeController extends Controller {
                                 super.updateItem(item, empty);
                                 if (item != null) {
                                     try {
-                                        String fxmlFile = "/fxml/elements/home_list_info_element.fxml";
+                                        String fxmlFile = "/fxml/elements/home_slide_info_element.fxml";
                                         FXMLLoader loader = new FXMLLoader();
                                         Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((InfoSliderController) loader.getController()).initInfo(item);

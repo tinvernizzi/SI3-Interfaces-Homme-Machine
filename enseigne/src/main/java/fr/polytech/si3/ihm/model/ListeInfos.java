@@ -12,9 +12,9 @@ public class ListeInfos {
     public ListeInfos() {
 
         listeInfos = FXCollections.observableArrayList(new ArrayList<Info>());
-        listeInfos.add(new Info("Information 1", "Nouvelle gamme de produits disponibles en mai !", "FFFFFF", "/images/information.png"));
-        listeInfos.add(new Info("Information 2", "Fermeture exceptionnelle du S.A.V. en avril", "DDDDDD", "/images/tboth.png"));
-        listeInfos.add(new Info("Information 3", "Nouvel arrivage de CD en juin", "FFFFFF", "/images/p_C.jpg"));
+        listeInfos.add(new Info("Best Sellers de 2016", "La liste des Best Sellers de l'année 2016 est enfin disponible !", "FFFFFF", "/images/information.png"));
+        listeInfos.add(new Info("Ouverte Exceptionnelle", "Tous nos magasins seront exceptionnellement ouverts le Dimanche 30 Février", "DDDDDD", "/images/tboth.png"));
+        listeInfos.add(new Info("Nouvelle gamme", "Nouvelle gamme de produits disponibles dès mai !", "FFFFFF", "/images/p_C.jpg"));
         listeInfos.add(new Info("Information 4", "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ", "DDDDDD", "/images/information.png"));
     }
 

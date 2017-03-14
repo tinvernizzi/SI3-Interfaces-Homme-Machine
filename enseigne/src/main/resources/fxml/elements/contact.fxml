@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 <VBox spacing="25" prefHeight="250" prefWidth="1000" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.ContactController">
-    <Text style="-fx-font-size: 25" text="Nous contacter"/>
+    <Text style="-fx-font-family: System; -fx-font-size: 25" text="Nous contacter"/>
     <HBox alignment="CENTER" prefHeight="80" prefWidth="1000" spacing="110">
         <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="address" />
         <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="phone" />
