@@ -1,9 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
-import fr.polytech.si3.ihm.model.Contact;
-import fr.polytech.si3.ihm.model.Product;
-import fr.polytech.si3.ihm.model.ProductDatabase;
-import fr.polytech.si3.ihm.model.Vendeur;
+import fr.polytech.si3.ihm.model.*;
 import fr.polytech.si3.ihm.statistics.MeansOfSaleGraph;
 import fr.polytech.si3.ihm.statistics.MonthsPerformance;
 import fr.polytech.si3.ihm.statistics.WeekPerformance;
@@ -43,6 +40,7 @@ public class AdministrationPageController implements Controller {
     public TextField jeudi;
     public TextField vendredi;
     public TextField mercredi;
+    public TextField dimanche;
     public TextField mardi;
     public TextField samedi;
     public TextField lundi;
@@ -93,6 +91,14 @@ public class AdministrationPageController implements Controller {
         webPage.setText(mainController.getContactController().getWebPage());
         phoneNumber.setText(mainController.getContactController().getPhoneNumber());
         adress.setText(mainController.getContactController().getAdress());
+
+        lundi.setText(mainController.getContactController().getHoraires().get(0).getOpeningHour());
+        mardi.setText(mainController.getContactController().getHoraires().get(1).getOpeningHour());
+        mercredi.setText(mainController.getContactController().getHoraires().get(2).getOpeningHour());
+        jeudi.setText(mainController.getContactController().getHoraires().get(3).getOpeningHour());
+        vendredi.setText(mainController.getContactController().getHoraires().get(4).getOpeningHour());
+        samedi.setText(mainController.getContactController().getHoraires().get(5).getOpeningHour());
+        dimanche.setText(mainController.getContactController().getHoraires().get(6).getOpeningHour());
     }
 
     @FXML
@@ -130,5 +136,15 @@ public class AdministrationPageController implements Controller {
         contact.setWebPage(webPage.getText());
         contact.setPhoneNumber(phoneNumber.getText());
         contact.setAdress(adress.getText());
+        ArrayList<Schedule> openingHours = new ArrayList<>();
+
+        openingHours.add((new Schedule("Lun", lundi.getText())));
+        openingHours.add((new Schedule("Mar", mardi.getText())));
+        openingHours.add((new Schedule("Mer", mercredi.getText())));
+        openingHours.add((new Schedule("Jeu", jeudi.getText())));
+        openingHours.add((new Schedule("Ven", vendredi.getText())));
+        openingHours.add((new Schedule("Sam", samedi.getText())));
+        openingHours.add((new Schedule("Dim", dimanche.getText())));
+        contact.setSchedule(openingHours);
     }
 }

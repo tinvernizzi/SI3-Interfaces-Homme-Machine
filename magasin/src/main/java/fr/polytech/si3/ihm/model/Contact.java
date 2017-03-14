@@ -1,5 +1,8 @@
 package fr.polytech.si3.ihm.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by tanguy on 14/03/17.
  */
@@ -8,6 +11,9 @@ public class Contact {
     private String webPage;
     private String phone;
     private String address;
+
+
+    private List<Schedule> schedules;
 
     public Contact() {
         address = ("06600 Antibes");
@@ -37,5 +43,13 @@ public class Contact {
 
     public void setAdress(String adress) {
         address = adress;
+    }
+
+    public void setSchedule(ArrayList<Schedule> schedule) {
+        this.schedules = schedule;
+    }
+
+    public List<Schedule> getSchedules() {
+        return schedules;
     }
 }
