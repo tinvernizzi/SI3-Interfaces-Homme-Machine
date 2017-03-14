@@ -37,15 +37,15 @@ public class HeaderController {
 
         // Change la couleur du bouton de la page active;
         if (currentController instanceof HomeController)
-            homeButton.setStyle("-fx-background-color: #" + currentColor + ";");
+            homeButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof PromoController)
-            promoButton.setStyle("-fx-background-color: #" + currentColor + ";");
+            promoButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof InfoController)
-            infoButton.setStyle("-fx-background-color: #" + currentColor + ";");
+            infoButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof ProductsController)
-            productButton.setStyle("-fx-background-color: #" + currentColor + ";");
+            productButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
         else if (currentController instanceof AboutController)
-            aboutButton.setStyle("-fx-background-color: #" + currentColor + ";");
+            aboutButton.setStyle("-fx-background-color: #" + currentColor + "; -fx-font-size: 13");
 
         homeButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {

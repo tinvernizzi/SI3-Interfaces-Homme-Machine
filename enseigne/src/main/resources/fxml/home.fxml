@@ -1,62 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<ScrollPane prefHeight="700.0" prefWidth="1015.0"
+<?import javafx.scene.text.Text?>
+<ScrollPane prefHeight="700" prefWidth="1015"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.HomeController">
-   <content>
-      <AnchorPane>
-         <children>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2540.0" prefWidth="1000.0" spacing="30.0">
-               <children>
-
-                  <BorderPane fx:id="header" />
-
-                  <BorderPane maxWidth="880.0" prefWidth="880.0" minWidth="880">
-                     <top>
-                        <Label text="Nos promotions">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font>
-                           <BorderPane.margin>
-                              <Insets left="30.0" />
-                           </BorderPane.margin>
-                           <padding>
-                              <Insets top="10" bottom="10"/>
-                           </padding>
-                        </Label>
-                     </top>
-                     <center>
-                        <ListView fx:id="slidePromos" orientation="HORIZONTAL" maxHeight="330" prefHeight="330" minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-
-                  <BorderPane maxHeight="300.0" prefHeight="300.0" maxWidth="880.0" prefWidth="880.0">
-                     <top>
-                        <Label text="Informations">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font>
-                           <BorderPane.margin>
-                              <Insets left="30.0" />
-                           </BorderPane.margin>
-                            <padding>
-                                <Insets top="10" bottom="10"/>
-                            </padding>
-                        </Label>
-                     </top>
-                     <center>
-                        <ListView fx:id="slideInfos" orientation="HORIZONTAL" maxHeight="330" prefHeight="330" minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-
-                  <BorderPane fx:id="contact" />
-
-               </children>
+    <BorderPane>
+        <center>
+            <VBox alignment="TOP_CENTER" spacing="30.0">
+                <BorderPane fx:id="header"/>
+                <BorderPane fx:id="slideshow"/>
+                <BorderPane>
+                    <top>
+                        <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Nos promotions">
+                            <BorderPane.margin>
+                                <Insets left="30.0" top="10" bottom="10" />
+                            </BorderPane.margin>
+                        </Text>
+                    </top>
+                    <center>
+                        <ListView fx:id="slidePromos" orientation="HORIZONTAL" maxHeight="330" prefHeight="330"
+                                  minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane>
+                    <top>
+                        <Text style="-fx-font-family: System; -fx-font-size: 25;" text="Informations">
+                            <BorderPane.margin>
+                                <Insets left="30.0" top="10" bottom="10" />
+                            </BorderPane.margin>
+                        </Text>
+                    </top>
+                    <center>
+                        <ListView fx:id="slideInfos" orientation="HORIZONTAL" maxHeight="330" prefHeight="330"
+                                  minHeight="330" prefWidth="880.0" BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="contact"/>
             </VBox>
-         </children>
-      </AnchorPane>
-   </content>
+        </center>
+    </BorderPane>
 </ScrollPane>

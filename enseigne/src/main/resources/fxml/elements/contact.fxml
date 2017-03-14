@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1000.0"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.ContactController">
-   <top>
-      <Label text="Nous contacter">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <BorderPane.margin>
-            <Insets left="30.0" />
-         </BorderPane.margin>
-      </Label>
-   </top>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="71.0" prefWidth="1000.0" spacing="80.0" BorderPane.alignment="CENTER">
-         <children>
-            <Text fx:id="address">
-               <font>
-                  <Font size="17.0" />
-               </font>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Text>
-            <Text fx:id="phone">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
-            <Text fx:id="mailaddress">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Text>
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-         </padding>
-      </HBox>
-   </bottom>
-</BorderPane>
+<VBox spacing="25" prefHeight="250" prefWidth="1000" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controller.elements.ContactController">
+    <Text style="-fx-font-size: 25" text="Nous contacter"/>
+    <HBox alignment="CENTER" prefHeight="80" prefWidth="1000" spacing="110">
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="address" />
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="phone" />
+        <Text style="-fx-font-size: 17; -fx-text-alignment: center" fx:id="mailaddress" />
+    </HBox>
+    <padding>
+        <Insets left="30" right="30" />
+    </padding>
+</VBox>

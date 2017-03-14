@@ -1,0 +1,9 @@
+
+.root {
+    -fx-font-family: "Verdana";
+}
+
+.header-menu {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
