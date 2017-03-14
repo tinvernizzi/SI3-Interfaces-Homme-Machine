@@ -96,4 +96,12 @@ public class ProductDatabase {
                         !product.getCategory().equals(category)
                 ).collect(Collectors.toList());
     }
+
+    public List<Product> getPromoProducts() {
+        List<Product> validItems = new ArrayList<>();
+        return validItems = getAllItems().stream()
+                .filter(product ->
+                        product.isOnPromotion()
+                ).collect(Collectors.toList());
+    }
 }

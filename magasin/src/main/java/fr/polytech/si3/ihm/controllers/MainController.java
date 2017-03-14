@@ -63,7 +63,7 @@ public class MainController {
         contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
-        promotionsViewController.start(this);
+        promotionsViewController.start(this,productDatabase);
         productsViewController.start(this);
         interfaceAdminButtonViewController.start(this);
     }

@@ -72,4 +72,8 @@ public class Product {
     public void removePromotion(){
         this.promotion = Optional.empty();
     }
+
+    public boolean isOnPromotion() {
+        return promotion.isPresent();
+    }
 }
