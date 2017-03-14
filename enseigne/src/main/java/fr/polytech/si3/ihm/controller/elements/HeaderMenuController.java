@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controller.elements;
 
+import fr.polytech.si3.ihm.MainApp;
 import fr.polytech.si3.ihm.controller.*;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,6 +14,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HeaderMenuController {
+
+    private final static String stylesheet = MainApp.getStyleSheet();
 
     @FXML
     private Button homeButton;
@@ -62,7 +65,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) homeButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/home.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -78,7 +81,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) promoButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/promo.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -94,7 +97,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) infoButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/info.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -110,7 +113,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) productButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/products.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -126,7 +129,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) shopsButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/shops.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {
@@ -142,7 +145,7 @@ public class HeaderMenuController {
                     Stage stage = (Stage) aboutButton.getScene().getWindow();
                     Parent rootNode = loader.load(getClass().getResourceAsStream("/fxml/about.fxml"));
                     Scene scene = new Scene(rootNode);
-                    scene.getStylesheets().add("/styles/default.css");
+                    scene.getStylesheets().add(stylesheet);
                     stage.setScene(scene);
                     stage.show();
                 } catch (IOException e) {

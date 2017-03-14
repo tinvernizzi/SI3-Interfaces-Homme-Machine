@@ -32,12 +32,15 @@ public class ShopsController extends Controller{
     }
 
     private void displayMagasins() {
-        ObservableList<Magasin> magasin=new ListeMagasin().getListeMagasins();
+        ObservableList<Magasin> liste = new ListeMagasin().getListeMagasins();
+        magasinsTable.setPrefHeight(30 * liste.size());
+
         nom.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
         ville.setCellValueFactory(cellData -> cellData.getValue().getCityProperty());
         region.setCellValueFactory(cellData -> cellData.getValue().getRegionProperty());
+        site.setCellValueFactory(cellData -> cellData.getValue().getSiteProperty());
 
-        magasinsTable.setItems(magasin);
+        magasinsTable.setItems(liste);
 
     }
 }

@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm;
 
+import fr.polytech.si3.ihm.controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +17,12 @@ public class MainApp extends Application {
     public static void main(String[] args) throws Exception {
 
         for (String arg : args)
-                styleSheet = "/style/" + arg + ".css";
-
+                styleSheet = "/styles/" + arg + ".css";
         launch(args);
+    }
+
+    public static String getStyleSheet() {
+        return styleSheet;
     }
 
     public void start(Stage stage) throws Exception {

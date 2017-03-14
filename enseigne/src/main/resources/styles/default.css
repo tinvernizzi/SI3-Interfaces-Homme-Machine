@@ -2,6 +2,7 @@
 .rootNode {
     -fx-background-color: #f0f0ff;
     -fx-font-family: "Verdana";
+    -fx-font-size: 12;
 }
 
         /* Header */
@@ -26,7 +27,7 @@
     -fx-background-color: #000000;
 }
 .infoTitle {
-    -fx-font-family: System Bold;
+    -fx-font-family: System;
     -fx-font-size: 18;
 }
 .infoDescr {
@@ -37,6 +38,11 @@
 }
 .productGridElement {
     -fx-font-size: 8;
+}
+.shopsTableColumn {
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
 }
 
         /* Contact */
