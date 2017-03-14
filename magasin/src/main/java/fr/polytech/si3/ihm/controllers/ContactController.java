@@ -69,9 +69,10 @@ public class ContactController implements Controller{
         schedules.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         //set others infos
-        address.setText("06600 Antibes");
-        phone.setText("06.72.98.21.21");
-        webPage.setText("www.tobeortohave.com");
+
+        address.setText(mainController.getContactInformations().getAdress());
+        phone.setText(mainController.getContactInformations().getPhoneNumber());
+        webPage.setText(mainController.getContactInformations().getPhoneNumber());
     }
 
     public Node getAnchor() {

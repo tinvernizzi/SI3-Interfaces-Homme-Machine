@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.Product;
 import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Vendeur;
@@ -59,7 +60,7 @@ public class AdministrationPageController implements Controller {
     private TableColumn<Vendeur, String> sales;
     private ProductDatabase database;
     private Product itemCurrentlySelected;
-    private ContactController contact;
+    private Contact contact;
 
 
     public void displayLastWeekPerformance(MouseEvent mouseEvent) throws Exception {
@@ -74,7 +75,7 @@ public class AdministrationPageController implements Controller {
 
     public void start(MainController mainController) {
         this.database = mainController.getProductDatabase();
-        this.contact = mainController.getContactController();
+        this.contact = mainController.getContactInformations();
         
         ArrayList<String> productNameList = new ArrayList<>();
 

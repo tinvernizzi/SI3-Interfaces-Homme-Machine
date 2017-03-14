@@ -2,14 +2,16 @@ package fr.polytech.si3.ihm.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
  * Created by Antoine on 3/1/2017.
  */
 public class EnteteController implements Controller{
+
     @FXML
-    public Button promotionsButton;
+    public TextField barreRecherche;
 
     private MainController mainController;
 
