@@ -66,8 +66,11 @@ public class MainController {
     private Contact contact;
 
     public void initialize() {
+        //init of model
         this.contact = new Contact();
-        productDatabase = new ProductDatabase();
+        this.productDatabase = new ProductDatabase();
+
+        //init of all controllers
         contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
@@ -134,10 +137,6 @@ public class MainController {
         interfaceAdminButtonViewController = (InterfaceAdminButtonController) addContent("/fxml/plugins/interfaceAdminButton.fxml");
         interfaceAdminButtonViewController.start(this);
         setScrollTo(slideshowView);
-        contactViewController.setWebPage(contact.getWebPage());
-        contactViewController.setPhoneNumber(contact.getPhoneNumber());
-        contactViewController.setAdress(contact.getAdress());
-        contactViewController.setHoraires(contact.getSchedules());
     }
 
     public ContactController getContactController() {

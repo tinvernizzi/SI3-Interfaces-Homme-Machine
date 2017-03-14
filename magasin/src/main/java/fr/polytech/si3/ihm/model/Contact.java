@@ -19,6 +19,15 @@ public class Contact {
         address = ("06600 Antibes");
         phone = ("06.72.98.21.21");
         webPage = ("www.tobeortohave.com");
+        //init of schedule
+        schedules = new ArrayList<Schedule>();
+        schedules.add((new Schedule("Lun", "09:00 à 19:00")));
+        schedules.add((new Schedule("Mar", "09:00 à 19:00")));
+        schedules.add((new Schedule("Mer", "09:00 à 19:00")));
+        schedules.add((new Schedule("Jeu", "09:00 à 19:00")));
+        schedules.add((new Schedule("Ven", "09:00 à 19:00")));
+        schedules.add((new Schedule("Sam", "09:00 à 12:00")));
+        schedules.add((new Schedule("Dim", "Fermé")));
     }
 
     public String getWebPage() {

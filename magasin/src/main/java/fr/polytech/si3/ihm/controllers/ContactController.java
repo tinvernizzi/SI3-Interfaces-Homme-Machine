@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.Schedule;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -47,23 +48,16 @@ public class ContactController implements Controller{
     @FXML
     public Label title;
 
-    ArrayList<Schedule> openingHours;
+    private List<Schedule> openingHours;
     
     @Override
     public void start(MainController mainController) {
-        openingHours = new ArrayList<Schedule>();
-
-        openingHours.add((new Schedule("Lun", "09:00 à 19:00")));
-        openingHours.add((new Schedule("Mar", "09:00 à 19:00")));
-        openingHours.add((new Schedule("Mer", "09:00 à 19:00")));
-        openingHours.add((new Schedule("Jeu", "09:00 à 19:00")));
-        openingHours.add((new Schedule("Ven", "09:00 à 19:00")));
-        openingHours.add((new Schedule("Sam", "09:00 à 12:00")));
-        openingHours.add((new Schedule("Dim", "Fermé")));
+        Contact contact = mainController.getContactInformations();
 
         //Set schedules
+        openingHours = contact.getSchedules();
+        System.out.println(openingHours);
         ObservableList<Schedule> horaires = FXCollections.observableArrayList(openingHours);
-
         date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
         hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
         schedules.setItems(horaires);
@@ -73,42 +67,13 @@ public class ContactController implements Controller{
         schedules.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         //set others infos
-
-        address.setText(mainController.getContactInformations().getAdress());
-        phone.setText(mainController.getContactInformations().getPhoneNumber());
-        webPage.setText(mainController.getContactInformations().getPhoneNumber());
+        address.setText(contact.getAdress());
+        phone.setText(contact.getPhoneNumber());
+        webPage.setText(contact.getPhoneNumber());
     }
 
     public Node getAnchor() {
         return address;
-    }
-
-    public String getWebPage() {
-        return webPage.getText();
-    }
-
-    public String getPhoneNumber() {
-        return phone.getText();
-    }
-
-    public String getAdress() {
-        return address.getText();
-    }
-
-    public void setWebPage(String webPage) {
-        this.webPage.setText(webPage);
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        phone.setText(phoneNumber);
-    }
-
-    public void setAdress(String adress) {
-        address.setText(adress);
-    }
-
-    public List<Schedule> getHoraires() {
-        return openingHours;
     }
 
     public void setHoraires(List<Schedule> listSchedules) {
