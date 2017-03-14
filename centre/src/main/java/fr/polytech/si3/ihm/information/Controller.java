@@ -49,9 +49,10 @@ public class Controller {
 
         opDate.setCellValueFactory(new PropertyValueFactory<Model, String>("day"));
         opHour.setCellValueFactory(new PropertyValueFactory<Model, String>("openingHour"));
-
         tableHours.setItems(openingHours);
+
         tableHours.getColumns().addAll(opDate, opHour);
+        tableHours.setEditable(false);
 
         final ObservableList<Model> exceptionalOpening = FXCollections.observableArrayList(
                 new Model("Lun 17 avr - Pâques", "11:00 à 19h00"),
@@ -61,9 +62,11 @@ public class Controller {
 
         exDate.setCellValueFactory(new PropertyValueFactory<Model, String>("day"));
         exHour.setCellValueFactory(new PropertyValueFactory<Model, String>("openingHour"));
-
         tableExcept.setItems(exceptionalOpening);
         tableExcept.getColumns().addAll(exDate, exHour);
+        exDate.setEditable(false);
+        exHour.setEditable(false);
+
     }
 
     @FXML
