@@ -4,6 +4,7 @@ import fr.polytech.si3.ihm.model.Contact;
 import fr.polytech.si3.ihm.model.Schedule;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,6 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -47,6 +49,8 @@ public class ContactController implements Controller{
     public TableColumn hour;
     @FXML
     public Label title;
+    @FXML
+    public HBox content;
 
     private List<Schedule> openingHours;
     
@@ -70,6 +74,18 @@ public class ContactController implements Controller{
         address.setText(contact.getAdress());
         phone.setText(contact.getPhoneNumber());
         webPage.setText(contact.getWebPage());
+
+
+        try {
+            String fxmlFile = "/fxml/plugins/map.fxml";
+            FXMLLoader loader = new FXMLLoader();
+            Parent map = loader.load(getClass().getResourceAsStream(fxmlFile));
+//            ((GMapsController) loader.getController()).mapInitialized();
+            content.getChildren().add(map);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public Node getAnchor() {

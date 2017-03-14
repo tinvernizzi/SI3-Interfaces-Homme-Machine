@@ -1,5 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
+import fr.polytech.si3.ihm.model.SlideShowContent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -7,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+
 /**
  * Created by Antoine on 3/1/2017.
  */
@@ -16,59 +17,34 @@ public class SlideshowController implements  Controller{
 
     @FXML
     public AnchorPane anchorPane;
-
     @FXML
-    private ImageView leftArrow;
-
-    @FXML
-    private ImageView rightArrow;
-
+    public HBox bubbles;
     @FXML
     private Button button;
-    private ImageSlide slider;
 
-    /*@FXML
-    private Label scheduleTitle;
-
-    @FXML
-    private Label scheduleTimes;
-
-    @FXML
-    private Label locationTitle;
-
-    @FXML
-    private Label LocationDescription;
-
-    @FXML
-    private ImageView bubble0;
-
-    @FXML
-    private ImageView bubble1;
-
-    @FXML
-    private ImageView bubble2;
-
-    @FXML
-    private ImageView bubble3;*/
+    private SlideShow slideShow;
+    private SlideShowContent slideShowContent;
 
     @FXML
     void clickOnButton(MouseEvent event){
-        System.out.println("button clicked");
     }
 
     public void clickOnLeftArrow(MouseEvent event) {
-        System.out.println("left");
-        slider.goLeft();
+        slideShow.goLeft();
     }
 
     public void clickOnRightArrow(MouseEvent event) {
-        System.out.println("right");
-        slider.goRight();
+        slideShow.goRight();
     }
 
     @FXML
     public void start(MainController mainController) {
-        this.slider = new ImageSlide(anchorPane);
-        slider.startAnimation();
+        this.slideShow = new SlideShow(mainController.getSlideShowContent(),anchorPane,this);
+        this.slideShowContent = mainController.getSlideShowContent();
+        slideShow.startAnimation();
+    }
+
+    public void onClickOnContactField(MouseEvent mouseEvent) {
+        System.out.println("carte");
     }
 }

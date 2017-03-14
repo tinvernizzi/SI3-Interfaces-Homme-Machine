@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import fr.polytech.si3.ihm.model.SlideShowContent;
 import javafx.animation.*;
 
 import javafx.collections.FXCollections;
@@ -18,38 +19,38 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
-public class ImageSlide {
+public class SlideShow {
 
     // Width and height of image in pixels
     private final double IMG_WIDTH = 1000;
     private final double IMG_HEIGHT = 400;
 
-    private final int NUM_OF_IMGS = 3;
+    private final int NUM_OF_IMGS;
     private final int SLIDE_FREQ = 4; // in secs
     private final Pane clipPane;
+    private final SlideShowContent slideShowContent;
+    private final SlideshowController slideShowController;
 
     private int actualImage = 1;
     HBox imgContainer;
     private Timeline mainAnim;
     private boolean animationIsFinished = true;
 
-    public ImageSlide(AnchorPane ac){
-        clipPane = new Pane();
+    public SlideShow(SlideShowContent slideShowContent, AnchorPane ac, SlideshowController slideshowController){
+        this.clipPane = new Pane();
+        this.slideShowContent = slideShowContent;
+        this.slideShowController = slideshowController;
         // To center the slide show incase maximized
         clipPane.setMaxSize(IMG_WIDTH, IMG_HEIGHT);
         clipPane.setClip(new Rectangle(IMG_WIDTH, IMG_HEIGHT));
         this.imgContainer = new HBox();
         //image view
-        ImageView imgGreen = new ImageView("/images/annonce_commande_final.png");
-        ImageView imgBlue = new ImageView("/images/annonce_neuro_final.png");
-        ImageView imgRose = new ImageView("/images/annonce_science_final.png");
-
-        imgContainer.getChildren().addAll(imgGreen, imgBlue, imgRose);
+        List<Node> images = slideShowContent.getImages();
+        NUM_OF_IMGS = images.size();
+        imgContainer.getChildren().addAll(images);
         clipPane.getChildren().add(imgContainer);
         ac.getChildren().add(clipPane);
-
         swap(ac);
-
     }
 
     public void swap(AnchorPane ac) {
@@ -64,7 +65,6 @@ public class ImageSlide {
 
     //start animation
     public void startAnimation() {
-        //error occured on (ActionEvent t) line
         //slide action
         EventHandler<ActionEvent> slideAction = (ActionEvent t) -> {
             TranslateTransition trans = new TranslateTransition(Duration.seconds(1.5), imgContainer);
@@ -108,8 +108,8 @@ public class ImageSlide {
     }
 
     public void translate(int sign){
-        mainAnim.stop();
         if(animationIsFinished) {
+            mainAnim.stop();
             setAnimationIsFinished(false);
             actualImage-=sign;
             EventHandler<ActionEvent> slideAction = (ActionEvent t) -> {
