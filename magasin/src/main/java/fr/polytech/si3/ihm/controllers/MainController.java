@@ -1,6 +1,7 @@
 package fr.polytech.si3.ihm.controllers;
 
 import fr.polytech.si3.ihm.model.Category;
+import fr.polytech.si3.ihm.model.ProductDatabase;
 import fr.polytech.si3.ihm.model.Type;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -53,14 +54,16 @@ public class MainController {
 
     private ProductsPageController productsPageViewController;
     private SearchController searchViewController;
+    private AdministrationPageController administrationPageController;
+    private ProductDatabase productDatabase;
 
 
     public void initialize() {
+        productDatabase = new ProductDatabase();
         contactViewController.start(this);
         slideshowViewController.start(this);
         enteteViewController.start(this);
         productsViewController.start(this);
-        System.out.println(interfaceAdminButtonViewController);
         interfaceAdminButtonViewController.start(this);
     }
 
@@ -97,7 +100,7 @@ public class MainController {
         searchViewController = (SearchController) addContent("/fxml/plugins/search.fxml");
         productsPageViewController = (ProductsPageController) addContent("/fxml/page_NosProduits.fxml");
         productsPageViewController.start(this);
-        searchViewController.start(this,productsPageViewController,type,category);
+        searchViewController.start(this,productsPageViewController,type,category,productDatabase);
 
         setScrollTo(productsPageViewController.getAnchor());
     }
@@ -106,7 +109,8 @@ public class MainController {
         isOnMainView = false;
         this.interfaceAdminButtonViewController = controller;
         content.getChildren().clear();
-        addContent("/fxml/administration.fxml");
+        administrationPageController = (AdministrationPageController) addContent("/fxml/administration.fxml");
+        administrationPageController.start(this, productDatabase);
     }
 
     public void setMainPage(EnteteController controller) {

@@ -19,7 +19,6 @@ public class MainApp extends Application {
     }
 
     public void start(Stage stage) throws Exception {
-
         log.info("Starting magasin To Be Or To Have application");
 
         String fxmlFile = "/fxml/MainView.fxml";

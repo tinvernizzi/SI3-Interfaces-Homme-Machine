@@ -51,7 +51,7 @@ public class SearchController  implements Controller{
         this.mainController = mainController;
     }
 
-    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<Type> optType, Optional<Category> category) {
+    public void start(MainController mainController, ProductsPageController productsPageViewController, Optional<Type> optType, Optional<Category> category, ProductDatabase database) {
         this.mainController = mainController;
         this.productPageController = productsPageViewController;
         this.database = new ProductDatabase();
