@@ -19,6 +19,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Double.MAX_VALUE;
 
@@ -45,20 +47,22 @@ public class ContactController implements Controller{
     @FXML
     public Label title;
 
+    ArrayList<Schedule> openingHours;
+    
     @Override
     public void start(MainController mainController) {
+        openingHours = new ArrayList<>();
 
-        System.out.println(this);
+        openingHours.add((new Schedule("Lun", "09:00 à 19:00")));
+        openingHours.add((new Schedule("Mar", "09:00 à 19:00")));
+        openingHours.add((new Schedule("Mer", "09:00 à 19:00")));
+        openingHours.add((new Schedule("Jeu", "09:00 à 19:00")));
+        openingHours.add((new Schedule("Ven", "09:00 à 19:00")));
+        openingHours.add((new Schedule("Sam", "09:00 à 12:00")));
+        openingHours.add((new Schedule("Dim", "Fermé")));
+
         //Set schedules
-        final ObservableList<Schedule> openingHours = FXCollections.observableArrayList(
-                new Schedule("Lun", "09:00 à 19:00"),
-                new Schedule("Mar", "09:00 à 19:00"),
-                new Schedule("Mer", "09:00 à 19:00"),
-                new Schedule("Jeu", "09:00 à 19:00"),
-                new Schedule("Ven", "09:00 à 19:00"),
-                new Schedule("Sam", "09:00 à 12:00"),
-                new Schedule("Dim", "Fermé")
-        );
+        ObservableList<Schedule> openingHours = FXCollections.observableArrayList();
 
         date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
         hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
@@ -101,5 +105,21 @@ public class ContactController implements Controller{
 
     public void setAdress(String adress) {
         address.setText(adress);
+    }
+
+    public List<Schedule> getHoraires() {
+        return openingHours;
+    }
+
+    public void setHoraires(List<Schedule> listSchedules) {
+        final ObservableList<Schedule> openingHours = FXCollections.observableArrayList(listSchedules);
+
+        date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
+        hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
+        schedules.setItems(openingHours);
+        //settings of tableView
+        schedules.setEditable(false);
+        schedules.setMouseTransparent(true);
+        schedules.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 }

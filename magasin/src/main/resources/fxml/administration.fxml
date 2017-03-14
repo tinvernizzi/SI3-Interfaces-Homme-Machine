@@ -88,14 +88,14 @@
                               <Font size="36.0" />
                            </font>
                         </Label>
-                        <ListView fx:id="listOfProducts" layoutX="15.0" layoutY="55.0" onMouseClicked="#clickedOnProduct" prefHeight="200.0" prefWidth="411.0" />
-                        <Label fx:id="produitSelect" alignment="CENTER" layoutX="467.0" layoutY="71.0" prefHeight="40.0" prefWidth="484.0" text="Veuillez sélectionner le produit que vous souhaitez modifier." textAlignment="CENTER" />
-                        <CheckBox fx:id="isOnPromo" layoutX="709.0" layoutY="146.0" mnemonicParsing="false" text="Réduction en cours" />
-                        <TextField fx:id="normalPrice" layoutX="565.0" layoutY="129.0" prefHeight="26.0" prefWidth="74.0" />
-                        <Label layoutX="467.0" layoutY="134.0" text="Prix normal : " />
-                        <TextField fx:id="reducPrice" layoutX="565.0" layoutY="167.0" prefHeight="26.0" prefWidth="74.0" />
-                        <Label layoutX="467.0" layoutY="172.0" prefHeight="16.0" prefWidth="91.0" text="Prix réduit :" />
-                        <Button fx:id="registerButton" layoutX="607.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterProduct" text="Enregistrer les modifications" />
+                        <ListView fx:id="listOfProducts" layoutX="15.0" layoutY="55.0" onMouseClicked="#clickedOnProduct" prefHeight="271.0" prefWidth="436.0" />
+                        <Label fx:id="produitSelect" alignment="CENTER" layoutX="474.0" layoutY="71.0" prefHeight="40.0" prefWidth="484.0" text="Veuillez sélectionner le produit que vous souhaitez modifier." textAlignment="CENTER" />
+                        <CheckBox fx:id="isOnPromo" layoutX="716.0" layoutY="146.0" mnemonicParsing="false" text="Réduction en cours" />
+                        <TextField fx:id="normalPrice" layoutX="572.0" layoutY="129.0" prefHeight="26.0" prefWidth="74.0" />
+                        <Label layoutX="474.0" layoutY="134.0" text="Prix normal : " />
+                        <TextField fx:id="reducPrice" layoutX="572.0" layoutY="167.0" prefHeight="26.0" prefWidth="74.0" />
+                        <Label layoutX="474.0" layoutY="172.0" prefHeight="16.0" prefWidth="91.0" text="Prix réduit :" />
+                        <Button fx:id="registerButton" layoutX="614.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterProduct" text="Enregistrer les modifications" />
                      </children>
                   </AnchorPane>
             </content>
