@@ -2,6 +2,7 @@ package fr.polytech.si3.ihm.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 /**
  * Created by tanguy on 14/03/17.

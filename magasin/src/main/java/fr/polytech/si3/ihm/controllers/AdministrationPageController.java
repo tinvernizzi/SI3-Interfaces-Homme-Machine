@@ -88,17 +88,18 @@ public class AdministrationPageController implements Controller {
         ObservableList<String> list = FXCollections.observableArrayList(productNameList);
         listOfProducts.setItems(list);
 
-        webPage.setText(mainController.getContactController().getWebPage());
-        phoneNumber.setText(mainController.getContactController().getPhoneNumber());
-        adress.setText(mainController.getContactController().getAdress());
+        webPage.setText(mainController.getContactInformations().getWebPage());
+        phoneNumber.setText(mainController.getContactInformations().getPhoneNumber());
+        adress.setText(mainController.getContactInformations().getAdress());
 
-        lundi.setText(mainController.getContactController().getHoraires().get(0).getOpeningHour());
-        mardi.setText(mainController.getContactController().getHoraires().get(1).getOpeningHour());
-        mercredi.setText(mainController.getContactController().getHoraires().get(2).getOpeningHour());
-        jeudi.setText(mainController.getContactController().getHoraires().get(3).getOpeningHour());
-        vendredi.setText(mainController.getContactController().getHoraires().get(4).getOpeningHour());
-        samedi.setText(mainController.getContactController().getHoraires().get(5).getOpeningHour());
-        dimanche.setText(mainController.getContactController().getHoraires().get(6).getOpeningHour());
+        List<Schedule> schedules = mainController.getContactInformations().getSchedules();
+        lundi.setText(schedules.get(0).getOpeningHour());
+        mardi.setText(schedules.get(1).getOpeningHour());
+        mercredi.setText(schedules.get(2).getOpeningHour());
+        jeudi.setText(schedules.get(3).getOpeningHour());
+        vendredi.setText(schedules.get(4).getOpeningHour());
+        samedi.setText(schedules.get(5).getOpeningHour());
+        dimanche.setText(schedules.get(6).getOpeningHour());
     }
 
     @FXML
