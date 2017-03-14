@@ -69,7 +69,7 @@ public class ContactController implements Controller{
         //set others infos
         address.setText(contact.getAdress());
         phone.setText(contact.getPhoneNumber());
-        webPage.setText(contact.getPhoneNumber());
+        webPage.setText(contact.getWebPage());
     }
 
     public Node getAnchor() {
