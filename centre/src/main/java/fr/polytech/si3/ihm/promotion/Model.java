@@ -35,4 +35,16 @@ public class Model {
     public String getTitle() {
         return title.get();
     }
+
+    public SimpleStringProperty reductionProperty() {
+        return reduction;
+    }
+
+    public SimpleStringProperty descriptionProperty() {
+        return description;
+    }
+
+    public SimpleStringProperty titleProperty() {
+        return title;
+    }
 }

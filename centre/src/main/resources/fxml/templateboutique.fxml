@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.store.Controller">
    <top>
       <fx:include source="/fxml/header.fxml" />
    </top>
@@ -48,7 +48,7 @@
                         </ImageView>
                         <VBox>
                            <children>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
+                              <Label fx:id="description">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -56,71 +56,7 @@
                                     <Insets left="50.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font  size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" left="50.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="En savoir plus" textFill="WHITE">
+                              <Button fx:id="buttonOut" onAction="#toStore" mnemonicParsing="false" style="-fx-background-color: #000000;" text="En savoir plus" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets left="50.0" />
                                  </VBox.margin>

@@ -31,16 +31,16 @@ public class Controller {
 
     @FXML
     void toEvenement(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/bbzb.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/templateEvenement.fxml"));
         Stage primaryStage = (Stage) button.getScene().getWindow();
         primaryStage.setTitle("Evènement");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
-    public void init(Model promo) {
-        image.setImage(promo.getImage());
-        title.setText(promo.getTitle());
-        description.setText(promo.getDescription());
+    public void init(Model event) {
+        image.setImage(event.getImage());
+        title.setText(event.getTitle());
+        description.setText(event.getDescription());
     }
 }
