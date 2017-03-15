@@ -1,4 +1,5 @@
-package fr.polytech.si3.ihm.promotion;
+package fr.polytech.si3.ihm.event;
+
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,19 +24,16 @@ public class Controller {
     private Label title;
 
     @FXML
-    private Label reduction;
-
-    @FXML
     private Label description;
 
     @FXML
     private Button button;
 
     @FXML
-    void toBoutique(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/templateBoutique.fxml"));
+    void toEvenement(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/bbzb.fxml"));
         Stage primaryStage = (Stage) button.getScene().getWindow();
-        primaryStage.setTitle("Boutique");
+        primaryStage.setTitle("Evènement");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
@@ -43,7 +41,6 @@ public class Controller {
     public void init(Model promo) {
         image.setImage(promo.getImage());
         title.setText(promo.getTitle());
-        reduction.setText(promo.getReduction());
         description.setText(promo.getDescription());
     }
 }

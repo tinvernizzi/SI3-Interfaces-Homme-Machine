@@ -13,10 +13,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.AdministrationPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.AdministrationPageController">
    <top>
       <HBox prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -81,21 +82,22 @@
           </Tab>
           <Tab text="Modifier le prix d'un produit">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="1001.0">
                      <children>
                         <Label layoutX="15.0" layoutY="11.0" text="Modifier le prix d'un produit">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </Label>
-                        <ListView fx:id="listOfProducts" layoutX="15.0" layoutY="55.0" onMouseClicked="#clickedOnProduct" prefHeight="271.0" prefWidth="436.0" />
-                        <Label fx:id="produitSelect" alignment="CENTER" layoutX="474.0" layoutY="71.0" prefHeight="40.0" prefWidth="484.0" text="Veuillez sélectionner le produit que vous souhaitez modifier." textAlignment="CENTER" />
-                        <CheckBox fx:id="isOnPromo" layoutX="716.0" layoutY="146.0" mnemonicParsing="false" text="Réduction en cours" />
-                        <TextField fx:id="normalPrice" layoutX="572.0" layoutY="129.0" prefHeight="26.0" prefWidth="74.0" />
-                        <Label layoutX="474.0" layoutY="134.0" text="Prix normal : " />
-                        <TextField fx:id="reducPrice" layoutX="572.0" layoutY="167.0" prefHeight="26.0" prefWidth="74.0" />
-                        <Label layoutX="474.0" layoutY="172.0" prefHeight="16.0" prefWidth="91.0" text="Prix réduit :" />
-                        <Button fx:id="registerButton" layoutX="614.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterProduct" text="Enregistrer les modifications" />
+                        <ListView fx:id="listOfProducts" layoutX="15.0" layoutY="55.0" onMouseClicked="#clickedOnProduct" prefHeight="475.0" prefWidth="436.0" />
+                        <Label fx:id="produitSelect" alignment="CENTER" layoutX="473.0" layoutY="55.0" prefHeight="40.0" prefWidth="484.0" text="Veuillez sélectionner le produit que vous souhaitez modifier." textAlignment="CENTER" />
+                        <CheckBox fx:id="isOnPromo" layoutX="762.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#updateOnCheckBoxClicked" text="Réduction en cours" />
+                        <TextField fx:id="normalPrice" layoutX="617.0" layoutY="399.0" prefHeight="26.0" prefWidth="74.0" />
+                        <Label layoutX="519.0" layoutY="404.0" text="Prix normal : " />
+                        <TextField fx:id="reducPrice" layoutX="713.0" layoutY="437.0" prefHeight="26.0" prefWidth="74.0" />
+                        <Label fx:id="prixReduitLabel" layoutX="615.0" layoutY="442.0" prefHeight="16.0" prefWidth="91.0" text="Prix réduit :" />
+                        <Button fx:id="registerButton" layoutX="613.0" layoutY="484.0" mnemonicParsing="false" onMouseClicked="#clickToRegisterProduct" text="Enregistrer les modifications" />
+                        <Pane fx:id="productPane" layoutX="615.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
             </content>

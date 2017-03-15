@@ -19,18 +19,18 @@
    <bottom>
    </bottom>
    <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="700.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <content>
             <VBox alignment="TOP_CENTER">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/tboth.png" />
+                        <Image url="@/images/tboth.png" />
                      </image>
                   </ImageView>
                   <Label text="Description">
                      <font>
-                        <Font name="Myriad Set Pro Text" size="24.0" />
+                        <Font size="24.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="20.0" />
@@ -40,7 +40,7 @@
                      <children>
                         <ImageView fitHeight="219.0" fitWidth="568.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/applestore.jpg" />
+                              <Image url="@/images/appleStore.jpg" />
                            </image>
                            <HBox.margin>
                               <Insets left="30.0" />
@@ -50,7 +50,7 @@
                            <children>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -58,7 +58,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -66,7 +66,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -74,7 +74,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -82,7 +82,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -90,7 +90,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -98,7 +98,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font  size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -106,7 +106,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets left="50.0" />
@@ -114,7 +114,7 @@
                               </Label>
                               <Label prefWidth="998.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="20.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="50.0" />
@@ -125,7 +125,7 @@
                                     <Insets left="50.0" />
                                  </VBox.margin>
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="12.0" />
+                                    <Font size="12.0" />
                                  </font>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
@@ -140,7 +140,7 @@
                   </HBox>
                   <Label text="Produits phares">
                      <font>
-                        <Font name="Myriad Set Pro Text" size="24.0" />
+                        <Font size="24.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="60.0" />
@@ -150,17 +150,17 @@
                      <children>
                         <ImageView fitHeight="96.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/CD%20Logo-96.png" />
+                              <Image url="@/images/cd.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="96.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/DVD%20Logo-96.png" />
+                              <Image url="@/images/dvd.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="84.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/Literature-104.png" />
+                              <Image url="@/images/book.png" />
                            </image>
                         </ImageView>
                      </children>

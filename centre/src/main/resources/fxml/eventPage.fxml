@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="1000.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.eventPage.Controller">
+    <top>
+        <fx:include source="/fxml/header.fxml"/>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" BorderPane.alignment="CENTER">
+            <content>
+                <ScrollPane fitToWidth="true" style=" -fx-border-color: #ffffff;" BorderPane.alignment="CENTER">
+                    <content>
+                        <VBox alignment="TOP_CENTER" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label text="Evènements en cours">
+                                    <font>
+                                        <Font size="30.0"/>
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="30.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <ListView fx:id="listView" style=" -fx-border-color: #999999;" editable="false"/>
+                            </children>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </content>
+            <padding>
+                <Insets top="30.0"/>
+            </padding>
+        </ScrollPane>
+    </center>
+</BorderPane>

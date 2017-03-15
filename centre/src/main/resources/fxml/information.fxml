@@ -54,8 +54,8 @@
                                                                         <Insets bottom="5.0"/>
                                                                     </VBox.margin>
                                                                 </Label>
-                                                                <TableView fx:id="tableHours" prefHeight="203.0"
-                                                                           prefWidth="452.0">
+                                                                <TableView fx:id="tableHours" prefHeight="177.0"
+                                                                           prefWidth="468.0">
                                                                     <columns>
                                                                         <TableColumn fx:id="opDate" prefWidth="200.0"
                                                                                      text="Jour"/>

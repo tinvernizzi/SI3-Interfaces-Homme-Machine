@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #000000;" stylesheets="@../styles/defaultHomepage.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #000000;" stylesheets="/styles/defaultHomepage.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.homePage.Controller">
    <bottom>
       <VBox BorderPane.alignment="CENTER">
          <children>
@@ -23,10 +23,13 @@
                         <Insets left="70.0" />
                      </VBox.margin>
                      <children>
-                        <Label prefHeight="22.0" prefWidth="123.0" text="Evenement" textFill="WHITE">
+                        <Label prefHeight="22.0" prefWidth="123.0" fx:id="eventType" onMouseClicked="#toEvenement" textFill="WHITE">
                            <font>
-                              <Font name="Myriad Set Pro Text" size="16.0" />
+                              <Font size="16.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
@@ -66,15 +69,21 @@
                <children>
                   <VBox layoutX="81.0" layoutY="5.0">
                      <children>
-                        <Label stylesheets="@../styles/titleHomePage.css" text="Exposition autour de Mazarine" textFill="WHITE">
+                        <Label fx:id="title" onMouseClicked="#toEvenement" textFill="WHITE">
                            <font>
-                              <Font name="Myriad Set Pro Text" size="27.0" />
+                              <Font size="27.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Label>
-                        <Label text="Description" textFill="WHITE">
+                        <Label fx:id="description" onMouseClicked="#toEvenement" textFill="WHITE">
                            <font>
-                              <Font name="Myriad Set Pro Text" size="16.0" />
+                              <Font size="16.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Label>
                      </children>
                   </VBox>
@@ -84,12 +93,12 @@
                            <children>
                               <Label text="Ouvert aujourd'hui" textFill="WHITE">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="16.0" />
+                                    <Font size="16.0" />
                                  </font>
                               </Label>
                               <Label alignment="BOTTOM_RIGHT" text="09:00 à 18:00" textFill="WHITE">
                                  <font>
-                                    <Font name="Myriad Set Pro Text" size="12.0" />
+                                    <Font size="12.0" />
                                  </font>
                               </Label>
                            </children>
@@ -103,14 +112,14 @@
                            <children>
                               <VBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label text="Venir visiter l'expo" textFill="WHITE">
+                                    <Label text="Venir visiter l'évènement" textFill="WHITE">
                                        <font>
-                                          <Font name="Myriad Set Pro Text" size="16.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Label>
                                     <Label fx:id="mapDisplayed" alignment="CENTER_RIGHT" text="Voir la carte" textFill="WHITE">
                                        <font>
-                                          <Font name="Myriad Set Pro Text" size="12.0" />
+                                          <Font size="12.0" />
                                        </font>
                                     </Label>
                                  </children>
