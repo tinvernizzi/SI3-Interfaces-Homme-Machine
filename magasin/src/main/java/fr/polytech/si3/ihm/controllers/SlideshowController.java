@@ -24,6 +24,7 @@ public class SlideshowController implements  Controller{
 
     private SlideShow slideShow;
     private SlideShowContent slideShowContent;
+    private MainController mainController;
 
     @FXML
     void clickOnButton(MouseEvent event){
@@ -39,12 +40,13 @@ public class SlideshowController implements  Controller{
 
     @FXML
     public void start(MainController mainController) {
+        this.mainController = mainController;
         this.slideShow = new SlideShow(mainController.getSlideShowContent(),anchorPane,this);
         this.slideShowContent = mainController.getSlideShowContent();
         slideShow.startAnimation();
     }
 
     public void onClickOnContactField(MouseEvent mouseEvent) {
-        System.out.println("carte");
+        mainController.setScrollTo(mainController.getContactController().getAnchor());
     }
 }

@@ -104,7 +104,6 @@ public class AdministrationPageController implements Controller {
 
     @FXML
     public void clickedOnProduct(MouseEvent mouseEvent) {
-        System.out.println("clicked on " + listOfProducts.getSelectionModel().getSelectedItem());
         itemCurrentlySelected = database.getItemsByName(database.getAllItems(), listOfProducts.getSelectionModel().getSelectedItem()).get(0);
         isOnPromo.setSelected(itemCurrentlySelected.isOnPromotion());
         if (itemCurrentlySelected.isOnPromotion()) {

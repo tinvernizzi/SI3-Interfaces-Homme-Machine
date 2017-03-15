@@ -43,9 +43,7 @@ public class GMapsController implements Initializable, MapComponentInitializedLi
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("salut");
         mapView.addMapInializedListener(this);
-//        address.bind(addressTextField.textProperty());
     }
 
 
@@ -72,7 +70,6 @@ public class GMapsController implements Initializable, MapComponentInitializedLi
 
     @FXML
     public void addressTextFieldAction() {
-        System.out.println(address);
         geocodingService.geocode(address.get(), (GeocodingResult[] results, GeocoderStatus status) -> {
 
             LatLong latLong = null;

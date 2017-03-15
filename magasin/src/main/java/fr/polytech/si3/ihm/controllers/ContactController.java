@@ -60,7 +60,6 @@ public class ContactController implements Controller{
 
         //Set schedules
         openingHours = contact.getSchedules();
-        System.out.println(openingHours);
         ObservableList<Schedule> horaires = FXCollections.observableArrayList(openingHours);
         date.setCellValueFactory(new PropertyValueFactory<Schedule, String>("day"));
         hour.setCellValueFactory(new PropertyValueFactory<Schedule, String>("openingHour"));
