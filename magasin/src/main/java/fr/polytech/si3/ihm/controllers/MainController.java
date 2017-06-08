@@ -1,9 +1,6 @@
 package fr.polytech.si3.ihm.controllers;
 
-import fr.polytech.si3.ihm.model.Category;
-import fr.polytech.si3.ihm.model.Contact;
-import fr.polytech.si3.ihm.model.ProductDatabase;
-import fr.polytech.si3.ihm.model.Type;
+import fr.polytech.si3.ihm.model.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
@@ -57,11 +54,7 @@ public class MainController {
     private ProductsPageController productsPageViewController;
     private SearchController searchViewController;
     private AdministrationPageController administrationPageController;
-
-    public ProductDatabase getProductDatabase() {
-        return productDatabase;
-    }
-
+    private SlideShowContent slideShowContent;
     private ProductDatabase productDatabase;
     private Contact contact;
 
@@ -69,6 +62,7 @@ public class MainController {
         //init of model
         this.contact = new Contact();
         this.productDatabase = new ProductDatabase();
+        this.slideShowContent = new SlideShowContent();
 
         //init of all controllers
         contactViewController.start(this);
@@ -157,5 +151,13 @@ public class MainController {
 
     public Contact getContactInformations() {
         return contact;
+    }
+
+    public SlideShowContent getSlideShowContent() {
+        return slideShowContent;
+    }
+
+    public ProductDatabase getProductDatabase() {
+        return productDatabase;
     }
 }

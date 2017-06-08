@@ -7,16 +7,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<?import javafx.scene.Cursor?>
 <HBox alignment="CENTER_LEFT" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.promotion.Controller">
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.event.Controller">
     <children>
         <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-              minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0">
+              minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0">
             <children>
                 <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
                 <Label fx:id="title" text="Label"/>
-                <Label fx:id="reduction" text="Label"/>
             </children>
         </VBox>
         <HBox alignment="CENTER_LEFT" prefWidth="600.0">
@@ -24,11 +22,7 @@
                 <VBox alignment="CENTER_LEFT">
                     <children>
                         <Label fx:id="description" text="Label"/>
-                        <Button fx:id="button" onAction="#toBoutique" mnemonicParsing="false" text="Vers la boutique" style="-fx-background-color: #000000;" textFill="WHITE">
-                        <cursor>
-                            <Cursor fx:constant="HAND" />
-                        </cursor>
-                        </Button>
+                        <Button fx:id="button" onAction="#toEvenement" mnemonicParsing="false" text="Vers l'évènement" style="-fx-background-color: #000000;" textFill="WHITE"/>
                     </children>
                 </VBox>
             </children>

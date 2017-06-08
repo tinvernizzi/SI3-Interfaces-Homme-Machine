@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.si3.ihm.controllers.ContactController">
    <top>
@@ -72,13 +67,13 @@
       </HBox>
    </bottom>
    <center>
-      <HBox alignment="CENTER_LEFT" prefHeight="287.0" prefWidth="1000.0" spacing="100.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="content" alignment="CENTER_LEFT" prefHeight="287.0" prefWidth="1000.0" spacing="100.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="map" fitHeight="205.0" fitWidth="336.0" pickOnBounds="true">
+            <!--<ImageView fx:id="map" fitHeight="205.0" fitWidth="336.0" pickOnBounds="true">
                <image>
-                  <Image url="@/images/map.jpg" />
+                  &lt;!&ndash;<Image url="@/images/map.jpg" />&ndash;&gt;
                </image>
-            </ImageView>
+            </ImageView>-->
             <VBox prefHeight="205.0" prefWidth="503.0">
                <children>
                   <Label text="Horaires d'ouverture" underline="true">

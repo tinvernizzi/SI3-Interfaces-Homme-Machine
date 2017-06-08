@@ -47,7 +47,7 @@ public class Controller {
     @FXML
     void toHomePage(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/homePage.fxml"));
-        Stage primaryStage = (Stage) buttonEnseignes.getScene().getWindow();
+        Stage primaryStage = (Stage) homePage.getScene().getWindow();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
@@ -63,7 +63,7 @@ public class Controller {
 
     @FXML
     void toEvenements(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/evenement.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/eventPage.fxml"));
         Stage primaryStage = (Stage) buttonEvenements.getScene().getWindow();
         primaryStage.setTitle("Evènements en cours");
         primaryStage.setScene(new Scene(root));
@@ -81,7 +81,7 @@ public class Controller {
 
     @FXML
     void toPromotions(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/promotion.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/promoPage.fxml"));
         Stage primaryStage = (Stage) buttonPromotions.getScene().getWindow();
         primaryStage.setTitle("Promotions en cours");
         primaryStage.setScene(new Scene(root));

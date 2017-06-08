@@ -7,9 +7,14 @@ import fr.polytech.si3.ihm.statistics.WeekPerformance;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -44,6 +49,8 @@ public class AdministrationPageController implements Controller {
     public TextField mardi;
     public TextField samedi;
     public TextField lundi;
+    public Pane productPane;
+    public Label prixReduitLabel;
 
     @FXML
     private TableView<Vendeur> statVendeurs;
@@ -104,7 +111,6 @@ public class AdministrationPageController implements Controller {
 
     @FXML
     public void clickedOnProduct(MouseEvent mouseEvent) {
-        System.out.println("clicked on " + listOfProducts.getSelectionModel().getSelectedItem());
         itemCurrentlySelected = database.getItemsByName(database.getAllItems(), listOfProducts.getSelectionModel().getSelectedItem()).get(0);
         isOnPromo.setSelected(itemCurrentlySelected.isOnPromotion());
         if (itemCurrentlySelected.isOnPromotion()) {
@@ -115,6 +121,24 @@ public class AdministrationPageController implements Controller {
             normalPrice.setText(itemCurrentlySelected.getPrixOutsideOfPromotion() + "");
             reducPrice.setText("0");
         }
+        updateProduct(itemCurrentlySelected);
+        updateOnCheckBoxClicked(mouseEvent);
+    }
+
+    public void updateProduct(Product product) {
+        final URL fxmlURL = getClass().getResource("/fxml/plugins/product.fxml");
+
+        final FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
+        Node node = null;
+        try {
+            node = fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        productPane.getChildren().clear();
+        productPane.getChildren().add(node);
+        SingleProductController singleProductController = fxmlLoader.getController();
+        singleProductController.setProductInformations(product);
     }
 
     public void clickToRegisterProduct(MouseEvent mouseEvent) {
@@ -125,6 +149,7 @@ public class AdministrationPageController implements Controller {
         else {
             itemCurrentlySelected.removePromotion();
         }
+        updateProduct(itemCurrentlySelected);
     }
 
     public void displayMeansOfSale(MouseEvent mouseEvent) throws Exception {
@@ -147,5 +172,16 @@ public class AdministrationPageController implements Controller {
         openingHours.add((new Schedule("Sam", samedi.getText())));
         openingHours.add((new Schedule("Dim", dimanche.getText())));
         contact.setSchedule(openingHours);
+    }
+
+    public void updateOnCheckBoxClicked(MouseEvent mouseEvent) {
+        if(isOnPromo.isSelected()) {
+            prixReduitLabel.setVisible(true);
+            reducPrice.setVisible(true);
+        }
+        else {
+            prixReduitLabel.setVisible(false);
+            reducPrice.setVisible(false);
+        }
     }
 }

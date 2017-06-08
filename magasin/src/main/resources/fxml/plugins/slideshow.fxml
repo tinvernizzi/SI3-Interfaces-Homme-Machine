@@ -63,11 +63,11 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" spacing="10.0">
+                  <HBox alignment="CENTER" onMouseClicked="#onClickOnContactField" spacing="10.0">
                      <children>
                         <VBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="116.0">
                            <children>
-                              <Label prefHeight="25.0" prefWidth="137.0" text="Venir récuperer " textFill="WHITE">
+                              <Label prefHeight="25.0" prefWidth="137.0" text="Contactez nous" textFill="WHITE">
                                  <font>
                                     <Font name="Myriad Set Pro Text" size="16.0" />
                                  </font>
@@ -88,7 +88,7 @@
                   </HBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1000.0" spacing="7.0" VBox.vgrow="ALWAYS">
+            <HBox fx:id="bubbles" alignment="CENTER" prefHeight="0.0" prefWidth="1000.0" spacing="7.0" visible="false" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
