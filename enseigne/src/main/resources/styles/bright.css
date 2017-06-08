@@ -1,8 +1,8 @@
 
 .rootNode {
     -fx-background-color: #ffffd0;
-    -fx-font-family: "Comic Sans MS";
-    -fx-font-size: 14;
+    -fx-font-family: "Liberation Sans";
+    -fx-font-size: 12;
 }
 
         /* Header */
@@ -22,15 +22,15 @@
 
         /* Sections */
 .sectionTitle {
-    -fx-font-family: "DejaVu Sans Condensed";
-    -fx-font-size: 30;
+    -fx-font-family: "DejaVu Sans";
+    -fx-font-size: 28;
 }
 .slideShow {
     -fx-background-color: #000000;
 }
 .infoTitle {
-    -fx-font-family: "DejaVu Sans Condensed";
-    -fx-font-size: 20;
+    -fx-font-family: "DejaVu Sans";
+    -fx-font-size: 15;
 }
 .infoDescr {
     -fx-text-alignment: center;
@@ -43,8 +43,8 @@
 }
 .shopsTableColumn {
     -fx-alignment: CENTER-LEFT;
-    -fx-border-color: #ffe0e0;
-    -fx-border-width: 1;
+    -fx-border-color: #505050;
+    -fx-border-width: 0.1;
 }
 
         /* Contact */

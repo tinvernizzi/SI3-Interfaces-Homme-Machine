@@ -12,10 +12,9 @@ public class ListePromotions {
     public ListePromotions() {
 
         listePromotions = FXCollections.observableArrayList(new ArrayList<Promotion>());
-        listePromotions.add(new Promotion("CD cool","Marque cool","-100% !", "FFFFFF","/images/p_C2.jpg"));
-        listePromotions.add(new Promotion("Livre cool","Marque cool","-100% !", "DDDDDD","/images/p_L3.jpg"));
-        listePromotions.add(new Promotion("DVD cool","Marque cool","-100% !", "FFFFFF","/images/p_D3.jpg"));
-        listePromotions.add(new Promotion("Stage cool","Marque cool","-100% !", "DDDDDD","/images/p_S3.jpg"));
+        listePromotions.add(new Promotion("CD Relaxation","Les Indispensables","-15%", "FFFFFF","/images/p_C2.jpg"));
+        listePromotions.add(new Promotion("Livre Massage","Docteur Chen","-30%", "DDDDDD","/images/p_L3.jpg"));
+        listePromotions.add(new Promotion("DVD Bien-être","-","2 pour le prix d'1", "FFFFFF","/images/p_D3.jpg"));listePromotions.add(new Promotion("Stage nature","Clairière des saveurs","-50%", "DDDDDD","/images/p_S3.jpg"));
     }
 
     public ObservableList<Promotion> getListePromotions() {

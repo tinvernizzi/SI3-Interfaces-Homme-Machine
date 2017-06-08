@@ -1,0 +1,54 @@
+
+.rootNode {
+    -fx-background-color: #e0e0ff;
+    -fx-font-family: "DejaVu Sans";
+    -fx-font-size: 14;
+}
+
+        /* Header */
+.headerMenu {
+    -fx-background-color: #c0c0c0;
+}
+.headerButton {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #101010;
+    -fx-font-size: 13;
+}
+.headerCurrentButton {
+    -fx-background-color: #a0a0a0;
+    -fx-text-fill: #000000;
+    -fx-font-size: 13;
+}
+
+        /* Sections */
+.sectionTitle {
+    -fx-font-family: "DejaVu Sans";
+    -fx-font-size: 22;
+}
+.slideShow {
+    -fx-background-color: #000000;
+}
+.infoTitle {
+    -fx-font-family: "DejaVu Sans";
+    -fx-font-size: 16;
+}
+.infoDescr {
+    -fx-text-alignment: center;
+}
+.productGrid {
+    -fx-background-color: #d0d0f0;
+}
+.productGridElement {
+}
+.shopsTableColumn {
+    -fx-font-size: 13;
+    -fx-alignment: center;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.3;
+}
+
+        /* Contact */
+.contactText {
+    -fx-font-size: 16;
+    -fx-text-alignment: center;
+}
